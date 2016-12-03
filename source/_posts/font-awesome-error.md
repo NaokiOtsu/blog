@@ -8,20 +8,21 @@ tags:
 フォントが正しく出ていない... ローカルでは大丈夫だったのに..
 
 そして、コンソールを見たら、
-<strong>「Failed to decode downloaded font」</strong>
+**「Failed to decode downloaded font」**
 とか
-<strong>「OTS parsing error: incorrect file size in WOFF header」</strong>
+**「OTS parsing error: incorrect file size in WOFF header」**
 とか出ている様子。
 
-<strong>【原因】</strong>
+## 原因
 調べてみると、gitの改行コードを変換する仕組みによって起きてる模様だった。
 参考: <a href="http://ts0818.hatenablog.com/entry/2016/04/01/225341" target="_blank">『Failed to decode downloaded font』から始まるエラー</a>
 
-<strong>【対策】</strong>
+## 対策
 gitのルートディレクトリにある、「.gitattributes」ファイルを開いて、
 変換しないように下記を追加してあげると問題なかった。
 
-<pre><code># Denote all files that are truly binary and should not be modified.
+```
+# Denote all files that are truly binary and should not be modified.
 ... 中略
 *.otf binary
 *.eot binary
@@ -29,6 +30,6 @@ gitのルートディレクトリにある、「.gitattributes」ファイルを
 *.ttf binary
 *.woff binary
 *.woff2 binary
-</code></pre>
+```
 
 もう一度、正しいフォントを格納して、git pushして確認したところ無事解決でした。

@@ -10,14 +10,17 @@ border-imageを使う時は、
 このサイトで生成したCSSはRetina対応してない素の画像サイズなので、
 スマホ制作してる時とかは画像が大きくなっちゃう。
 
+## Retina対応させる方法
 Retina対応する場合は、<code>border-image</code>の数値は変えず、
-<code>border-width</code>の値だけ、1/2とかにすると良いっぽいので、
+<code>border-width</code>の値だけ、1/2とかにすると良いので、
 例えば、こうなっていたら↓
 
-<pre><code class="css">border-width: 36px 40px 40px 44px;
-</code></pre>
+``` css
+border-width: 36px 40px 40px 44px;
+```
 
 こうする↓
 
-<pre><code class="css">border-width: 18px 20px 20px 22px;
-</code></pre>
+``` css
+border-width: 18px 20px 20px 22px;
+```

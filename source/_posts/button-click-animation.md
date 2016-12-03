@@ -8,7 +8,11 @@ tags:
 ぽよんと反応するようなアニメーション効果を与えたい。  
 その要素を押したら、例えば `.click-animation`のような、ぽよんとするCSSアニメーションを付けたクラスを、付与させる事が多いが、そんな時の実装MEMO。  
 
-要素を押した時に、`.click-animation`が既に付与されていたら、削除してから付与しないとアニメーションしなく、また削除して即付与してもアニメーションしないので、`setTimeout()`などで適当な一定時間待って付与する事が多かった。
+## 従来の方法
+要素を押した時に、`.click-animation`が既に付与されていたら、
+削除してから付与しないとアニメーションしなく、
+また削除して即付与してもアニメーションしないので、
+`setTimeout()`などで適当な一定時間待って付与する事が多かった。
 
 ``` js
 $(target).removeClass('click-animation');
@@ -27,8 +31,9 @@ $(target).on('webkitAnimationEnd', function() {
 ```
 
 ただこれだと連打した場合に反応してくれない場合がある。
-結論、`requestAnimationFrame`を使うと良さそう。
 
+## 実装方法
+結論、`requestAnimationFrame`を使うと良さそう。
 ``` js
 $(target).removeClass('click-animation');
 requestAnimationFrame(function() {

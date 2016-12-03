@@ -1,5 +1,5 @@
 ---
-title: Youtubeの再生リストの動画を一覧表示する &#124; Youtube Data API v3
+title: Youtubeの再生リストの動画を一覧表示する | Youtube Data API v3
 date: 2016-11-13 21:48:04
 tags:
 ---
@@ -7,9 +7,9 @@ tags:
 自分のプライベートなプロダクトで、
 Youtubeの再生リストの動画を一覧表示する機能が入れる必要があって、
 <a href="https://developers.google.com/youtube/v3/getting-started?hl=ja" target="_blank">Youtube Data API v3 のガイド</a>を見ながらやっていたが、
-若干の分かり辛さがあって、スムーズに行かなかったので結論の実装方法をメモしておくことに。
+スムーズに行かなかったので結論の実装方法をメモしておくことに。
 
-<h2><strong>【結論】</strong></h2>
+<h2><strong>実装方法</strong></h2>
 
 下記の4ステップを踏むと良かった。
 
@@ -21,8 +21,9 @@ Youtubeの再生リストの動画を一覧表示する機能が入れる必要�
 
 自分の場合は、再生リストの一覧が欲しかったので、<a href="https://developers.google.com/youtube/v3/docs/playlistItems/list?hl=ja" target="_blank">こちら</a>のリクエストURLが必要だった。
 
-<pre><code class="php">GET https://www.googleapis.com/youtube/v3/playlistItems
-</code></pre>
+``` php
+GET https://www.googleapis.com/youtube/v3/playlistItems
+```
 
 GET形式で、このURLにリクエストをすれば良いようだ。
 
@@ -35,8 +36,9 @@ GET形式で、このURLにリクエストをすれば良いようだ。
 <a href="https://www.youtube.com/playlist?list=PLlVlyGVtvuVnAx-u38QOieyVIrMEmzuDx" target="_blank">https://www.youtube.com/playlist?list=PLlVlyGVtvuVnAx-u38QOieyVIrMEmzuDx</a>
 の再生リストのIDは、
 
-<pre><code>PLlVlyGVtvuVnAx-u38QOieyVIrMEmzuDx
-</code></pre>
+```
+PLlVlyGVtvuVnAx-u38QOieyVIrMEmzuDx
+```
 
 のように、URLの最後の部分になるようだ。
 
@@ -45,7 +47,8 @@ GET形式で、このURLにリクエストをすれば良いようだ。
 Youtube Data API v3のガイドだと、リクエストURLに <code>?part=</code> とかを付けて、受け取ってねとあったが、
 jQueryとかだと、下記のようにリクエストを投げても、無事に欲しいレスポンスが返ってくるので、自分はこっちで実装した。
 
-<pre><code class="js">$.ajax({
+``` js
+$.ajax({
   type: 'get',
   url: 'https://www.googleapis.com/youtube/v3/playlistItems', // リクエストURL
   dataType: 'json',
@@ -60,13 +63,14 @@ jQueryとかだと、下記のようにリクエストを投げても、無事�
 }).fail(function() {
   // エラー
 });
-</code></pre>
+```
 
 これで入力項目が問題なければ、成功するので、
 あとは、返ってきた <code>response</code> から動画を表示させれば良い。
 
-<pre><code class="js">response.items.forEach(function(item) {
+``` js
+response.items.forEach(function(item) {
     var id = item.snippet.resourceId.videoId;
     $('#list').append('&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/'+ id +'" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;');
 });
-</code></pre>
+```

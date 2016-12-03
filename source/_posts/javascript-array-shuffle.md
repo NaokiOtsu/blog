@@ -6,14 +6,16 @@ tags:
 
 [ピュア(Vanilla)なJavaScriptでの配列のシャッフル。
 
-<pre><code>var targets = [1,2,3,4,5];
+``` js
+var targets = [1,2,3,4,5];
 var results = [];
 while (targets.length) {
     results.push(targets.splice(Math.floor(Math.random() * targets.length), 1)[0]);
 }
 console.log(results); // 例: [5, 1, 4, 3, 2]
-</code></pre>
+```
 
+## ただちょっと注意も
 ※ただこのやり方だと全く同じ配列が返されてしまう場合もある。
 間違いなくシャッフルさせなければいけない時の記述はもう少し複雑になるが、下記を参照。
 

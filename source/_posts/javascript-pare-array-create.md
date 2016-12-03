@@ -6,10 +6,11 @@ tags:
 
 [神経衰弱を作る時のような、[1, 1, 2, 2]のようなペアな値を持った配列が欲しい時の実装MEMO。
 
-<pre><code class="js">var cards = [];
+``` js
+var cards = [];
 for (var i = 1; i &lt;= 2; i++) {
     cards[cards.length] = i;
     cards[cards.length] = i;
 }
 console.log(cards); // [1, 1, 2, 2]
-</code></pre>
+```

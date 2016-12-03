@@ -4,8 +4,9 @@ date: 2016-10-25 21:44:12
 tags:
 ---
 
-[開発環境構築のメモ。
+開発環境構築のメモ。
 
+## 参考にした記事
 こちらの記事を参考に構築。
 <a href="http://fnya.cocolog-nifty.com/blog/2015/12/vagrant-centos7.html">http://fnya.cocolog-nifty.com/blog/2015/12/vagrant-centos7.html</a>
 

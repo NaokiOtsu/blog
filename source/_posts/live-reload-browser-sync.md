@@ -6,6 +6,7 @@ tags:
 
 さっとローカルサーバーを立ち上げて、LiveReloadさせて作業する時のメモ。
 
+## セットアップ
 まずは作業場所で、セットアップ。
 
 ``` shell
@@ -16,12 +17,13 @@ $ npm i -D browser-sync
 
 package.jsonにシェルを記載。
 
-``` json
+``` json package.json
 "scripts": {
   "live": "browser-sync start --server --no-notify --files \"**/*\""
 },
 ```
 
+## npm run
 <code>npm run live</code>を実行すると、ブラウザが開いてローカルサーバーが立ち上がり、
 ファイルを監視して、LiveReload開始。
 Sync時に右上に表示されるお知らせは無くしたかったので、<code>--no-notify</code>を付けてる。
