@@ -1,0 +1,18 @@
+---
+title: JavaScriptで要素の入れ替え | replaceChild, cloneNode
+date: 2016-09-24 21:42:55
+tags:
+---
+
+[ピュア(Vanilla)なJavaScriptでの要素の入れ替えのMEMO。
+例えばAとBの要素を入れ替えたい時など。
+
+<pre><code class="js">var clone_A = element_A.cloneNode(true);
+var clone_B = element_B.cloneNode(true);
+
+element_A.parentNode.replaceChild(clone_A, element_B);
+element_B.parentNode.replaceChild(clone_B, element_A);
+</code></pre>
+
+cloneNodeで要素のクローンを作った後に、replaceChildで置換する。
+cloneNodeの引数は、nodeの子孫ノードも複製する場合はtrue 、 nodeのみを複製する場合はfalseとなる。
