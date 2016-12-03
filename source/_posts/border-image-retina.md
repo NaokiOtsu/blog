@@ -1,7 +1,7 @@
 ---
 title: border-imageをRetina対応させるときの備忘録
 date: 2016-09-18 21:34:20
-tags:
+tags: css
 ---
 
 border-imageを使う時は、

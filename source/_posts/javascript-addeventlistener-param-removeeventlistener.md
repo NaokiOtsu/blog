@@ -1,7 +1,7 @@
 ---
 title: addEventListenerに引数を渡しつつremoveEventListenerしたい時
 date: 2016-09-22 21:38:36
-tags:
+tags: js
 ---
 
 全然スマートじゃないからもっと良い方法ありそうだけど、一応備忘録。

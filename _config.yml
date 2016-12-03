@@ -65,6 +65,12 @@ pagination_dir: page
 ## Themes: https://hexo.io/themes/
 theme: apollo
 
+archive_generator:
+    per_page: 0
+    yearly: false
+    monthly: false
+    daily: false
+
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:

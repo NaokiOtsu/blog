@@ -1,7 +1,7 @@
 ---
 title: JavaScriptで配列をシャッフルさせる
 date: 2016-09-22 21:41:44
-tags:
+tags: js
 ---
 
 [ピュア(Vanilla)なJavaScriptでの配列のシャッフル。

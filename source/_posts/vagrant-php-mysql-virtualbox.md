@@ -1,7 +1,7 @@
 ---
 title: Vagrantで開発環境構築(PHP+Mysql) &#124; VirtualBox
 date: 2016-10-25 21:44:12
-tags:
+tags: vagrant
 ---
 
 開発環境構築のメモ。

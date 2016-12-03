@@ -1,7 +1,7 @@
 ---
 title: ボタンのデザインを変えずに、クリック領域だけ広げるTips
 date: 2016-09-18 21:37:05
-tags:
+tags: css
 ---
 
 「<a href="https://www.amazon.co.jp/CSS%E3%82%B7%E3%83%BC%E3%82%AF%E3%83%AC%E3%83%83%E3%83%88-%E2%80%9547%E3%81%AE%E3%83%86%E3%82%AF%E3%83%8B%E3%83%83%E3%82%AF%E3%81%A7CSS%E3%82%92%E8%87%AA%E5%9C%A8%E3%81%AB%E6%93%8D%E3%82%8B-Lea-Verou/dp/4873117666/ref=sr_1_1?ie=UTF8&amp;qid=1474188594&amp;sr=8-1&amp;keywords=CSS%E3%82%B7%E3%83%BC%E3%82%AF%E3%83%AC%E3%83%83%E3%83%88">CSSシークレット</a>」で書かれていた備忘録だが、

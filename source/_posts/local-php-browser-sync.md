@@ -1,7 +1,7 @@
 ---
 title: ローカルにPHP環境構築してBrowserSyncでLiveReload
 date: 2016-11-28 21:49:03
-tags:
+tags: browsersync
 ---
 
 MacのローカルにPHP環境構築して、<a href="https://www.browsersync.io/" target="_blank">BrowserSync</a>でLiveReloadさせた時のMEMO。

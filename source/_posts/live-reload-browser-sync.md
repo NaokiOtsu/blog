@@ -1,7 +1,7 @@
 ---
 title: さくっとLiveReload導入メモ
 date: 2016-09-18 21:30:35
-tags:
+tags: browsersync
 ---
 
 さっとローカルサーバーを立ち上げて、LiveReloadさせて作業する時のメモ。

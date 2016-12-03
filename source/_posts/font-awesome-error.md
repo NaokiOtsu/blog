@@ -1,7 +1,7 @@
 ---
 title: Font Awesomeで、「Failed to decode downloaded font」が出てしまう時
 date: 2016-11-11 21:46:57
-tags:
+tags: fontawesome
 ---
 
 <a href="http://fontawesome.io/" target="_blank">Font Awesome</a>を使っていて、本番サイトで確認しようとしたら、

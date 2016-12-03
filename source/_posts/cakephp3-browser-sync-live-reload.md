@@ -1,7 +1,7 @@
 ---
 title: CakePHP3とBrowserSyncでのLiveReload
 date: 2016-10-29 21:45:10
-tags:
+tags: cakephp3
 ---
 
 [CakePHP3でWebアプリの開発をしていたが、
