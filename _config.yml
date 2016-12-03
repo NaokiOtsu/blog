@@ -3,12 +3,12 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Naoki Otsu Blog
+title: Naoki Otsu
 subtitle: フロントエンド(HTML,CSS,JavaScript)を中心に。
-description: 
+description: Naoki Otsu (大津 直樹)。1982年熊本県生まれ。福岡のWeb制作会社で4年、その2014年に上京しDeNA入社。フロントエンドエンジニア。
 author: Naoki Otsu
-language:
-timezone:
+language: en
+timezone: Asia/Tokyo
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
