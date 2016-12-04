@@ -2,6 +2,7 @@
 title: ソフトバンク 孫社長
 date: 2016-11-01 21:46:03
 tags: private
+comments: true
 ---
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/zhrz8KdUB4w" frameborder="0" allowfullscreen></iframe>
