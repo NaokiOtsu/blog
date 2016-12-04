@@ -6,9 +6,9 @@ mixin postInfo(item)
 
 //- Index Page
 mixin posts()
-    ul.home.post-list
+    div.home.post-list
         - page.posts.each(function (item) {
-            li.post-list-item
+            div.post-list-item
                 article.post-block
                     h2.post-title
                         a.post-title-link(href= url_for(item.path))
@@ -18,6 +18,8 @@ mixin posts()
                         != item.excerpt
                     a.read-more(href= url_for(item.path))!= __('more')
         - })
+        include ../mixins/paginator
+        +home()
 
 //- Archive Page
 mixin postList()
@@ -45,3 +47,17 @@ mixin post(item)
             +postInfo(item)
             .post-content
                 != item.content
+            .profile-content
+                img(src=theme.logo)
+                .profile-text
+                    div.name
+                        span Author: 
+                        | Naoki Otsu
+                    div.profile
+                        span Job:  
+                        | Frontend Engineer<br>
+                        | 主にフロントエンドに関わる事をつぶやいたりブログに書いたり。熊本出身。バスケ(特にNBA)好きです。<a class="more" href="/about/">...more</a><br>
+                    <a href="https://twitter.com/melo15" class="twitter-follow-button" data-show-count="false">Follow @melo15</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        include ../mixins/paginator
+        +post()
+        include ../partial/comment

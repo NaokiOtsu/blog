@@ -13,14 +13,17 @@ title: プロフィール
 
 ### 簡単な経歴
 デジタルハリウッド福岡校卒業後、福岡の[トランスメディアGP](http://www.trance-media.co.jp/)入社。
-主にフロントエンド、FlashのWeb開発に4年間従事。
-更なるスキルアップを目指し2014年に上京。[株式会社ディー・エヌ・エー](http://dena.com/jp/)入社。
+約4年間、フロントエンドやFlash開発に従事。
+その後、更なるスキルアップを目指し2014年に上京。[株式会社ディー・エヌ・エー](http://dena.com/jp/)入社。
 主にソーシャルゲームのフロントエンド担当。
 
-### 登壇
+### LT
 [【イベントレポート】ページをより楽しく印象的にする「CSSアニメーション」を学ぶスキルアップイベント](http://www.itstaffing.jp/engineer/entry/20151211_1)
 
 ### SNS
-[Twitter](https://twitter.com/melo15)
-[Facebook](https://www.facebook.com/naoki.otsu.5)
+[Twitter @melo15](https://twitter.com/melo15)
 [Github](https://github.com/NaokiOtsu)
+[Qiita](http://qiita.com/melo15)
+
+### Contact
+n.otsu1029 (at) gmail.com

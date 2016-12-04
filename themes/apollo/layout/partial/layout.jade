@@ -6,12 +6,11 @@ html(lang=config.language)
         .wrap
             header
                 a.logo-link(href=url_for())
-                    div.site-name Naoki Otsu
+                    div.site-name Otsu.info
                 include nav
             section.container
                 include sidebar
                 block container
             footer
-                block pagination
                 block copyright
         include scripts
