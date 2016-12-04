@@ -1,5 +1,5 @@
 ---
-title: gitでsubmoduleを自分のリポジトリ管理下に置く方法
+title: gitでsubmoduleを自分のリポジトリ管理下に置く
 date: 2016-12-04 09:53:32
 tags: git
 ---
