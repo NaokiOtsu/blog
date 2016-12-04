@@ -2,17 +2,59 @@ section.container {
     margin: 2em 10px;
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 960px) {
     .wrap {
-        width: 700px;
+        width: 960px;
         margin: 0 auto;
     }
     header {
         padding: 20px 100px;
     }
+
+    .container {
+        display: flex;
+    }
+
+    .home.post-list {
+        flex: 1;
+        margin-top: 0;
+    }
+
+    .post {
+        flex: 1;
+    }
+
+    .sidebar {
+        width: 240px;
+        margin-top: 36px;
+        margin-right: 30px;
+        font-size: 14px;
+
+        span {
+            color: #000000;
+            font-weight: bold;
+        }
+
+        iframe {
+            margin: 6px 0 0 0;
+        }
+    }
+    
+    .avator {
+        text-align: center;
+        img {
+            width: 80px;
+            border-radius: 100%;
+            box-shadow: 0 0 1px #000;
+        }
+    }
+
+    .name {
+        margin-top: 10px;
+    }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 960px) {
     .wrap {
         width: 100%;
     }
@@ -45,5 +87,9 @@ section.container {
     .ds-thread,
     #disqus_thread {
         margin: 2em 10px;
+    }
+
+    .sidebar {
+        display: none;
     }
 }

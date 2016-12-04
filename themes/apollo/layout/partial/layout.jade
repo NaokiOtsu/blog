@@ -6,9 +6,10 @@ html(lang=config.language)
         .wrap
             header
                 a.logo-link(href=url_for())
-                    img(src=theme.logo)
+                    div.site-name Naoki Otsu
                 include nav
             section.container
+                include sidebar
                 block container
             footer
                 block pagination
