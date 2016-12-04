@@ -1,9 +1,9 @@
 menu:
     Blog: /
     Archive: /archives/
+    ABOUT: /about/
     Twitter: https://twitter.com/melo15
     GitHub: https://github.com/NaokiOtsu
-    Rss: /atom.xml
 
 favicon: /favicon.png
 logo: /images/logo.png
