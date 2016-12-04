@@ -1,4 +1,0 @@
-[submodule "themes/apollo"]
-    path = themes/apollo
-    url = git://github.com:pinggod/hexo-theme-apollo.git
-    ignore = dirty
