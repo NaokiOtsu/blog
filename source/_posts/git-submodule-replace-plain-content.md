@@ -14,8 +14,8 @@ modified:   something/file (modified content, untracked content)
 
 この場合、この変更が特に必要ないものならば、
 ```
-cd something/file
-git checkout .
+$ cd something/file
+$ git checkout .
 ```
 で変更をなかった事にすれば元には戻るが、
 変更が必要なもので、それを自分のリポジトリ管理下に置き直したい場合は
@@ -23,9 +23,9 @@ git checkout .
 **※ただ、そのsubmoduleのLicenseには十分気をつけなければいけない。**
 
 ```
-git rm --cached something
-rm -rf something/.git
-git add something
+$ git rm --cached something
+$ rm -rf something/.git
+$ git add something
 ```
 
 submoduleをプレーンなファイルにして(.gitを削除して)、`git add`する。
