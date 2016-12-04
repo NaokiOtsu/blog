@@ -1,5 +1,5 @@
 ---
-title: gitでsubmoduleを自分のリポジトリ管理下に置く
+title: git cloneしたsubmoduleを自分のリポジトリで管理する
 date: 2016-12-04 09:53:32
 tags: git
 ---
@@ -18,7 +18,7 @@ $ cd something/file
 $ git checkout .
 ```
 で変更をなかった事にすれば元には戻るが、
-変更が必要なもので、それを自分のリポジトリ管理下に置き直したい場合は
+変更が必要なもので、それを自分のリポジトリで管理していきたい場合は
 下記の方法があるようだった。
 **※ただ、そのsubmoduleのLicenseには十分気をつけなければいけない。**
 
@@ -28,6 +28,6 @@ $ rm -rf something/.git
 $ git add something
 ```
 
-submoduleをプレーンなファイルにして(.gitを削除して)、`git add`する。
+submoduleをプレーンなファイルにして(.gitを削除して)、`git add`すると良い。
 
 参考: http://stackoverflow.com/questions/4161022/git-how-to-track-untracked-content
