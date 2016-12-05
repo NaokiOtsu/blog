@@ -1,5 +1,5 @@
 ---
-title: プロフィール
+title: プロフィール | Naoki Otsu
 ---
 
 ### 名前
@@ -9,7 +9,7 @@ title: プロフィール
 熊本県 阿蘇
 
 ### 職業
-フロントエンドエンジニア
+Frontend Engineer
 
 ### 簡単な経歴
 デジタルハリウッド福岡校卒業後、福岡の[トランスメディアGP](http://www.trance-media.co.jp/)入社。

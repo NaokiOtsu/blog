@@ -2,6 +2,13 @@ section.container {
     margin: 2em 10px;
 }
 
+.sns-area {
+    // はてなブックマーク
+    iframe {
+        margin: 1rem 0;
+    }
+}
+
 @media screen and (min-width: 990px) {
     .wrap {
         width: 990px;
@@ -22,12 +29,12 @@ section.container {
 
     .post {
         flex: 1;
+        min-width: 12em;
     }
 
     .sidebar {
-        width: 210px;
-        margin-top: 36px;
-        margin-right: 30px;
+        flex: 0 0 210px;
+        margin: 36px 30px 0 0;
         font-size: 14px;
 
         span {
