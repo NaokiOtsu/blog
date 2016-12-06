@@ -3,9 +3,64 @@ section.container {
 }
 
 .sns-area {
+    display: flex;
+    align-items: flex-end;
+
     // はてなブックマーク
-    iframe {
-        margin: 1rem 0;
+    .hatena-bookmark-button-frame {
+        margin: 0 15px 0 0;
+    }
+
+    // Twitter
+    .twitter-button {
+        width: 80px;
+        height: 60px;
+        position: relative;
+
+        iframe {
+            margin: 7.5px auto;
+        }
+
+        .counter {
+            display: block;
+            top: 0px;
+            width: 70px;
+            height: 31px;
+            background-color: #FFF;
+            position: relative;
+            border: 1px solid #B0C1D8;
+            -webkit-border-radius: 3px;
+            border-radius: 3px;
+            padding: 0 4px;
+            font-family: Arial;
+            font-size: 16px;
+            line-height: 31px;
+            text-align: center;
+            color: #2D4C86;
+            display: block;
+        }
+
+        &:before,
+        &:after {
+            border: solid transparent;
+            content: ' ';
+            height: 0;
+            right: 100%;
+            position: absolute;
+            width: 0;
+        }
+        &:before {
+            border-width: 5px;
+            border-top-color: #B0C1D8;
+            top: 32px;
+            left: 34px;
+        }
+        &:after {
+            border-width: 4px;
+            border-top-color: #FFF;
+            top: 31px;
+            left: 35px;
+        }
     }
 }
 
