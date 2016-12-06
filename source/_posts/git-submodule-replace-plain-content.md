@@ -6,7 +6,7 @@ tags: git
 
 gitで、プロジェクトのリポジトリ内で、別のsubmoduleを`git clone`などして、
 更に、そのsubmoduleに変更を加えたりすると下記のような表示となり、
-ファイルは変更されているけど、このファイルはsubmoduleで他のリポジトリで管理されているファイルだよ、というようなメッセージが表示される。
+ファイルは変更されているけど、このファイルはsubmoduleで他のリポジトリで管理されているファイルだから`untracked content`だよ、というようなメッセージが表示される。
 
 ``` shell
 modified:   something/file (modified content, untracked content)
@@ -18,9 +18,9 @@ $ cd something/file
 $ git checkout .
 ```
 で変更をなかった事にすれば元には戻るが、
-変更が必要なもので、それを自分のリポジトリで管理していきたい場合は
-下記の方法があるようだった。
-**※ただ、そのsubmoduleのLicenseには十分気をつけなければいけない。**
+変更が必要なもので、今後はsubmoduleを自分のリポジトリで管理していきたい場合は
+`.git`を削除してsubmoduleから外す事ができる。
+**※注意点としては、そのsubmoduleのLicenseには十分気をつけなければいけない事と、そのsubmoduleは元リポジトリの管理から外れるのでpullしてこれない事だろうか。**
 
 ```
 $ git rm --cached something
