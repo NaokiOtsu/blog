@@ -4,14 +4,14 @@ date: 2016-11-28 21:49:03
 tags: browsersync
 ---
 
-MacのローカルにPHP環境構築して、<a href="https://www.browsersync.io/" target="_blank">BrowserSync</a>でLiveReloadさせた時のMEMO。
+MacのローカルにPHP環境構築して、<a href="https://www.browsersync.io/" target="_blank">BrowserSync</a>でLiveReloadさせた時のMEMOです。
 
 ## 実装方法
-調べた結果、<a href="https://www.npmjs.com/package/gulp-connect-php" target="_blank">gulp-connect-php</a>を使うのが早そうだった。
+調べた結果、<a href="https://www.npmjs.com/package/gulp-connect-php" target="_blank">gulp-connect-php</a>を使うのが早そうでした。
 
 ``` shell
-$ yarn init -y
-$ yarn add -D gulp gulp-connect-php browser-sync
+$ npm init -y
+$ npm install -D gulp gulp-connect-php browser-sync
 ```
 
 ``` js gulpfile.js

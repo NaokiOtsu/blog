@@ -4,7 +4,7 @@ date: 2016-09-22 21:38:36
 tags: js
 ---
 
-全然スマートじゃないからもっと良い方法ありそうだけど、一応備忘録。
+全然スマートじゃないので、もっと良い方法ありそうですが、、一応備忘録で残しておきます。
 
 ``` js
 element.addEventListener('click', function onClick() {

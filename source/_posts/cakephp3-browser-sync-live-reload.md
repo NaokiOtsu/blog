@@ -4,8 +4,8 @@ date: 2016-10-29 21:45:10
 tags: cakephp3
 ---
 
-[CakePHP3でWebアプリの開発をしていたが、
-BrowserSyncを使ってLiveReloadさせて効率よく開発していきたい。そんな時のMEMO。
+CakePHP3でWebアプリの開発をしていましたが、
+BrowserSyncを使ってLiveReloadさせて効率よく開発していきたい事があります。そんな時のMEMOを残しておきます。
 
 ## 実装方法
 CakePHPでは
@@ -14,7 +14,7 @@ CakePHPでは
 bin/cake server
 ```
 
-で、デフォルトは、 <code>localhost:8765</code> のサーバーが立ち上がるが、
+で、デフォルトは、 <code>localhost:8765</code> のサーバーが立ち上がりますが、
 
 まずはこれを、
 
@@ -22,9 +22,9 @@ bin/cake server
 bin/cake server -H {IPアドレス} -p 8765
 ```
 
-で起動させて、 {IPアドレス}:8765 で立ち上げておく。
+で起動させて、 {IPアドレス}:8765 で立ち上がるようにします。
 
-そしてBrowserSync側では、optionsのproxyとportを設定すれば良さそう。
+そしてBrowserSync側では、optionsのproxyとportを設定すれば良さそうです。
 
 ``` js gulpfile.js
 {
@@ -34,4 +34,4 @@ bin/cake server -H {IPアドレス} -p 8765
 ```
 
 これでBrowserSyncをstartさせたら、 
-http://{IPアドレス}:4000/ もしくは http://localhost:4000 へのアクセスで問題なくLiveReload出来た。
+http://{IPアドレス}:4000/ もしくは http://localhost:4000 へのアクセスで問題なくLiveReload出来ました。

@@ -1,13 +1,13 @@
 ---
-title: さくっとLiveReload導入メモ
+title: さっとLiveReload導入メモ
 date: 2016-09-18 21:30:35
 tags: browsersync
 ---
 
-さっとローカルサーバーを立ち上げて、LiveReloadさせて作業する時のメモ。
+さっとローカルサーバーを立ち上げて、LiveReloadさせて作業する時のメモです。
 
 ## セットアップ
-まずは作業場所で、セットアップ。
+まずは作業場所で、セットアップします。
 
 ``` shell
 $ npm init -y
@@ -15,7 +15,7 @@ $ npm i -g browser-sync # グローバルに入れてなかったら
 $ npm i -D browser-sync
 ```
 
-package.jsonにシェルを記載。
+package.jsonにシェルを記載します。
 
 ``` json package.json
 "scripts": {
@@ -25,12 +25,12 @@ package.jsonにシェルを記載。
 
 ## npm run
 <code>npm run live</code>を実行すると、ブラウザが開いてローカルサーバーが立ち上がり、
-ファイルを監視して、LiveReload開始。
-Sync時に右上に表示されるお知らせは無くしたかったので、<code>--no-notify</code>を付けてる。
+ファイルを監視して、LiveReload開始します。
+Sync時に右上に表示されるお知らせは無くしたかったので、<code>--no-notify</code>を付けています。
 
 ``` shell
 $ npm run live
 ```
 
-オプションを付けたりしたい時は下記から
+他にオプションを付けたい時は下記を参照すると良いです。
 <a href="https://www.browsersync.io/docs/command-line#start">https://www.browsersync.io/docs/command-line#start</a>

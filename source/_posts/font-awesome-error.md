@@ -11,15 +11,15 @@ tags: fontawesome
 **「Failed to decode downloaded font」**
 とか
 **「OTS parsing error: incorrect file size in WOFF header」**
-とか出ている様子。
+とか出ている様子..。
 
 ## 原因
-調べてみると、gitの改行コードを変換する仕組みによって起きてる模様だった。
+調べてみると、gitの改行コードを変換する仕組みによって起きてるようでした。
 参考: <a href="http://ts0818.hatenablog.com/entry/2016/04/01/225341" target="_blank">『Failed to decode downloaded font』から始まるエラー</a>
 
 ## 対策
 gitのルートディレクトリにある、「.gitattributes」ファイルを開いて、
-変換しないように下記を追加してあげると問題なかった。
+変換しないように下記を追加してあげると問題ありませんでした。
 
 ```
 # Denote all files that are truly binary and should not be modified.
