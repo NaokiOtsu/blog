@@ -3,9 +3,9 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Naoki Otsu
+title: Otsu.info
 subtitle: フロントエンド(HTML,CSS,JavaScript)を中心に。
-description: Naoki Otsu (大津直樹)。福岡のWeb制作会社で4年、その2014年に上京しDeNA入社。フロントエンドエンジニア。
+description: "Naoki Otsu. Frontend Engineer. 所属: DeNA. 主にフロントエンドに関わる事をつぶやいたりブログに書いたりしています。熊本出身。バスケ(特にNBA)好きです。"
 author: Naoki Otsu
 language: ja
 timezone: Asia/Tokyo
@@ -16,6 +16,7 @@ url: http://naoki-otsu.info
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
+domain: naoki-otsu.info
 
 # Directory
 source_dir: source
