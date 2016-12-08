@@ -1,6 +1,7 @@
 ---
 title: ローカルにPHP環境構築してBrowserSyncでLiveReload
 date: 2016-11-28 21:49:03
+description: MacのローカルにPHP環境を構築して、BrowserSyncでLiveReloadさせた時のMEMOです。調べた結果、gulp-connect-phpを使うのが早そうでした。
 tags: browsersync
 ---
 
