@@ -3,6 +3,13 @@ ul.nav.nav-list
         li.nav-list-item
             - var re = /^(http|https):\/\/*/gi;
             - var tar = re.test(value) ? "_blank" : "_self"
-            - var act = !re.test(value) && "/"+page.current_url === value
+            - var page_path = page.path
+            - var path = page_path.replace(/\/[0-9a-zA-Z\.]*/, "/")
+            - var act = !re.test(value) && "/" + path === value
             a.nav-list-link(class={active: act} href=value target=tar)
                 != key
+div(style="display:none;")
+    if page.layout === "post"
+        hoge
+    else
+        fuga 
