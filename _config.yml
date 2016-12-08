@@ -3,7 +3,7 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Otsu.info
+title: Otty
 subtitle: フロントエンド(HTML,CSS,JavaScript)を中心に。
 description: "Naoki Otsu. Frontend Engineer. 所属: DeNA. 主にフロントエンドに関わる事をつぶやいたりブログに書いたりしています。熊本出身。バスケ(特にNBA)好きです。"
 author: Naoki Otsu
@@ -67,10 +67,10 @@ pagination_dir: page
 theme: apollo
 
 archive_generator:
-    per_page: 0
-    yearly: false
-    monthly: false
-    daily: false
+  per_page: 0
+  yearly: false
+  monthly: false
+  daily: false
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html

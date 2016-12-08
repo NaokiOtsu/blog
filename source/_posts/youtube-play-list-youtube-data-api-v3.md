@@ -1,5 +1,5 @@
 ---
-title: Youtubeの再生リストの動画を一覧表示する | Youtube Data API v3
+title: Youtubeの再生リストの動画を一覧表示する - Youtube Data API v3
 date: 2016-11-13 21:48:04
 tags: youtube
 ---

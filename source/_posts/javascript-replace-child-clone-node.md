@@ -1,5 +1,5 @@
 ---
-title: JavaScriptで要素の入れ替え | replaceChild, cloneNode
+title: JavaScriptで要素の入れ替え - replaceChild, cloneNode
 date: 2016-09-24 21:42:55
 tags: js
 ---

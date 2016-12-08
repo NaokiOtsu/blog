@@ -4,10 +4,26 @@ meta(name="X-UA-Compatible", content="IE=edge")
 title 
     block site_title
         = config.title
-block description
-    meta(name="description", content= config.description ? config.description : 'A Blog Powered By Hexo')
 
-meta(name="viewport", content="width=device-width, initial-scale=1")
+meta(name="viewport", content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no")
+meta(name="keywords", content="Otty,Naoki,Otsu,大津,直樹,フロントエンド")
+meta(name="copyright", content="Copyright &copy; Naoki Otsu. All rights reserved")
+meta(property="og:title", content="Otty")
+meta(property="og:type", content="blog")
+meta(property="og:url", content="http://naoki-otsu.info/")
+meta(property="og:image", content="http://naoki-otsu.info/images/ogimage_facebook.png")
+meta(property="og:site_name", content="Otty")
+meta(property="og:description", content="Naoki Otsuによるブログです。フロントエンド(HTML,CSS,JavaScript)に関わる事を掲載しています。")
+meta(property="og:locale", content="ja_JP")
+meta(name="twitter:card", content="summary_large_image")
+meta(name="twitter:site", content="@melo15")
+meta(name="twitter:title", content="Otty")
+meta(name="twitter:description", content="Naoki Otsuによるブログです。フロントエンド(HTML,CSS,JavaScript)に関わる事を掲載しています。")
+meta(name="twitter:image:src", content="http://naoki-otsu.info/images/ogimage_twitter.png")
+link(rel="icon", href="http://naoki-otsu.info/images/favicon.ico")
+link(rel="shortcut icon", href="http://naoki-otsu.info/images/favicon.ico")
+link(rel="apple-touch-icon", sizes="180x180", href="http://naoki-otsu.info/images/apple_touch_icon.png")
+
 link(rel="short icon", href=url_for(theme.favicon))
 link(rel="stylesheet", href=url_for("css/apollo.css"))
 
