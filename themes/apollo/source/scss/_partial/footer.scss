@@ -1,6 +1,8 @@
+// 記事以外のページャー
 .paginator {
     margin: 4em 0;
     text-align: center;
+
     .prev, .next {
         display: inline-block;
         margin: 0 15px;
@@ -12,6 +14,48 @@
         background-color: #4fc08d;
         &:hover {
             background-color: #22bd77;
+        }
+    }
+}
+
+// 記事のページャー
+.paginator-post {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    margin: 4em 0;
+    text-align: center;
+
+    .prev, .next {
+        width: 100%;
+        box-sizing: border-box;
+        position: relative;
+        color: #4fc08d;
+        font-size: 15px;
+        word-break: break-all;
+        &:before {
+            display: block;
+            position: absolute;
+            top: 50%;
+            margin-top: -13px;
+        }
+    }
+    .prev {
+        margin-right: 8px;
+        padding-left: 10px;
+        text-align: left;
+        &:before {
+            content: '<';
+            left: -5px;
+        }
+    }
+    .next {
+        margin-left: 8px;
+        padding-right: 10px;
+        text-align: right;
+        &:before {
+            content: '>';
+            right: -5px;
         }
     }
 }

@@ -8,10 +8,8 @@ mixin home()
             a.next(href=url_for(next))!= __('next')
 
 mixin post()
-    - var prev = page.prev ? page.prev.path : false;
-    - var next = page.next ? page.next.path : false; 
-    .paginator
-        if prev
-            a.prev(href=url_for(prev))!= __('prev_post')
-        if next
-            a.next(href=url_for(next))!= __('next_post')
+    .paginator-post
+        if page.prev
+            a.prev(href=url_for(page.prev.path))!= page.prev.title
+        if page.next
+            a.next(href=url_for(page.next.path))!= page.next.title
