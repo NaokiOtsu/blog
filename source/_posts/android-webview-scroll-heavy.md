@@ -1,5 +1,5 @@
 ---
-title: AndroidアプリのWebViewでスクロールが重たい問題の改善
+title: AndroidのWebViewでスクロールが重たい問題の改善
 date: 2017-03-15 05:06:26
 tags:
 ---
