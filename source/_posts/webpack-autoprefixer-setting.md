@@ -9,7 +9,7 @@ CSSの出力結果から `display: -webkit-flex;` とかが何故か抜けてて
 Android4系とかの一部端末で横並びが効いてない事があったので、その時の実装メモ。
 
 [AutoPrefixerのドキュメント](https://github.com/postcss/autoprefixer#no-prefixes-in-production)に記載がありましたが、  
-原因は、webpackとかのツールにもAutoPrefixerが含まれていて、  
+原因は、webpackとかのビルドツールにもAutoPrefixerが含まれていて、  
 そのツールを使ってAutoPrefixerを使うとそのツールの  
 デフォルトのブラウザリストを使うので、  
 結果的にプレフィックスを削除するよ、的な事のようでした。    
@@ -19,6 +19,6 @@ AutoPrefixerのブラウザリストの設定は、
 package.jsonのkeyに `browserslist` を設定する事が推奨されているようなので、  
 package.jsonに設定を移す事で無事に解決できました。  
 
-webpack2 + ReactでCSSモジュール構築した時も同じ問題に直面したりして、  
+webpack2 + ReactでCSSモジュールを構築した時も同じ問題に直面したりして、  
 webpack.config.jsやgulpfile.jsなどに記載していたAutoPrefixerのBrowserlistを、  
-[こちらの](https://github.com/NaokiOtsu/Tips/blob/master/React/ReactCSSModule/package.json#L26-L30)package.jsonのように記載すれば `display: -webkit-flex;` が消えちゃう問題も解消されるはずです。  
+こちらの[package.json](https://github.com/NaokiOtsu/Tips/blob/master/React/ReactCSSModule/package.json#L26-L30)のように記載して解消されました。  
