@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>OtsuLog</title>
   <subtitle>フロントエンド(HTML,CSS,JavaScript)を中心に。</subtitle>
-  <link href="/atom.xml" rel="self"/>
+  <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://naokiotsu.github.io/"/>
   <updated>2017-05-04T10:21:04.000Z</updated>
