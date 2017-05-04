@@ -1,0 +1,602 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>OtsuLog</title>
+  <subtitle>フロントエンド(HTML,CSS,JavaScript)を中心に。</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://naokiotsu.github.io/"/>
+  <updated>2017-05-04T10:21:04.000Z</updated>
+  <id>https://naokiotsu.github.io/</id>
+  
+  <author>
+    <name>Naoki Otsu</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Flexboxの子要素がインラインだとiOS8などで要素が消えちゃう問題</title>
+    <link href="https://naokiotsu.github.io/2017/04/30/flexbox-inline-element/"/>
+    <id>https://naokiotsu.github.io/2017/04/30/flexbox-inline-element/</id>
+    <published>2017-04-29T21:36:31.000Z</published>
+    <updated>2017-05-04T10:21:04.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Flexboxの子要素にインライン要素(spanとかaタグ)を使用する事があって、<br>主要ブラウザの確認では特に問題なかったので普通に使えるんだろうと思ってましたが、<br>iOS8やAndroid4.2以下辺りではその子要素が消えてしまうようで..勉強不足でした..&gt;&lt;</p>
+<p>子要素に対して、 display: block; を入れて解決でした。<br>inline-blockでもいいのかな。  </p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Flexboxの子要素にインライン要素(spanとかaタグ)を使用する事があって、&lt;br&gt;主要ブラウザの確認では特に問題なかったので普通に使えるんだろうと思ってましたが、&lt;br&gt;iOS8やAndroid4.2以下辺りではその子要素が消えてしまうようで..勉強不足でした..&amp;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>AndroidのWebViewでスクロールが重たい問題の改善</title>
+    <link href="https://naokiotsu.github.io/2017/03/15/android-webview-scroll-heavy/"/>
+    <id>https://naokiotsu.github.io/2017/03/15/android-webview-scroll-heavy/</id>
+    <published>2017-03-14T20:06:26.000Z</published>
+    <updated>2017-05-04T10:21:04.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>とあるAndroidアプリ案件でWebViewのスクロールが重たい報告があがってきました。  </p>
+<p>スクロールしようとしてもAndroidはスムーズにいかず、反応が鈍い感じ..<br>同じ端末のデフォルトブラウザ(Web)やiOSは特に問題なしで、AndroidのWebViewのみ顕著に重たい状況でした。  </p>
+<p>JavaScriptもそれなりに入っているページだったので、<br>最初はJavaScriptのリファクタリングを頑張ってましたが、<br>頑張ってはみたもののそこまでの改善は見られず..</p>
+<p>また大きい画像もあったのでレンダリング処理に時間かかってるのかなという事で、<br>最適な画像を準備するようにしても、あまり変わらず..</p>
+<p>困り果てて調べていたところ、CSSの可能性が。  </p>
+<p><a href="https://havelog.ayumusato.com/develop/performance/e569-frontend_performance_memo.html" target="_blank" rel="external">フロントエンドチューニングの箇条殴り書き ::ハブろぐ</a>  </p>
+<p><a href="http://www.yoheim.net/blog.php?q=20130713" target="_blank" rel="external">[CSS] border-radiusとbox-shadowを組み合わせると、それぞれ単体でのスタイルより５倍重たい！？</a></p>
+<p><code>border-radius</code> と <code>box-shadow</code> の組み合わせ。<br>どうも今回のケースはこれが原因のようでした。<br><code>box-shadow</code> を無くしたり、<code>border-radius</code>を角丸の画像(懐かしいやり方)に変えたりしたところ、かなり改善されました。  </p>
+<p>これらのCSS3系プロパティが重たいというのは聞いてはいたが、ここまでとは。<br>特に <code>border-radius</code> と <code>box-shadow</code> の組み合わせは、よくありそうなケースなので注意が必要ですね。<br>勉強になりました。  </p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;とあるAndroidアプリ案件でWebViewのスクロールが重たい報告があがってきました。  &lt;/p&gt;
+&lt;p&gt;スクロールしようとしてもAndroidはスムーズにいかず、反応が鈍い感じ..&lt;br&gt;同じ端末のデフォルトブラウザ(Web)やiOSは特に問題なしで、Androidの
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>webpack + AutoPrefixerで、&quot;display:-webkit-flex;&quot;が消えてしまう問題</title>
+    <link href="https://naokiotsu.github.io/2017/03/13/webpack-autoprefixer-setting/"/>
+    <id>https://naokiotsu.github.io/2017/03/13/webpack-autoprefixer-setting/</id>
+    <published>2017-03-12T20:29:33.000Z</published>
+    <updated>2017-05-04T10:21:04.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>とある案件で、webpack + AutoPrefixerを使ってて、<br>CSSの出力結果から <code>display: -webkit-flex;</code> とかが何故か抜けててしまってて、<br>Android4系とかの一部端末で横並びが効いてない事があったので、その時の実装メモ。</p>
+<p><a href="https://github.com/postcss/autoprefixer#no-prefixes-in-production" target="_blank" rel="external">AutoPrefixerのドキュメント</a>に記載がありましたが、<br>原因は、webpackとかのビルドツールにもAutoPrefixerが含まれていて、<br>そのツールを使ってAutoPrefixerを使うとそのツールの<br>デフォルトのブラウザリストを使うので、<br>結果的にプレフィックスを削除するよ、的な事のようでした。    </p>
+<p>AutoPrefixerのブラウザリストの設定は、<br><code>browserslist</code> のファイルをルートに置くか、<br>package.jsonのkeyに <code>browserslist</code> を設定する事が推奨されているようなので、<br>package.jsonに設定を移す事で無事に解決できました。  </p>
+<p>webpack2 + ReactでCSSモジュールを構築した時も同じ問題に直面したりして、<br>webpack.config.jsやgulpfile.jsなどに記載していたAutoPrefixerのBrowserlistを、<br>こちらの<a href="https://github.com/NaokiOtsu/Tips/blob/master/React/ReactCSSModule/package.json#L26-L30" target="_blank" rel="external">package.json</a>のように記載して解消されました。  </p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;とある案件で、webpack + AutoPrefixerを使ってて、&lt;br&gt;CSSの出力結果から &lt;code&gt;display: -webkit-flex;&lt;/code&gt; とかが何故か抜けててしまってて、&lt;br&gt;Android4系とかの一部端末で横並びが効いてない事があった
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>JavaScriptでCSSの値を取得する / getComputedStyleとparseInt,parseFloat</title>
+    <link href="https://naokiotsu.github.io/2017/02/10/getcomputedstyle-parseint-css-js/"/>
+    <id>https://naokiotsu.github.io/2017/02/10/getcomputedstyle-parseint-css-js/</id>
+    <published>2017-02-09T22:03:28.000Z</published>
+    <updated>2017-05-04T10:21:04.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="getComputedStyle"><a href="#getComputedStyle" class="headerlink" title="getComputedStyle"></a>getComputedStyle</h1><p>普段、jQueryなどを使っていたら <code>.css()</code> などを使うので、ほとんど使わないメソッドだとは思うんですが、ピュア(Vanilla)なJavaScriptでCSSの値を取得したい時は、 <code>window.getComputedStyle()</code> を使うと取得できます。<br>IE9以上のモダンブラウザで使用出来ます。  </p>
+<p>例えば要素の高さを取得したい時は、下記のように取得できます。  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var element = document.getElementById(&apos;target&apos;);</div><div class="line">window.getComputedStyle(element, null).height; // `30px` など</div></pre></td></tr></table></figure>
+<p>第一引数が取得したいDOM要素、第二引数は基本的にnullで <code>:before</code> 要素とかを取得したい時に ‘:before’ などを指定すると良さそうです。  </p>
+<h1 id="parseIntとparseFloat"><a href="#parseIntとparseFloat" class="headerlink" title="parseIntとparseFloat"></a>parseIntとparseFloat</h1><p>この時、例えば <code>30px</code> など <code>px</code> が入った文字列が取得できるのですが、これを <code>30</code> など数値のみに変換したい事も出てきます。<br>自分は数値変換では <code>Number()</code> を使う事が多いんですが、 <code>Number()</code> だと数値に変換出来ない文字列があった場合は <code>NaN</code> を返してしまうので、この場合は使えません。  </p>
+<p>正規表現でやるのかなと思いましたがそんな事はなく、 <code>parseInt()</code> や <code>parseFloat()</code> を使うと柔軟に対応してくれそうです。<br> <code>parseInt()</code> は整数だけを解析、 <code>parseFloat()</code> は整数と浮動小数点の両方を解析してくれて、両方とも文字列の前の空白や最後の数値変換出来ない文字列は無視してくれます。</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">parseInt(&apos;30px&apos;, 10); // 30</div></pre></td></tr></table></figure>
+<p>無事に数値のみ取得できました。<br>良くわかってなかった部分の備忘録でした。  </p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;getComputedStyle&quot;&gt;&lt;a href=&quot;#getComputedStyle&quot; class=&quot;headerlink&quot; title=&quot;getComputedStyle&quot;&gt;&lt;/a&gt;getComputedStyle&lt;/h1&gt;&lt;p&gt;普段、jQueryなどを使っ
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>git checkout --ours と --theirs - コンフリした時の対処</title>
+    <link href="https://naokiotsu.github.io/2016/12/20/git-checkout-ours-theirs/"/>
+    <id>https://naokiotsu.github.io/2016/12/20/git-checkout-ours-theirs/</id>
+    <published>2016-12-19T20:05:47.000Z</published>
+    <updated>2017-05-04T10:21:04.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>gitでコンフリした時に、通常だと差分を見て手動で解決していきますが、<br>HEAD側か、マージさせた側かに全ての変更を適用したい場合もあったりして、<br>その場合は、 <code>git checkout --ours</code> もしくは <code>git checkout --theirs</code> を使うと良いのですが、<br>どちらがどちらになるのかよく忘れてしまうので備忘録です。</p>
+<p><img src="/images/git_checkout_ours_theirs.png" alt="git checkout --ours or --theirs"></p>
+<p><code>--ours</code>がHEAD側、<code>--theirs</code>がマージさせた側(自分が直前に作業した内容な事が多そうでしょうか)となるようです。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;gitでコンフリした時に、通常だと差分を見て手動で解決していきますが、&lt;br&gt;HEAD側か、マージさせた側かに全ての変更を適用したい場合もあったりして、&lt;br&gt;その場合は、 &lt;code&gt;git checkout --ours&lt;/code&gt; もしくは &lt;code&gt;git ch
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>CSSアニメーションのスマホ(iOS/Android)で起きる不具合/バグ</title>
+    <link href="https://naokiotsu.github.io/2016/12/05/css-animation-bug/"/>
+    <id>https://naokiotsu.github.io/2016/12/05/css-animation-bug/</id>
+    <published>2016-12-05T11:42:43.000Z</published>
+    <updated>2017-05-04T10:21:04.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>普段のスマホのコーディングでは、かなり多くのユーザーを抱えたWeb開発に携わらせて頂いていますが、<br>そうするとCSSアニメーションで「動かない」などの声を頂くことも多くあり、<br>どんな書き方をすると、どの端末で動かない事があるのか。<br>またその対応策など、自分の遭遇したもの中心に記載しておこうと思います。  </p>
+<h2 id="transformが含まれた複数プロパティをアニメーションさせた時にAndroid2系で動かない"><a href="#transformが含まれた複数プロパティをアニメーションさせた時にAndroid2系で動かない" class="headerlink" title="transformが含まれた複数プロパティをアニメーションさせた時にAndroid2系で動かない"></a>transformが含まれた複数プロパティをアニメーションさせた時にAndroid2系で動かない</h2><p><code>「transform + 任意のプロパティ」</code>をアニメーションさせた時に、<br>keyframesの指定が 0% → 100% となっているとAndroid2系で動きません。<br>よくある要件としては、<code>「移動させながらopacityを1にする」「縮小しながらopacityを0にする」</code>などでしょうか。</p>
+<p><strong>動かない書き方</strong>   </p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.test</span> &#123;</div><div class="line">  <span class="attribute">-webkit-animation</span>: hoge <span class="number">2s</span> infinite;</div><div class="line">&#125;</div><div class="line">@-<span class="keyword">webkit</span>-<span class="keyword">keyframes</span> hoge &#123;</div><div class="line">  0%   &#123; <span class="attribute">-webkit-transform</span>: <span class="built_in">translate</span>(0, 0);     <span class="attribute">opacity</span>: <span class="number">0</span>; &#125;</div><div class="line">  100% &#123; <span class="attribute">-webkit-transform</span>: <span class="built_in">translate</span>(100px, 0); <span class="attribute">opacity</span>: <span class="number">1</span>; &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>結論、「100%」→<code>「99.9%,to」</code>と書くと動きますので、<br>keyframesの指定は<code>「99.9%,to」</code>の書き方で統一しておくと良さそうです。  </p>
+<p><strong>動く書き方</strong></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">@-<span class="keyword">webkit</span>-<span class="keyword">keyframes</span> hoge &#123;</div><div class="line">    0%       &#123; <span class="attribute">-webkit-transform</span>: <span class="built_in">translate</span>(0, 0);     <span class="attribute">opacity</span>: <span class="number">0</span>; &#125;</div><div class="line">    99<span class="selector-class">.9</span>%,<span class="selector-tag">to</span> &#123; <span class="attribute">-webkit-transform</span>: <span class="built_in">translate</span>(100px, 0); <span class="attribute">opacity</span>: <span class="number">1</span>; &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>translateだけのアニメーションでは、「100%」にしても不具合は発生しませんでしたので、<br>組み合わせてアニメーションした場合に限り発生するようです。  </p>
+<h2 id="animation-fill-modeを指定すると、Android2系で動かない"><a href="#animation-fill-modeを指定すると、Android2系で動かない" class="headerlink" title="animation-fill-modeを指定すると、Android2系で動かない"></a>animation-fill-modeを指定すると、Android2系で動かない</h2><p><code>animation-fill-mode</code>は、Android2系がサポートされておらず、<br>指定するとアニメーションが動かなくなります。</p>
+<p><strong>動かない書き方</strong>  </p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.box</span> &#123;</div><div class="line">  <span class="attribute">width</span>: <span class="number">50px</span>;</div><div class="line">  <span class="attribute">height</span>: <span class="number">50px</span>;</div><div class="line">  <span class="attribute">background</span>: black;</div><div class="line">  <span class="attribute">-webkit-animation</span>: hoge <span class="number">1s</span> forwards;</div><div class="line">&#125;</div><div class="line">@-<span class="keyword">webkit</span>-<span class="keyword">keyframes</span> hoge &#123;</div><div class="line">  0%       &#123; <span class="attribute">opacity</span>: <span class="number">1</span>; &#125;</div><div class="line">  99<span class="selector-class">.9</span>%,<span class="selector-tag">to</span> &#123; <span class="attribute">opacity</span>: <span class="number">0</span>; &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>この場合、<code>opacity</code>の初期値を予め設定しておき<code>forwards</code>を削除する事でAndroid2系でも動くようになります。<br>初め<code>forwards</code>をサポートしてないブラウザは、単に無視されるのかなと思いましたが、指定されていただけで動かなくなりましたので、指定は削除する必要がありそうでした。  </p>
+<p><strong>動く書き方</strong></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.box</span> &#123;</div><div class="line">  <span class="attribute">width</span>: <span class="number">50px</span>;</div><div class="line">  <span class="attribute">height</span>: <span class="number">50px</span>;</div><div class="line">  <span class="attribute">background</span>: black;</div><div class="line">  <span class="attribute">opacity</span>: <span class="number">0</span>;</div><div class="line">  <span class="attribute">-webkit-animation</span>: hoge <span class="number">1s</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="擬似要素へのアニメーションがAndroid2-4系で動かない"><a href="#擬似要素へのアニメーションがAndroid2-4系で動かない" class="headerlink" title="擬似要素へのアニメーションがAndroid2,4系で動かない"></a>擬似要素へのアニメーションがAndroid2,4系で動かない</h2><p><code>:before</code> や <code>:after</code> の擬似要素ですが、PCやiOSは動作確認出来ましたが、Android2,4系でも動かない端末がありました。<br>現状、擬似要素へのアニメーションが必要な場合は、<code>span</code>タグなどで代替する必要がありそうです。  </p>
+<h2 id="transformの値を省略すると動かない"><a href="#transformの値を省略すると動かない" class="headerlink" title="transformの値を省略すると動かない"></a>transformの値を省略すると動かない</h2><p>例えば、「拡大しながら右にアニメーションしたい」という時に、<br>下記のように0%時の<code>translateX()</code>を省略すると、Chromeなどでも動作確認出来ませんでした。  </p>
+<p><strong>動かない書き方</strong>  </p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.box</span> &#123;</div><div class="line">  <span class="attribute">width</span>: <span class="number">50px</span>;</div><div class="line">  <span class="attribute">height</span>: <span class="number">50px</span>;</div><div class="line">  <span class="attribute">background-color</span>: black;</div><div class="line">  <span class="attribute">-webkit-animation</span>: hoge <span class="number">1s</span> infinite;</div><div class="line">&#125;</div><div class="line">@-<span class="keyword">webkit</span>-<span class="keyword">keyframes</span> hoge &#123;</div><div class="line">  0%       &#123; <span class="attribute">-webkit-transform</span>: <span class="built_in">scale</span>(0); &#125;</div><div class="line">  99<span class="selector-class">.9</span>%,<span class="selector-tag">to</span> &#123; <span class="attribute">-webkit-transform</span>: <span class="built_in">scale</span>(1) <span class="built_in">translateX</span>(100px); &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>0%時のプロパティも省略せずに記述することで回避できます。  </p>
+<p><strong>動く書き方</strong>  </p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.box</span> &#123;</div><div class="line">  <span class="attribute">width</span>: <span class="number">50px</span>;</div><div class="line">  <span class="attribute">height</span>: <span class="number">50px</span>;</div><div class="line">  <span class="attribute">background-color</span>: black;</div><div class="line">  <span class="attribute">-webkit-animation</span>: hoge <span class="number">1s</span> infinite;</div><div class="line">&#125;</div><div class="line">@-<span class="keyword">webkit</span>-<span class="keyword">keyframes</span> hoge &#123;</div><div class="line">  0%       &#123; <span class="attribute">-webkit-transform</span>: <span class="built_in">scale</span>(0) <span class="built_in">translateX</span>(0); &#125;</div><div class="line">  99<span class="selector-class">.9</span>%,<span class="selector-tag">to</span> &#123; <span class="attribute">-webkit-transform</span>: <span class="built_in">scale</span>(1) <span class="built_in">translateX</span>(100px); &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="animation-timing-function-steps-はAndroid2系がサポートしていない"><a href="#animation-timing-function-steps-はAndroid2系がサポートしていない" class="headerlink" title="animation-timing-function: steps()はAndroid2系がサポートしていない"></a>animation-timing-function: steps()はAndroid2系がサポートしていない</h2><p>コマ送りのスプライト画像を準備して、<code>animation-timing-functionのsteps()</code>を使ってコマ送りアニメーションを実装する方法がありますが、Android2系でサポートしていない為、もし実装したい場合はJavaScriptなどを使用する必要がありそうです。  </p>
+<p>steps()の実装方法については下記が参考になります。<br><a href="http://www.webcreatorbox.com/tech/css-sprite-steps/" target="_blank" rel="external">CSSスプライトとstepsを使ってアニメーション画像を作ろう</a>  </p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.box</span> &#123;</div><div class="line">  <span class="attribute">width</span>: <span class="number">50px</span>;</div><div class="line">  <span class="attribute">height</span>: <span class="number">50px</span>;</div><div class="line">  <span class="attribute">background-image</span>: <span class="built_in">url</span>(../images/heart.png);</div><div class="line">  <span class="attribute">background-size</span>: <span class="number">1450px</span> auto;</div><div class="line">  <span class="attribute">-webkit-animation</span>: hoge <span class="number">1s</span> <span class="built_in">steps</span>(29) infinite;</div><div class="line">&#125;</div><div class="line">@-<span class="keyword">webkit</span>-<span class="keyword">keyframes</span> hoge &#123;</div><div class="line">  0%       &#123; <span class="attribute">background-position</span>: <span class="number">0</span> <span class="number">0</span>; &#125;</div><div class="line">  99<span class="selector-class">.9</span>%,<span class="selector-tag">to</span> &#123; <span class="attribute">background-position</span>: -<span class="number">1450px</span> <span class="number">0</span>; &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>また、<code>animation-timing-function</code>の<code>cubic-bezier()</code>もAndroid2,4系で対応してない端末があるため(5系から正常に動作。)、スマホ案件では、<code>ease-in-out</code>や<code>linear</code>などの基本指定に留めておいたほうがよさそうです..。PCでは問題なさそうです。  </p>
+<h2 id="dispalayとopacityをtransitionさせる時の注意点"><a href="#dispalayとopacityをtransitionさせる時の注意点" class="headerlink" title="dispalayとopacityをtransitionさせる時の注意点"></a>dispalayとopacityをtransitionさせる時の注意点</h2><p>例えば、最初は<code>display: none;</code>な要素を、class付与のタイミングで<code>display: block;</code>にすると同時にフェードインさせたい時に、<code>transition</code>でアニメーションさせる場合の注意点です。  </p>
+<p>下記のように実装すれば問題なさそうに見えますが、一瞬でboxが表示されてしまい意図した動作にならない場合があります。  </p>
+<p><strong>意図しない動作の書き方</strong></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.box</span> &#123;</div><div class="line">  <span class="attribute">width</span>: <span class="number">50px</span>;</div><div class="line">  <span class="attribute">height</span>: <span class="number">50px</span>;</div><div class="line">  <span class="attribute">background</span>: black;</div><div class="line">  <span class="attribute">display</span>: none;</div><div class="line">  <span class="attribute">opacity</span>: <span class="number">0</span>;</div><div class="line">  <span class="attribute">-webkit-transition</span>: opacity <span class="number">1s</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-class">.box</span><span class="selector-class">.active</span> &#123;</div><div class="line">  <span class="attribute">display</span>: block;</div><div class="line">  <span class="attribute">opacity</span>: <span class="number">1</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>こちらの対応策はいくつか方法がありそうですが、<br>簡単なものだと<code>animation</code>の<code>keyframes</code>を使用することで回避出来ます。  </p>
+<p><strong>意図した動作の書き方</strong>  </p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.box</span> &#123;</div><div class="line">  <span class="attribute">width</span>: <span class="number">50px</span>;</div><div class="line">  <span class="attribute">height</span>: <span class="number">50px</span>;</div><div class="line">  <span class="attribute">background</span>: black;</div><div class="line">  <span class="attribute">display</span>: none;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-class">.box</span><span class="selector-class">.active</span> &#123;</div><div class="line">  <span class="attribute">display</span>: block;</div><div class="line">  <span class="attribute">opacity</span>: <span class="number">1</span>;</div><div class="line">  <span class="attribute">-webkit-animation</span>: hoge <span class="number">1s</span>;</div><div class="line">&#125;</div><div class="line">@-<span class="keyword">webkit</span>-<span class="keyword">keyframes</span> hoge &#123;</div><div class="line">  0%   &#123; <span class="attribute">opacity</span>: <span class="number">0</span>; &#125;</div><div class="line">  100% &#123; <span class="attribute">opacity</span>: <span class="number">1</span>; &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="translateとrotateを同時にアニメーションさせる場合は、記述順で動作が異なる"><a href="#translateとrotateを同時にアニメーションさせる場合は、記述順で動作が異なる" class="headerlink" title="translateとrotateを同時にアニメーションさせる場合は、記述順で動作が異なる"></a>translateとrotateを同時にアニメーションさせる場合は、記述順で動作が異なる</h2><p>こちら色々な端末で確認できましたが、<br>例えば、回転させながら横に動かしたい時に、<br>下記のような実装をすると意図した動作となります。  </p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.box</span> &#123;</div><div class="line">  <span class="attribute">width</span>: <span class="number">100px</span>;</div><div class="line">  <span class="attribute">height</span>: <span class="number">100px</span>;</div><div class="line">  <span class="attribute">background-color</span>: black;</div><div class="line">  <span class="attribute">-webkit-animation</span>: hoge <span class="number">1s</span> infinite;</div><div class="line">&#125;</div><div class="line">@-<span class="keyword">webkit</span>-<span class="keyword">keyframes</span> hoge &#123;</div><div class="line">  0%       &#123; <span class="attribute">-webkit-transform</span>: <span class="built_in">translateX</span>(0) <span class="built_in">rotate</span>(0); &#125;</div><div class="line">  99<span class="selector-class">.9</span>%,<span class="selector-tag">to</span> &#123; <span class="attribute">-webkit-transform</span>: <span class="built_in">translateX</span>(100px) <span class="built_in">rotate</span>(180deg); &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>ただ、下記のように<code>rotate</code>プロパティを先に記述してしまうと基準点が変わってしまい、<br>意図した動作になりませんでした。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">@-<span class="keyword">webkit</span>-<span class="keyword">keyframes</span> hoge &#123;</div><div class="line">  0%       &#123; <span class="attribute">-webkit-transform</span>: <span class="built_in">rotate</span>(0) <span class="built_in">translateX</span>(0) ; &#125;</div><div class="line">  99<span class="selector-class">.9</span>%,<span class="selector-tag">to</span> &#123; <span class="attribute">-webkit-transform</span>: <span class="built_in">rotate</span>(180deg) <span class="built_in">translateX</span>(100px); &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><code>translate</code>と<code>rotate</code>を組み合わせる場合は、<code>translate</code>を先に書くようにしておくと良さそうです。  </p>
+<h2 id="3d系の指定をすると、Android2系でおかしな挙動となる場合がある"><a href="#3d系の指定をすると、Android2系でおかしな挙動となる場合がある" class="headerlink" title="3d系の指定をすると、Android2系でおかしな挙動となる場合がある"></a>3d系の指定をすると、Android2系でおかしな挙動となる場合がある</h2><p>端末のGPUを使用する為に、下記のようなプロパティを指定する事があるのですが  </p>
+<ul>
+<li>transform: translate3d(0,0,0);</li>
+<li>transform: translateZ(0);</li>
+<li>backface-visibility: hidden; </li>
+</ul>
+<p>指定するとAndroid2系でいくつか不具合があがっているようです。</p>
+<ul>
+<li>フォーム関連要素がページ内にあった場合に、タップ位置が変わったりといった挙動がおかしくなる。  </li>
+<li>scale, rotate, skewのtransformプロパティが正常に動作しなくなる。  </li>
+<li>特定のCSSプロパティの上書きが反映されなくなる (positionなど)</li>
+</ul>
+<p>JIRAなどでAndroid2系のみおかしな挙動が起きた場合は、<br>ページ内の3d系プロパティを疑うのも1つの解決方法となりそうです。  </p>
+<h2 id="使用できるプロパティ、使用出来ないプロパティを調べてみたところ…"><a href="#使用できるプロパティ、使用出来ないプロパティを調べてみたところ…" class="headerlink" title="使用できるプロパティ、使用出来ないプロパティを調べてみたところ…"></a>使用できるプロパティ、使用出来ないプロパティを調べてみたところ…</h2><p>transform系以外のプロパティは、Android2系でも問題なく動作していそうです。<br>例: <code>opacity, background-color, box-shadow</code>など。  </p>
+<p>transform系でAndroid2系も含めて動作確認出来たのは、<br><code>translateX, translateY, scaleX, scaleY, rotate, skewX, skewY, transform-origin, matrix</code>などでした。  </p>
+<p>Android2系で、動作確認出来なかったプロパティは、<br><code>translateZ, rotateX, rotateY, perspective</code>などの3d系プロパティが使えないようです。  </p>
+<p>Android2系までサポートしようとすると3D系のアニメーションは厳しい状況です。  </p>
+<p>2DのアニメーションであればAndroid2系含めて動作しますので(複雑でたくさん動かしたい場合はパフォーマンス的に厳しそうですが..)、様々な場面で検討していくと良さそうです。</p>
+<h2 id="不具合への対策まとめ"><a href="#不具合への対策まとめ" class="headerlink" title="不具合への対策まとめ"></a>不具合への対策まとめ</h2><p>・<code>keyframes</code>は<code>「100%」→「99.9%, to」</code>と書く。<br>・<code>animation-fill-mode</code>(bothやforwardsなど)は、Android2系で使えないので注意する。初期値を予め設定しておくと良い。<br>・<code>cubic-bezier()</code>は、Android2系では使えない。<br>・疑似要素でアニメーションが必要な場合は、<code>span</code>タグなどで代替する。<br>・<code>keyframes</code>内の、各％のプロパティは省略せずに記述する。<br>・<code>animation-timing-function: steps();</code>はAndroid2系がサポートしていない<br>・<code>dispalay</code>と<code>opacity</code>を併用したアニメーションでは、<code>keyframes</code>を使用すると良い。<br>・<code>translate</code>と<code>rotate</code>を同時にアニメーションさせる場合は、<code>translate</code>を先に記述する。<br>・3d系のプロパティ(<code>translate3d, backface-visibility: hidden;</code>)の指定がある場合は、Android2系で不具合が起きる可能性があることを知っておく。</p>
+<p>以上になります。<br>間違ってるところなどありましたら、ご連絡頂けると有難いです。<br>今後のCSSアニメーション実装の参考にして頂ければと思います。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;普段のスマホのコーディングでは、かなり多くのユーザーを抱えたWeb開発に携わらせて頂いていますが、&lt;br&gt;そうするとCSSアニメーションで「動かない」などの声を頂くことも多くあり、&lt;br&gt;どんな書き方をすると、どの端末で動かない事があるのか。&lt;br&gt;またその対応策など、自分
+    
+    </summary>
+    
+    
+      <category term="css" scheme="https://naokiotsu.github.io/tags/css/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>git cloneしたsubmoduleを自分のリポジトリで管理する</title>
+    <link href="https://naokiotsu.github.io/2016/12/04/git-submodule-replace-plain-content/"/>
+    <id>https://naokiotsu.github.io/2016/12/04/git-submodule-replace-plain-content/</id>
+    <published>2016-12-04T00:53:32.000Z</published>
+    <updated>2017-05-04T10:21:04.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>gitで、プロジェクトのリポジトリ内で、別のsubmoduleを<code>git clone</code>などして、<br>更に、そのsubmoduleに変更を加えたりすると下記のような表示となり、<br>ファイルは変更されているけど、このファイルはsubmoduleで他のリポジトリで管理されているファイルだから<code>untracked content</code>だよ、というようなメッセージが表示される事があります。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">modified:   something/file (modified content, untracked content)</div></pre></td></tr></table></figure>
+<p>この場合、この変更が特に必要ないものならば、<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ cd something/file</div><div class="line">$ git checkout .</div></pre></td></tr></table></figure></p>
+<p>で変更をなかった事にすれば元には戻るのですが、<br>変更が必要なもので、今後はsubmoduleを自分のリポジトリで管理していきたい場合は<br><code>.git</code>を削除する事で、submoduleから外す事ができます。<br><strong>※注意点としては、そのsubmoduleのLicenseには十分気をつけなければいけない事と、そのsubmoduleは元リポジトリの管理から外れるので、以降はpullしてこれない等があります。</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ git rm --cached something</div><div class="line">$ rm -rf something/.git</div></pre></td></tr></table></figure>
+<p>これで、submoduleをプレーンなファイルにして(.gitを削除して)、自分のリポジトリ配下のファイルとなります。</p>
+<p>参考: <a href="http://stackoverflow.com/questions/4161022/git-how-to-track-untracked-content" target="_blank" rel="external">http://stackoverflow.com/questions/4161022/git-how-to-track-untracked-content</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;gitで、プロジェクトのリポジトリ内で、別のsubmoduleを&lt;code&gt;git clone&lt;/code&gt;などして、&lt;br&gt;更に、そのsubmoduleに変更を加えたりすると下記のような表示となり、&lt;br&gt;ファイルは変更されているけど、このファイルはsubmoduleで他
+    
+    </summary>
+    
+    
+      <category term="git" scheme="https://naokiotsu.github.io/tags/git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ローカルにPHP環境構築してBrowserSyncでLiveReload</title>
+    <link href="https://naokiotsu.github.io/2016/11/28/local-php-browser-sync/"/>
+    <id>https://naokiotsu.github.io/2016/11/28/local-php-browser-sync/</id>
+    <published>2016-11-28T12:49:03.000Z</published>
+    <updated>2017-05-04T10:21:04.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>MacのローカルにPHP環境構築して、<a href="https://www.browsersync.io/" target="_blank">BrowserSync</a>でLiveReloadさせた時のMEMOです。</p>
+<h2 id="実装方法"><a href="#実装方法" class="headerlink" title="実装方法"></a>実装方法</h2><p>調べた結果、<a href="https://www.npmjs.com/package/gulp-connect-php" target="_blank">gulp-connect-php</a>を使うのが早そうでした。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ npm init -y</div><div class="line">$ npm install -D gulp gulp-connect-php browser-sync</div></pre></td></tr></table></figure>
+<figure class="highlight js"><figcaption><span>gulpfile.js</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> gulp        = <span class="built_in">require</span>(<span class="string">'gulp'</span>);</div><div class="line"><span class="keyword">var</span> connect     = <span class="built_in">require</span>(<span class="string">'gulp-connect-php'</span>);</div><div class="line"><span class="keyword">var</span> browserSync = <span class="built_in">require</span>(<span class="string">'browser-sync'</span>).create();</div><div class="line"></div><div class="line">gulp.task(<span class="string">'connect-sync'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  connect.server(&#123;&#125;, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    browserSync.init(&#123;</div><div class="line">      <span class="attr">proxy</span>: <span class="string">'127.0.0.1:8000'</span></div><div class="line">    &#125;);</div><div class="line">  &#125;);</div><div class="line"></div><div class="line">  gulp.watch([<span class="string">'./*.php'</span>, <span class="string">'./*.css'</span>, <span class="string">'./*.js'</span>]).on(<span class="string">'change'</span>, browserSync.reload);</div><div class="line">&#125;);</div><div class="line"></div><div class="line">gulp.task(<span class="string">'default'</span>, [<span class="string">'connect-sync'</span>]);</div></pre></td></tr></table></figure>
+<p>これで <code>gulp</code> を叩いたら無事に構築出来ました。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      MacのローカルにPHP環境を構築して、BrowserSyncでLiveReloadさせた時のMEMOです。調べた結果、gulp-connect-phpを使うのが早そうでした。
+    
+    </summary>
+    
+    
+      <category term="browsersync" scheme="https://naokiotsu.github.io/tags/browsersync/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Youtubeの再生リストの動画を一覧表示する - Youtube Data API v3</title>
+    <link href="https://naokiotsu.github.io/2016/11/13/youtube-play-list-youtube-data-api-v3/"/>
+    <id>https://naokiotsu.github.io/2016/11/13/youtube-play-list-youtube-data-api-v3/</id>
+    <published>2016-11-13T12:48:04.000Z</published>
+    <updated>2017-05-04T10:21:04.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>自分のプライベートなプロダクトで、<br>Youtubeの再生リストの動画を一覧表示する機能が入れる必要がありまして、<br><a href="https://developers.google.com/youtube/v3/getting-started?hl=ja" target="_blank">Youtube Data API v3 のガイド</a>を見ながらやっていましたが、<br>スムーズに行かなかったので結論の実装方法をメモしておくことにしました。</p>
+<h2><strong>実装方法</strong></h2>
+
+<p>下記の4ステップを踏むと良かったです。</p>
+<h3><strong>1. APIキーを取得する</strong></h3>
+
+<p><a href="https://developers.google.com/youtube/registering_an_application?hl=ja" target="_blank">こちら</a>の手順を踏んで、APIキーを取得します。</p>
+<h3><strong>2. 表示したい動画のリクエストURLを<a href="https://developers.google.com/youtube/v3/docs/?hl=ja" target="_blank">リファレンス</a>から調べます</strong></h3>
+
+<p>自分の場合は、再生リストの一覧が欲しかったので、<a href="https://developers.google.com/youtube/v3/docs/playlistItems/list?hl=ja" target="_blank">こちら</a>のリクエストURLが必要でした。</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">GET https:<span class="comment">//www.googleapis.com/youtube/v3/playlistItems</span></div></pre></td></tr></table></figure>
+<p>GET形式で、このURLにリクエストをすれば良いようです。</p>
+<h3><strong>3. 再生リストのIDを調べる</strong></h3>
+
+<p>再生リストを表示したい場合は、再生リストIDというのが必要なようでした。<br>チャンネルIDとかも必要なのかなと思っていましたが、それは必要なかったです。</p>
+<p>再生リストIDは、例えば<br><a href="https://www.youtube.com/playlist?list=PLlVlyGVtvuVnAx-u38QOieyVIrMEmzuDx" target="_blank">https://www.youtube.com/playlist?list=PLlVlyGVtvuVnAx-u38QOieyVIrMEmzuDx</a><br>の再生リストのIDは、</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">PLlVlyGVtvuVnAx-u38QOieyVIrMEmzuDx</div></pre></td></tr></table></figure>
+<p>のように、URLの最後の部分になるようです。</p>
+<h3><strong>4. Ajaxでリクエストを投げてレスポンスを表示する</strong></h3>
+
+<p>Youtube Data API v3のガイドだと、リクエストURLに <code>?part=</code> とかを付けて、受け取ってねとありましたが、<br>jQueryとかだと、下記のようにリクエストを投げても、無事に欲しいレスポンスが返ってくるので、自分はこっちで実装しました。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">$.ajax(&#123;</div><div class="line">  <span class="attr">type</span>: <span class="string">'get'</span>,</div><div class="line">  <span class="attr">url</span>: <span class="string">'https://www.googleapis.com/youtube/v3/playlistItems'</span>, <span class="comment">// リクエストURL</span></div><div class="line">  dataType: <span class="string">'json'</span>,</div><div class="line">  <span class="attr">data</span>: &#123;</div><div class="line">    <span class="attr">part</span>: <span class="string">'snippet'</span>, <span class="comment">// partは必須で指定が必要とのこと。レスポンスで返してもらいたいデータをカンマ区切りで指定する。snippetがあればとりあえず動画を再生するレスポンスが受け取れる。</span></div><div class="line">    playlistId: <span class="string">'PLlVlyGVtvuVnAx-u38QOieyVIrMEmzuDx'</span>, <span class="comment">// 再生リストID</span></div><div class="line">    maxResults: <span class="number">20</span>, <span class="comment">// デフォルトは5件までしか受け取らないので、取得件数を変更</span></div><div class="line">    key: <span class="string">'&#123;APIキー&#125;'</span></div><div class="line">  &#125;</div><div class="line">&#125;).done(<span class="function"><span class="keyword">function</span>(<span class="params">response</span>) </span>&#123;</div><div class="line">  <span class="comment">// 成功</span></div><div class="line">&#125;).fail(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="comment">// エラー</span></div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>これで入力項目が問題なければ、成功するので、<br>あとは、返ってきた <code>response</code> から動画を表示させれば良いです。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">response.items.forEach(<span class="function"><span class="keyword">function</span>(<span class="params">item</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> id = item.snippet.resourceId.videoId;</div><div class="line">    $(<span class="string">'#list'</span>).append(<span class="string">'&amp;lt;iframe width="560" height="315" src="https://www.youtube.com/embed/'</span>+ id +<span class="string">'" frameborder="0" allowfullscreen&amp;gt;&amp;lt;/iframe&amp;gt;'</span>);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;自分のプライベートなプロダクトで、&lt;br&gt;Youtubeの再生リストの動画を一覧表示する機能が入れる必要がありまして、&lt;br&gt;&lt;a href=&quot;https://developers.google.com/youtube/v3/getting-started?hl=ja&quot; t
+    
+    </summary>
+    
+    
+      <category term="youtube" scheme="https://naokiotsu.github.io/tags/youtube/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Font Awesomeで、「Failed to decode downloaded font」が出てしまう時</title>
+    <link href="https://naokiotsu.github.io/2016/11/11/font-awesome-error/"/>
+    <id>https://naokiotsu.github.io/2016/11/11/font-awesome-error/</id>
+    <published>2016-11-11T12:46:57.000Z</published>
+    <updated>2017-05-04T10:21:04.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="http://fontawesome.io/" target="_blank">Font Awesome</a>を使っていて、本番サイトで確認しようとしたら、<br>フォントが正しく出ていない… ローカルでは大丈夫だったのに..</p>
+<p>そして、コンソールを見たら、<br><strong>「Failed to decode downloaded font」</strong><br>とか<br><strong>「OTS parsing error: incorrect file size in WOFF header」</strong><br>とか出ている様子..。</p>
+<h2 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h2><p>調べてみると、gitの改行コードを変換する仕組みによって起きてるようでした。<br>参考: <a href="http://ts0818.hatenablog.com/entry/2016/04/01/225341" target="_blank">『Failed to decode downloaded font』から始まるエラー</a></p>
+<h2 id="対策"><a href="#対策" class="headerlink" title="対策"></a>対策</h2><p>gitのルートディレクトリにある、「.gitattributes」ファイルを開いて、<br>変換しないように下記を追加してあげると問題ありませんでした。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"># Denote all files that are truly binary and should not be modified.</div><div class="line">... 中略</div><div class="line">*.otf binary</div><div class="line">*.eot binary</div><div class="line">*.svg binary</div><div class="line">*.ttf binary</div><div class="line">*.woff binary</div><div class="line">*.woff2 binary</div></pre></td></tr></table></figure>
+<p>もう一度、正しいフォントを格納して、git pushして確認したところ無事解決でした。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;a href=&quot;http://fontawesome.io/&quot; target=&quot;_blank&quot;&gt;Font Awesome&lt;/a&gt;を使っていて、本番サイトで確認しようとしたら、&lt;br&gt;フォントが正しく出ていない… ローカルでは大丈夫だったのに..&lt;/p&gt;
+&lt;p&gt;そして、コン
+    
+    </summary>
+    
+    
+      <category term="fontawesome" scheme="https://naokiotsu.github.io/tags/fontawesome/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ソフトバンク 孫社長</title>
+    <link href="https://naokiotsu.github.io/2016/11/01/softbank-son-president/"/>
+    <id>https://naokiotsu.github.io/2016/11/01/softbank-son-president/</id>
+    <published>2016-11-01T12:46:03.000Z</published>
+    <updated>2017-05-04T10:21:04.000Z</updated>
+    
+    <content type="html"><![CDATA[<iframe width="560" height="315" src="https://www.youtube.com/embed/zhrz8KdUB4w" frameborder="0" allowfullscreen></iframe>
+
+<p>孫社長はずっと前から尊敬している事業家のお一人で、<br>2005年、東京ビックサイトで行われたソフトバンクBBの新卒入社式で、豆粒ぐらいとても遠くでお話されていたのにすごく感動したのを思い出す。</p>
+<p>本や雑誌でも様々なことを学ばせて頂いていますが、<br>この動画でおっしゃってる事や考えが原点にあるような気がしていて、これまでにも何度も見てきた。</p>
+<p>お金とか地位とか名誉とかそんなことじゃなく、自分がやりたいと思った事を貫くかっこよさ。<br>自分が死ぬ前に、あ〜無難に生きたな、出世できたなとかそんな小さな事じゃなく、<br>心からやりたい事を本気でやったなと思って死にたい。<br>そんな想いをこの動画から感じる。</p>
+<p>そんな孫社長が何かの折に「流行りのおっかけ屋さん」という表現をおっしゃっていたのを聞いて、そのフレーズに自分の中ではドキっとした。<br>それは自分の今の職業(フロントエンドエンジニア)やITという業界そのものが、流行りのおっかけ要素が満載だからかなと思う。<br>決して今の職業や業界が嫌いとかじゃなく大好きだけど、技術はあくまで手段で、<br>「使っている方に何を提供したのか」ってところがほんとに大事で、その部分の意識の持ち方によって日々の過ごし方もガラっと変わってきそうだ。</p>
+<p>高い技術はもちろん大切。<br>ただ高い技術を持つより大切なのは、もっと愚直に使ってくれている方に目を向けた思いやりの気持ちで、場合によっては技術自体は超古いんだけど、使う人にとっては最高の体験を提供している事が工数1時間で実装出来た、なんて事が全然起こり得ると思っている。<br>だからこそ、そこに対して日々向き合っていかないと「ただの流行りのおっかけ屋さん」になってしまう、ということを思ったりした。  </p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/zhrz8KdUB4w&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;孫社長はずっと前から尊敬し
+    
+    </summary>
+    
+    
+      <category term="private" scheme="https://naokiotsu.github.io/tags/private/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CakePHP3とBrowserSyncでのLiveReload</title>
+    <link href="https://naokiotsu.github.io/2016/10/29/cakephp3-browser-sync-live-reload/"/>
+    <id>https://naokiotsu.github.io/2016/10/29/cakephp3-browser-sync-live-reload/</id>
+    <published>2016-10-29T12:45:10.000Z</published>
+    <updated>2017-05-04T10:21:04.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>CakePHP3でWebアプリの開発をしていましたが、<br>BrowserSyncを使ってLiveReloadさせて効率よく開発していきたい事があります。そんな時のMEMOを残しておきます。</p>
+<h2 id="実装方法"><a href="#実装方法" class="headerlink" title="実装方法"></a>実装方法</h2><p>CakePHPでは</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">bin/cake server</div></pre></td></tr></table></figure>
+<p>で、デフォルトは、 <code>localhost:8765</code> のサーバーが立ち上がりますが、</p>
+<p>まずはこれを、</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">bin/cake server -H &#123;IPアドレス&#125; -p 8765</div></pre></td></tr></table></figure>
+<p>で起動させて、 {IPアドレス}:8765 で立ち上がるようにします。</p>
+<p>そしてBrowserSync側では、optionsのproxyとportを設定すれば良さそうです。</p>
+<figure class="highlight js"><figcaption><span>gulpfile.js</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    <span class="attr">proxy</span>: <span class="string">"&#123;IPアドレス&#125;:8765"</span>,</div><div class="line">    <span class="attr">port</span>: <span class="number">4000</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>これでBrowserSyncをstartさせたら、<br><a href="http://{IPアドレス}:4000/" target="_blank" rel="external">http://{IPアドレス}:4000/</a> もしくは <a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a> へのアクセスで問題なくLiveReload出来ました。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;CakePHP3でWebアプリの開発をしていましたが、&lt;br&gt;BrowserSyncを使ってLiveReloadさせて効率よく開発していきたい事があります。そんな時のMEMOを残しておきます。&lt;/p&gt;
+&lt;h2 id=&quot;実装方法&quot;&gt;&lt;a href=&quot;#実装方法&quot; class=
+    
+    </summary>
+    
+    
+      <category term="cakephp3" scheme="https://naokiotsu.github.io/tags/cakephp3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Vagrantで開発環境構築(PHP+Mysql) &amp;#124; VirtualBox</title>
+    <link href="https://naokiotsu.github.io/2016/10/25/vagrant-php-mysql-virtualbox/"/>
+    <id>https://naokiotsu.github.io/2016/10/25/vagrant-php-mysql-virtualbox/</id>
+    <published>2016-10-25T12:44:12.000Z</published>
+    <updated>2017-05-04T10:21:04.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Vagrantで開発環境構築(PHP+Mysql)した時のメモです。</p>
+<h2 id="参考にした記事"><a href="#参考にした記事" class="headerlink" title="参考にした記事"></a>参考にした記事</h2><p>こちらの記事を参考に構築しました。<br><a href="http://fnya.cocolog-nifty.com/blog/2015/12/vagrant-centos7.html" target="_blank" rel="external">http://fnya.cocolog-nifty.com/blog/2015/12/vagrant-centos7.html</a></p>
+<p>シンボリックリンクを貼って、ローカルPCからファイル編集出来るようにするのに、下記を参照しました。<br><a href="http://qiita.com/tiwu_official/items/f135e6b6fbbe3ec6aa54#8%E3%82%B7%E3%83%B3%E3%83%9C%E3%83%AA%E3%83%83%E3%82%AF%E3%83%AA%E3%83%B3%E3%82%AF%E3%81%AE%E4%BD%9C%E6%88%90" target="_blank" rel="external">http://qiita.com/tiwu_official/items/f135e6b6fbbe3ec6aa54#8%E3%82%B7%E3%83%B3%E3%83%9C%E3%83%AA%E3%83%83%E3%82%AF%E3%83%AA%E3%83%B3%E3%82%AF%E3%81%AE%E4%BD%9C%E6%88%90</a></p>
+<p>ただファイル共有が使えないエラーが出てた。ので下記を参考に解決しました。<br><a href="http://stackoverflow.com/questions/22717428/vagrant-error-failed-to-mount-folders-in-linux-guest" target="_blank" rel="external">http://stackoverflow.com/questions/22717428/vagrant-error-failed-to-mount-folders-in-linux-guest</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Vagrantで開発環境構築(PHP+Mysql)した時のメモです。&lt;/p&gt;
+&lt;h2 id=&quot;参考にした記事&quot;&gt;&lt;a href=&quot;#参考にした記事&quot; class=&quot;headerlink&quot; title=&quot;参考にした記事&quot;&gt;&lt;/a&gt;参考にした記事&lt;/h2&gt;&lt;p&gt;こちらの記事を参
+    
+    </summary>
+    
+    
+      <category term="vagrant" scheme="https://naokiotsu.github.io/tags/vagrant/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JavaScriptで要素の入れ替え - replaceChild, cloneNode</title>
+    <link href="https://naokiotsu.github.io/2016/09/24/javascript-replace-child-clone-node/"/>
+    <id>https://naokiotsu.github.io/2016/09/24/javascript-replace-child-clone-node/</id>
+    <published>2016-09-24T12:42:55.000Z</published>
+    <updated>2017-05-04T10:21:04.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>ピュア(Vanilla)なJavaScriptでの要素の入れ替えのMEMOです。<br>例えばAとBの要素を入れ替えたい時などに使います。</p>
+<h2 id="実装方法"><a href="#実装方法" class="headerlink" title="実装方法"></a>実装方法</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> clone_A = element_A.cloneNode(<span class="literal">true</span>);</div><div class="line"><span class="keyword">var</span> clone_B = element_B.cloneNode(<span class="literal">true</span>);</div><div class="line"></div><div class="line">element_A.parentNode.replaceChild(clone_A, element_B);</div><div class="line">element_B.parentNode.replaceChild(clone_B, element_A);</div></pre></td></tr></table></figure>
+<p>cloneNodeで要素のクローンを作った後に、replaceChildで置換します。<br>cloneNodeの引数は、nodeの子孫ノードも複製する場合はtrue<br>nodeのみを複製する場合はfalseとなります。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;ピュア(Vanilla)なJavaScriptでの要素の入れ替えのMEMOです。&lt;br&gt;例えばAとBの要素を入れ替えたい時などに使います。&lt;/p&gt;
+&lt;h2 id=&quot;実装方法&quot;&gt;&lt;a href=&quot;#実装方法&quot; class=&quot;headerlink&quot; title=&quot;実装方法&quot;&gt;&lt;
+    
+    </summary>
+    
+    
+      <category term="js" scheme="https://naokiotsu.github.io/tags/js/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JavaScriptで配列をシャッフルさせる</title>
+    <link href="https://naokiotsu.github.io/2016/09/22/javascript-array-shuffle/"/>
+    <id>https://naokiotsu.github.io/2016/09/22/javascript-array-shuffle/</id>
+    <published>2016-09-22T12:41:44.000Z</published>
+    <updated>2017-05-04T10:21:04.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>ピュア(Vanilla)なJavaScriptでの配列のシャッフル。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> targets = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>];</div><div class="line"><span class="keyword">var</span> results = [];</div><div class="line"><span class="keyword">while</span> (targets.length) &#123;</div><div class="line">    results.push(targets.splice(<span class="built_in">Math</span>.floor(<span class="built_in">Math</span>.random() * targets.length), <span class="number">1</span>)[<span class="number">0</span>]);</div><div class="line">&#125;</div><div class="line"><span class="built_in">console</span>.log(results); <span class="comment">// 例: [5, 1, 4, 3, 2]</span></div></pre></td></tr></table></figure>
+<h2 id="ただちょっと注意も"><a href="#ただちょっと注意も" class="headerlink" title="ただちょっと注意も"></a>ただちょっと注意も</h2><p>※ただこのやり方だと全く同じ配列が返されてしまう場合もあります。<br>間違いなくシャッフルさせなければいけない時の記述はもう少し複雑になりますが、下記を参照すると良いです。</p>
+<p><a href="https://h2ham.net/javascript-%E3%81%A7%E9%85%8D%E5%88%97%E3%81%AE%E3%82%B7%E3%83%A3%E3%83%83%E3%83%95%E3%83%AB" target="_blank" rel="external">JavaScriptで配列のシャッフル</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;ピュア(Vanilla)なJavaScriptでの配列のシャッフル。&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div clas
+    
+    </summary>
+    
+    
+      <category term="js" scheme="https://naokiotsu.github.io/tags/js/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JavaScriptでペアな配列を作る時のMEMO</title>
+    <link href="https://naokiotsu.github.io/2016/09/22/javascript-pare-array-create/"/>
+    <id>https://naokiotsu.github.io/2016/09/22/javascript-pare-array-create/</id>
+    <published>2016-09-22T12:39:34.000Z</published>
+    <updated>2017-05-04T10:21:04.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>神経衰弱を作る時のような、[1, 1, 2, 2]のようなペアな値を持った配列が欲しい時の実装MEMOです。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> cards = [];</div><div class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">1</span>; i &amp;lt;= <span class="number">2</span>; i++) &#123;</div><div class="line">    cards[cards.length] = i;</div><div class="line">    cards[cards.length] = i;</div><div class="line">&#125;</div><div class="line"><span class="built_in">console</span>.log(cards); <span class="comment">// [1, 1, 2, 2]</span></div></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;神経衰弱を作る時のような、[1, 1, 2, 2]のようなペアな値を持った配列が欲しい時の実装MEMOです。&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;li
+    
+    </summary>
+    
+    
+      <category term="js" scheme="https://naokiotsu.github.io/tags/js/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>addEventListenerに引数を渡しつつremoveEventListenerしたい時</title>
+    <link href="https://naokiotsu.github.io/2016/09/22/javascript-addeventlistener-param-removeeventlistener/"/>
+    <id>https://naokiotsu.github.io/2016/09/22/javascript-addeventlistener-param-removeeventlistener/</id>
+    <published>2016-09-22T12:38:36.000Z</published>
+    <updated>2017-05-04T10:21:04.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>全然スマートじゃないので、もっと良い方法ありそうですが、、一応備忘録で残しておきます。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">element.addEventListener(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span> <span class="title">onClick</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    onClickHandler(onClick, <span class="string">'渡したい引数'</span>);</div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">onClickHandler</span>(<span class="params">func, text</span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(text); <span class="comment">// 渡したい引数</span></div><div class="line">    element.removeEventListener(<span class="string">'click'</span>, func);</div><div class="line">&#125;</div></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;全然スマートじゃないので、もっと良い方法ありそうですが、、一応備忘録で残しておきます。&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;
+    
+    </summary>
+    
+    
+      <category term="js" scheme="https://naokiotsu.github.io/tags/js/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ボタンのデザインを変えずに、クリック領域だけ広げるTips</title>
+    <link href="https://naokiotsu.github.io/2016/09/18/no-change-button-design-click-scale/"/>
+    <id>https://naokiotsu.github.io/2016/09/18/no-change-button-design-click-scale/</id>
+    <published>2016-09-18T12:37:05.000Z</published>
+    <updated>2017-05-04T10:21:04.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>「<a href="https://www.amazon.co.jp/CSS%E3%82%B7%E3%83%BC%E3%82%AF%E3%83%AC%E3%83%83%E3%83%88-%E2%80%9547%E3%81%AE%E3%83%86%E3%82%AF%E3%83%8B%E3%83%83%E3%82%AF%E3%81%A7CSS%E3%82%92%E8%87%AA%E5%9C%A8%E3%81%AB%E6%93%8D%E3%82%8B-Lea-Verou/dp/4873117666/ref=sr_1_1?ie=UTF8&amp;qid=1474188594&amp;sr=8-1&amp;keywords=CSS%E3%82%B7%E3%83%BC%E3%82%AF%E3%83%AC%E3%83%83%E3%83%88" target="_blank" rel="external">CSSシークレット</a>」で書かれていた備忘録で、言葉では伝えるのが難しいですが、<br>開発していると、ボタンそのもののwidthとheightでは領域が狭くて、ユーザーさんはクリックしにくい、<br>ただそのボタンのデザインは変更せずに、クリックできる領域だけを広げたいという時があります。そんな時の実装方法です。</p>
+<h2 id="実装方法"><a href="#実装方法" class="headerlink" title="実装方法"></a>実装方法</h2><p>擬似要素を使って下記のように実装します。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.target</span> &#123;</div><div class="line">    <span class="attribute">position</span>: relative;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.target</span><span class="selector-pseudo">:before</span> &#123;</div><div class="line">    <span class="attribute">content</span>: <span class="string">''</span>;</div><div class="line">    <span class="attribute">position</span>: absolute;</div><div class="line">    <span class="attribute">top</span>: -<span class="number">15px</span>; <span class="attribute">bottom</span>: -<span class="number">15px</span>; <span class="attribute">right</span>: -<span class="number">15px</span>; <span class="attribute">left</span>: -<span class="number">15px</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>上記の場合、ボタンの周りに15pxクリック領域が出来ます。</p>
+<h2 id="他のやり方も"><a href="#他のやり方も" class="headerlink" title="他のやり方も"></a>他のやり方も</h2><p>擬似要素を既に使っている時は、ボーダーを使ったやり方もあります。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.target</span> &#123;</div><div class="line">    <span class="attribute">border</span>: <span class="number">15px</span> solid transparent;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>この場合、ボタン領域に15pxの透明なボーダーが出来て領域が広がります。</p>
+<p>もしこれでボタンの背景が広がってしまう場合は、background-clip: padding-box;を指定することで回避することもできます。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.target</span> &#123;</div><div class="line">    <span class="attribute">border</span>: <span class="number">15px</span> solid transparent;</div><div class="line">    <span class="attribute">background-clip</span>: padding-box;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      開発していると、ボタンそのもののwidthとheightでは領域が狭くて、ユーザーさんはクリックしにくい、ただそのボタンのデザインは変更せずに、クリックできる領域だけを広げたいという時があります。そんな時の実装方法です。
+    
+    </summary>
+    
+    
+      <category term="css" scheme="https://naokiotsu.github.io/tags/css/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SVGで円をアニメーションさせたい時のMEMO</title>
+    <link href="https://naokiotsu.github.io/2016/09/18/svg-circle-animation/"/>
+    <id>https://naokiotsu.github.io/2016/09/18/svg-circle-animation/</id>
+    <published>2016-09-18T12:35:38.000Z</published>
+    <updated>2017-05-04T10:21:04.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>ローディングバーや円グラフを表示したい時など、<br>くるっと回る円のアニメーションを作りたい時があります。</p>
+<p><img src="https://qiita-image-store.s3.amazonaws.com/0/2582/b6d35e8d-0301-57c4-e4c3-2b12ed7fafd9.png" alt="Create_a_New_Pen.png"></p>
+<p><a href="http://codepen.io/melo15/pen/yJmVEJ" target="_blank" rel="external">http://codepen.io/melo15/pen/yJmVEJ</a></p>
+<h2 id="実装方法"><a href="#実装方法" class="headerlink" title="実装方法"></a>実装方法</h2><p>下記のように実装すると良いです。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">svg</span> <span class="attr">width</span>=<span class="string">"124"</span> <span class="attr">height</span>=<span class="string">"124"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">circle</span> <span class="attr">cx</span>=<span class="string">"62"</span> <span class="attr">cy</span>=<span class="string">"62"</span> <span class="attr">r</span>=<span class="string">"60"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">svg</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">svg</span> &#123;</div><div class="line">    <span class="attribute">transform</span>: <span class="built_in">rotate</span>(-90deg);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-tag">circle</span> &#123;</div><div class="line">    <span class="attribute">fill</span>: transparent;</div><div class="line">    <span class="attribute">stroke</span>: <span class="number">#4fa8df</span>;</div><div class="line">    <span class="attribute">stroke-width</span>: <span class="number">4</span>;</div><div class="line">    <span class="attribute">animation</span>: circle <span class="number">1s</span> infinite;</div><div class="line">&#125;</div><div class="line"></div><div class="line">@<span class="keyword">keyframes</span> circle &#123;</div><div class="line">  0% &#123; <span class="attribute">stroke-dasharray</span>: <span class="number">0</span> <span class="number">377</span>; &#125;</div><div class="line">  99<span class="selector-class">.9</span>%,<span class="selector-tag">to</span> &#123; <span class="attribute">stroke-dasharray</span>: <span class="number">377</span> <span class="number">377</span>; &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="対応ブラウザ"><a href="#対応ブラウザ" class="headerlink" title="対応ブラウザ"></a>対応ブラウザ</h2><p>インラインSVGなので、モダンブラウザは対応していて、<br>IE8以下、Android2系以下辺りは使えなさそうです。<br><a href="http://caniuse.com/#feat=svg-html5" target="_blank" rel="external">http://caniuse.com/#feat=svg-html5</a></p>
+<h2 id="実装方法-1"><a href="#実装方法-1" class="headerlink" title="実装方法"></a>実装方法</h2><p>半径60pxの円を作りたいとすると、<br><code>&lt;svg&gt;</code>の<code>width</code>と<code>height</code>には、<code>60px x 2 = 120px</code><br>これに、のちのち設定する円の外側の線幅(stroke-width)の4pxを足して、124pxを設定します。<br><code>&lt;circle&gt;</code>の<code>cx</code>と<code>cy</code>には、124pxの半分の値を設定し、円を<code>&lt;svg&gt;</code>の中央に配置します。<br><code>r</code>は円の半径で60pxを設定しますが、この値によって後々アニメーションさせる時の値が変わってきます。</p>
+<h3 id="CSSでは"><a href="#CSSでは" class="headerlink" title="CSSでは"></a>CSSでは</h3><p><code>&lt;circle&gt;</code>の<code>fill</code>を<code>transparent</code>にして塗りつぶしなしに設定します。<br><code>stroke</code>と<code>stroke-width</code>を指定して、円の外側に線を表示します。<br>これを<code>animation</code>を使って、くるっと回るアニメーションにします。</p>
+<h3 id="アニメーションでは"><a href="#アニメーションでは" class="headerlink" title="アニメーションでは"></a>アニメーションでは</h3><p>破線を設定する<code>stroke-dasharray</code>を使います。<br><code>stroke-dasharray: 破線の長さ 破線の間隔;</code><br>この破線の長さをアニメーションさせる事で、くるっと回るアニメーションとなります。</p>
+<h3 id="破線の間隔の値"><a href="#破線の間隔の値" class="headerlink" title="破線の間隔の値"></a>破線の間隔の値</h3><p>この時、破線の間隔の値は、円周の長さを設定する必要があり、計算によって導きます。<br>円周の長さは<code>直径 x 3.14</code>で計算します。<br>今回は、<code>120 x 3.14 = 376.8</code>なので、小数点を切り上げて<code>377</code>としました。<br>あとは、破線の長さを0から377までアニメーションさせると、くるっと1周するアニメーションとなります。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">@-<span class="keyword">webkit</span>-<span class="keyword">keyframes</span> circle &#123;</div><div class="line">  0% &#123; <span class="attribute">stroke-dasharray</span>: <span class="number">0</span> <span class="number">377</span>; &#125;</div><div class="line">  99<span class="selector-class">.9</span>%,<span class="selector-tag">to</span> &#123; <span class="attribute">stroke-dasharray</span>: <span class="number">377</span> <span class="number">377</span>; &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="1周ではなく半分のところで止めたい場合は"><a href="#1周ではなく半分のところで止めたい場合は" class="headerlink" title="1周ではなく半分のところで止めたい場合は"></a>1周ではなく半分のところで止めたい場合は</h3><p>半分のところで止めたい場合は、<code>377 / 2 = 188.5</code>などを設定すると良いです。</p>
+<p>最後に、そのままだとアニメーションの開始点が90度ずれてしまうので、<br><code>&lt;svg&gt;</code>に<code>transform: rotate(-90deg);</code>を設定して、上からくるっと回るアニメーションにします。</p>
+<p>同じようなアニメーションのデモも、CodePenにあったのでメモしておきます。</p>
+<p><a href="https://codepen.io/kyledws/pen/Gvelt/" target="_blank" rel="external">https://codepen.io/kyledws/pen/Gvelt/</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;ローディングバーや円グラフを表示したい時など、&lt;br&gt;くるっと回る円のアニメーションを作りたい時があります。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://qiita-image-store.s3.amazonaws.com/0/2582/b6d35e8d-0301-5
+    
+    </summary>
+    
+    
+      <category term="svg" scheme="https://naokiotsu.github.io/tags/svg/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>border-imageをRetina対応させるときの備忘録</title>
+    <link href="https://naokiotsu.github.io/2016/09/18/border-image-retina/"/>
+    <id>https://naokiotsu.github.io/2016/09/18/border-image-retina/</id>
+    <published>2016-09-18T12:34:20.000Z</published>
+    <updated>2017-05-04T10:21:04.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>border-imageを使う時は、<br><a href="http://border-image.com/" target="_blank" rel="external">http://border-image.com/</a><br>を使ってCSSソースを生成して貼り付ける事が多いのですが、<br>こちらで生成されるCSSはRetina対応してない素の画像サイズなので、<br>スマホ制作してる時とかは画像が大きくなってしまいます。</p>
+<h2 id="Retina対応させる方法"><a href="#Retina対応させる方法" class="headerlink" title="Retina対応させる方法"></a>Retina対応させる方法</h2><p>Retina対応する場合は、<code>border-image</code>の数値は変えずに、<br><code>border-width</code>の値だけ、1/2とかにすると良いので、<br>例えば、こうなっていたら↓</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">border-width</span>: 36<span class="selector-tag">px</span> 40<span class="selector-tag">px</span> 40<span class="selector-tag">px</span> 44<span class="selector-tag">px</span>;</div></pre></td></tr></table></figure>
+<p>こうすると良かったです↓</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">border-width</span>: 18<span class="selector-tag">px</span> 20<span class="selector-tag">px</span> 20<span class="selector-tag">px</span> 22<span class="selector-tag">px</span>;</div></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;border-imageを使う時は、&lt;br&gt;&lt;a href=&quot;http://border-image.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://border-image.com/&lt;/a&gt;&lt;br&gt;を使ってCSSソースを生成して貼り
+    
+    </summary>
+    
+    
+      <category term="css" scheme="https://naokiotsu.github.io/tags/css/"/>
+    
+  </entry>
+  
+</feed>
