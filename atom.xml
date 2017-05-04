@@ -4,9 +4,9 @@
   <subtitle>フロントエンド(HTML,CSS,JavaScript)を中心に。</subtitle>
   <link href="/blog/atom.xml" rel="self"/>
   
-  <link href="https://naokiotsu.github.io/"/>
+  <link href="https://naokiotsu.github.io/blog/"/>
   <updated>2017-05-04T10:21:04.000Z</updated>
-  <id>https://naokiotsu.github.io/</id>
+  <id>https://naokiotsu.github.io/blog/</id>
   
   <author>
     <name>Naoki Otsu</name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title>Flexboxの子要素がインラインだとiOS8などで要素が消えちゃう問題</title>
-    <link href="https://naokiotsu.github.io/2017/04/30/flexbox-inline-element/"/>
-    <id>https://naokiotsu.github.io/2017/04/30/flexbox-inline-element/</id>
+    <link href="https://naokiotsu.github.io/blog/2017/04/30/flexbox-inline-element/"/>
+    <id>https://naokiotsu.github.io/blog/2017/04/30/flexbox-inline-element/</id>
     <published>2017-04-29T21:36:31.000Z</published>
     <updated>2017-05-04T10:21:04.000Z</updated>
     
@@ -37,8 +37,8 @@
   
   <entry>
     <title>AndroidのWebViewでスクロールが重たい問題の改善</title>
-    <link href="https://naokiotsu.github.io/2017/03/15/android-webview-scroll-heavy/"/>
-    <id>https://naokiotsu.github.io/2017/03/15/android-webview-scroll-heavy/</id>
+    <link href="https://naokiotsu.github.io/blog/2017/03/15/android-webview-scroll-heavy/"/>
+    <id>https://naokiotsu.github.io/blog/2017/03/15/android-webview-scroll-heavy/</id>
     <published>2017-03-14T20:06:26.000Z</published>
     <updated>2017-05-04T10:21:04.000Z</updated>
     
@@ -65,8 +65,8 @@
   
   <entry>
     <title>webpack + AutoPrefixerで、&quot;display:-webkit-flex;&quot;が消えてしまう問題</title>
-    <link href="https://naokiotsu.github.io/2017/03/13/webpack-autoprefixer-setting/"/>
-    <id>https://naokiotsu.github.io/2017/03/13/webpack-autoprefixer-setting/</id>
+    <link href="https://naokiotsu.github.io/blog/2017/03/13/webpack-autoprefixer-setting/"/>
+    <id>https://naokiotsu.github.io/blog/2017/03/13/webpack-autoprefixer-setting/</id>
     <published>2017-03-12T20:29:33.000Z</published>
     <updated>2017-05-04T10:21:04.000Z</updated>
     
@@ -87,8 +87,8 @@
   
   <entry>
     <title>JavaScriptでCSSの値を取得する / getComputedStyleとparseInt,parseFloat</title>
-    <link href="https://naokiotsu.github.io/2017/02/10/getcomputedstyle-parseint-css-js/"/>
-    <id>https://naokiotsu.github.io/2017/02/10/getcomputedstyle-parseint-css-js/</id>
+    <link href="https://naokiotsu.github.io/blog/2017/02/10/getcomputedstyle-parseint-css-js/"/>
+    <id>https://naokiotsu.github.io/blog/2017/02/10/getcomputedstyle-parseint-css-js/</id>
     <published>2017-02-09T22:03:28.000Z</published>
     <updated>2017-05-04T10:21:04.000Z</updated>
     
@@ -113,8 +113,8 @@
   
   <entry>
     <title>git checkout --ours と --theirs - コンフリした時の対処</title>
-    <link href="https://naokiotsu.github.io/2016/12/20/git-checkout-ours-theirs/"/>
-    <id>https://naokiotsu.github.io/2016/12/20/git-checkout-ours-theirs/</id>
+    <link href="https://naokiotsu.github.io/blog/2016/12/20/git-checkout-ours-theirs/"/>
+    <id>https://naokiotsu.github.io/blog/2016/12/20/git-checkout-ours-theirs/</id>
     <published>2016-12-19T20:05:47.000Z</published>
     <updated>2017-05-04T10:21:04.000Z</updated>
     
@@ -134,8 +134,8 @@
   
   <entry>
     <title>CSSアニメーションのスマホ(iOS/Android)で起きる不具合/バグ</title>
-    <link href="https://naokiotsu.github.io/2016/12/05/css-animation-bug/"/>
-    <id>https://naokiotsu.github.io/2016/12/05/css-animation-bug/</id>
+    <link href="https://naokiotsu.github.io/blog/2016/12/05/css-animation-bug/"/>
+    <id>https://naokiotsu.github.io/blog/2016/12/05/css-animation-bug/</id>
     <published>2016-12-05T11:42:43.000Z</published>
     <updated>2017-05-04T10:21:04.000Z</updated>
     
@@ -205,14 +205,14 @@
     </summary>
     
     
-      <category term="css" scheme="https://naokiotsu.github.io/tags/css/"/>
+      <category term="css" scheme="https://naokiotsu.github.io/blog/tags/css/"/>
     
   </entry>
   
   <entry>
     <title>git cloneしたsubmoduleを自分のリポジトリで管理する</title>
-    <link href="https://naokiotsu.github.io/2016/12/04/git-submodule-replace-plain-content/"/>
-    <id>https://naokiotsu.github.io/2016/12/04/git-submodule-replace-plain-content/</id>
+    <link href="https://naokiotsu.github.io/blog/2016/12/04/git-submodule-replace-plain-content/"/>
+    <id>https://naokiotsu.github.io/blog/2016/12/04/git-submodule-replace-plain-content/</id>
     <published>2016-12-04T00:53:32.000Z</published>
     <updated>2017-05-04T10:21:04.000Z</updated>
     
@@ -232,14 +232,14 @@
     </summary>
     
     
-      <category term="git" scheme="https://naokiotsu.github.io/tags/git/"/>
+      <category term="git" scheme="https://naokiotsu.github.io/blog/tags/git/"/>
     
   </entry>
   
   <entry>
     <title>ローカルにPHP環境構築してBrowserSyncでLiveReload</title>
-    <link href="https://naokiotsu.github.io/2016/11/28/local-php-browser-sync/"/>
-    <id>https://naokiotsu.github.io/2016/11/28/local-php-browser-sync/</id>
+    <link href="https://naokiotsu.github.io/blog/2016/11/28/local-php-browser-sync/"/>
+    <id>https://naokiotsu.github.io/blog/2016/11/28/local-php-browser-sync/</id>
     <published>2016-11-28T12:49:03.000Z</published>
     <updated>2017-05-04T10:21:04.000Z</updated>
     
@@ -257,14 +257,14 @@
     </summary>
     
     
-      <category term="browsersync" scheme="https://naokiotsu.github.io/tags/browsersync/"/>
+      <category term="browsersync" scheme="https://naokiotsu.github.io/blog/tags/browsersync/"/>
     
   </entry>
   
   <entry>
     <title>Youtubeの再生リストの動画を一覧表示する - Youtube Data API v3</title>
-    <link href="https://naokiotsu.github.io/2016/11/13/youtube-play-list-youtube-data-api-v3/"/>
-    <id>https://naokiotsu.github.io/2016/11/13/youtube-play-list-youtube-data-api-v3/</id>
+    <link href="https://naokiotsu.github.io/blog/2016/11/13/youtube-play-list-youtube-data-api-v3/"/>
+    <id>https://naokiotsu.github.io/blog/2016/11/13/youtube-play-list-youtube-data-api-v3/</id>
     <published>2016-11-13T12:48:04.000Z</published>
     <updated>2017-05-04T10:21:04.000Z</updated>
     
@@ -300,14 +300,14 @@
     </summary>
     
     
-      <category term="youtube" scheme="https://naokiotsu.github.io/tags/youtube/"/>
+      <category term="youtube" scheme="https://naokiotsu.github.io/blog/tags/youtube/"/>
     
   </entry>
   
   <entry>
     <title>Font Awesomeで、「Failed to decode downloaded font」が出てしまう時</title>
-    <link href="https://naokiotsu.github.io/2016/11/11/font-awesome-error/"/>
-    <id>https://naokiotsu.github.io/2016/11/11/font-awesome-error/</id>
+    <link href="https://naokiotsu.github.io/blog/2016/11/11/font-awesome-error/"/>
+    <id>https://naokiotsu.github.io/blog/2016/11/11/font-awesome-error/</id>
     <published>2016-11-11T12:46:57.000Z</published>
     <updated>2017-05-04T10:21:04.000Z</updated>
     
@@ -327,14 +327,14 @@
     </summary>
     
     
-      <category term="fontawesome" scheme="https://naokiotsu.github.io/tags/fontawesome/"/>
+      <category term="fontawesome" scheme="https://naokiotsu.github.io/blog/tags/fontawesome/"/>
     
   </entry>
   
   <entry>
     <title>ソフトバンク 孫社長</title>
-    <link href="https://naokiotsu.github.io/2016/11/01/softbank-son-president/"/>
-    <id>https://naokiotsu.github.io/2016/11/01/softbank-son-president/</id>
+    <link href="https://naokiotsu.github.io/blog/2016/11/01/softbank-son-president/"/>
+    <id>https://naokiotsu.github.io/blog/2016/11/01/softbank-son-president/</id>
     <published>2016-11-01T12:46:03.000Z</published>
     <updated>2017-05-04T10:21:04.000Z</updated>
     
@@ -356,14 +356,14 @@
     </summary>
     
     
-      <category term="private" scheme="https://naokiotsu.github.io/tags/private/"/>
+      <category term="private" scheme="https://naokiotsu.github.io/blog/tags/private/"/>
     
   </entry>
   
   <entry>
     <title>CakePHP3とBrowserSyncでのLiveReload</title>
-    <link href="https://naokiotsu.github.io/2016/10/29/cakephp3-browser-sync-live-reload/"/>
-    <id>https://naokiotsu.github.io/2016/10/29/cakephp3-browser-sync-live-reload/</id>
+    <link href="https://naokiotsu.github.io/blog/2016/10/29/cakephp3-browser-sync-live-reload/"/>
+    <id>https://naokiotsu.github.io/blog/2016/10/29/cakephp3-browser-sync-live-reload/</id>
     <published>2016-10-29T12:45:10.000Z</published>
     <updated>2017-05-04T10:21:04.000Z</updated>
     
@@ -387,14 +387,14 @@
     </summary>
     
     
-      <category term="cakephp3" scheme="https://naokiotsu.github.io/tags/cakephp3/"/>
+      <category term="cakephp3" scheme="https://naokiotsu.github.io/blog/tags/cakephp3/"/>
     
   </entry>
   
   <entry>
     <title>Vagrantで開発環境構築(PHP+Mysql) &amp;#124; VirtualBox</title>
-    <link href="https://naokiotsu.github.io/2016/10/25/vagrant-php-mysql-virtualbox/"/>
-    <id>https://naokiotsu.github.io/2016/10/25/vagrant-php-mysql-virtualbox/</id>
+    <link href="https://naokiotsu.github.io/blog/2016/10/25/vagrant-php-mysql-virtualbox/"/>
+    <id>https://naokiotsu.github.io/blog/2016/10/25/vagrant-php-mysql-virtualbox/</id>
     <published>2016-10-25T12:44:12.000Z</published>
     <updated>2017-05-04T10:21:04.000Z</updated>
     
@@ -412,14 +412,14 @@
     </summary>
     
     
-      <category term="vagrant" scheme="https://naokiotsu.github.io/tags/vagrant/"/>
+      <category term="vagrant" scheme="https://naokiotsu.github.io/blog/tags/vagrant/"/>
     
   </entry>
   
   <entry>
     <title>JavaScriptで要素の入れ替え - replaceChild, cloneNode</title>
-    <link href="https://naokiotsu.github.io/2016/09/24/javascript-replace-child-clone-node/"/>
-    <id>https://naokiotsu.github.io/2016/09/24/javascript-replace-child-clone-node/</id>
+    <link href="https://naokiotsu.github.io/blog/2016/09/24/javascript-replace-child-clone-node/"/>
+    <id>https://naokiotsu.github.io/blog/2016/09/24/javascript-replace-child-clone-node/</id>
     <published>2016-09-24T12:42:55.000Z</published>
     <updated>2017-05-04T10:21:04.000Z</updated>
     
@@ -436,14 +436,14 @@
     </summary>
     
     
-      <category term="js" scheme="https://naokiotsu.github.io/tags/js/"/>
+      <category term="js" scheme="https://naokiotsu.github.io/blog/tags/js/"/>
     
   </entry>
   
   <entry>
     <title>JavaScriptで配列をシャッフルさせる</title>
-    <link href="https://naokiotsu.github.io/2016/09/22/javascript-array-shuffle/"/>
-    <id>https://naokiotsu.github.io/2016/09/22/javascript-array-shuffle/</id>
+    <link href="https://naokiotsu.github.io/blog/2016/09/22/javascript-array-shuffle/"/>
+    <id>https://naokiotsu.github.io/blog/2016/09/22/javascript-array-shuffle/</id>
     <published>2016-09-22T12:41:44.000Z</published>
     <updated>2017-05-04T10:21:04.000Z</updated>
     
@@ -461,14 +461,14 @@
     </summary>
     
     
-      <category term="js" scheme="https://naokiotsu.github.io/tags/js/"/>
+      <category term="js" scheme="https://naokiotsu.github.io/blog/tags/js/"/>
     
   </entry>
   
   <entry>
     <title>JavaScriptでペアな配列を作る時のMEMO</title>
-    <link href="https://naokiotsu.github.io/2016/09/22/javascript-pare-array-create/"/>
-    <id>https://naokiotsu.github.io/2016/09/22/javascript-pare-array-create/</id>
+    <link href="https://naokiotsu.github.io/blog/2016/09/22/javascript-pare-array-create/"/>
+    <id>https://naokiotsu.github.io/blog/2016/09/22/javascript-pare-array-create/</id>
     <published>2016-09-22T12:39:34.000Z</published>
     <updated>2017-05-04T10:21:04.000Z</updated>
     
@@ -483,14 +483,14 @@
     </summary>
     
     
-      <category term="js" scheme="https://naokiotsu.github.io/tags/js/"/>
+      <category term="js" scheme="https://naokiotsu.github.io/blog/tags/js/"/>
     
   </entry>
   
   <entry>
     <title>addEventListenerに引数を渡しつつremoveEventListenerしたい時</title>
-    <link href="https://naokiotsu.github.io/2016/09/22/javascript-addeventlistener-param-removeeventlistener/"/>
-    <id>https://naokiotsu.github.io/2016/09/22/javascript-addeventlistener-param-removeeventlistener/</id>
+    <link href="https://naokiotsu.github.io/blog/2016/09/22/javascript-addeventlistener-param-removeeventlistener/"/>
+    <id>https://naokiotsu.github.io/blog/2016/09/22/javascript-addeventlistener-param-removeeventlistener/</id>
     <published>2016-09-22T12:38:36.000Z</published>
     <updated>2017-05-04T10:21:04.000Z</updated>
     
@@ -505,14 +505,14 @@
     </summary>
     
     
-      <category term="js" scheme="https://naokiotsu.github.io/tags/js/"/>
+      <category term="js" scheme="https://naokiotsu.github.io/blog/tags/js/"/>
     
   </entry>
   
   <entry>
     <title>ボタンのデザインを変えずに、クリック領域だけ広げるTips</title>
-    <link href="https://naokiotsu.github.io/2016/09/18/no-change-button-design-click-scale/"/>
-    <id>https://naokiotsu.github.io/2016/09/18/no-change-button-design-click-scale/</id>
+    <link href="https://naokiotsu.github.io/blog/2016/09/18/no-change-button-design-click-scale/"/>
+    <id>https://naokiotsu.github.io/blog/2016/09/18/no-change-button-design-click-scale/</id>
     <published>2016-09-18T12:37:05.000Z</published>
     <updated>2017-05-04T10:21:04.000Z</updated>
     
@@ -534,14 +534,14 @@
     </summary>
     
     
-      <category term="css" scheme="https://naokiotsu.github.io/tags/css/"/>
+      <category term="css" scheme="https://naokiotsu.github.io/blog/tags/css/"/>
     
   </entry>
   
   <entry>
     <title>SVGで円をアニメーションさせたい時のMEMO</title>
-    <link href="https://naokiotsu.github.io/2016/09/18/svg-circle-animation/"/>
-    <id>https://naokiotsu.github.io/2016/09/18/svg-circle-animation/</id>
+    <link href="https://naokiotsu.github.io/blog/2016/09/18/svg-circle-animation/"/>
+    <id>https://naokiotsu.github.io/blog/2016/09/18/svg-circle-animation/</id>
     <published>2016-09-18T12:35:38.000Z</published>
     <updated>2017-05-04T10:21:04.000Z</updated>
     
@@ -571,14 +571,14 @@
     </summary>
     
     
-      <category term="svg" scheme="https://naokiotsu.github.io/tags/svg/"/>
+      <category term="svg" scheme="https://naokiotsu.github.io/blog/tags/svg/"/>
     
   </entry>
   
   <entry>
     <title>border-imageをRetina対応させるときの備忘録</title>
-    <link href="https://naokiotsu.github.io/2016/09/18/border-image-retina/"/>
-    <id>https://naokiotsu.github.io/2016/09/18/border-image-retina/</id>
+    <link href="https://naokiotsu.github.io/blog/2016/09/18/border-image-retina/"/>
+    <id>https://naokiotsu.github.io/blog/2016/09/18/border-image-retina/</id>
     <published>2016-09-18T12:34:20.000Z</published>
     <updated>2017-05-04T10:21:04.000Z</updated>
     
@@ -595,7 +595,7 @@
     </summary>
     
     
-      <category term="css" scheme="https://naokiotsu.github.io/tags/css/"/>
+      <category term="css" scheme="https://naokiotsu.github.io/blog/tags/css/"/>
     
   </entry>
   
