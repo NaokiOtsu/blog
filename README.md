@@ -12,6 +12,6 @@ hexo new post hoge # creating new post
 
 ## Deploy
 ```bash
-hexo deploy -g # Deploy on gh-pages branch
+hexo deploy -g # deploy on gh-pages branch
 ```
 Publish when pushing to `gh-pages` branch
