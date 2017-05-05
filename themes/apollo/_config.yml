@@ -1,12 +1,12 @@
 menu:
-    Blog: /
-    About: /about/
-    Archive: /archives/
+    Blog: /blog/
+    About: /blog/about/
+    Archive: /blog/archives/
     Twitter: https://twitter.com/melo15
     GitHub: https://github.com/NaokiOtsu
 
-favicon: /favicon.png
-logo: /images/logo.png
+favicon: /blog/favicon.png
+logo: /blog/images/logo.png
 
 # Comment
 # e.g disqus: seansun
