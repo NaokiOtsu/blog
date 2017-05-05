@@ -12,8 +12,8 @@ timezone: Asia/Tokyo
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://naokiotsu.github.io
-root: /
+url: https://naokiotsu.github.io/blog
+root: /blog/
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 domain: naokiotsu.github.io
@@ -76,5 +76,5 @@ archive_generator:
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: git@github.com:NaokiOtsu/NaokiOtsu.github.io.git
-  branch: master
+  repo: git@github.com:NaokiOtsu/blog.git
+  branch: gh-pages
