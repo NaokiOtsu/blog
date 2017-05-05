@@ -1,5 +1,5 @@
 ---
-title: プロフィール
+title: Profile
 ---
 
 ### 名前
