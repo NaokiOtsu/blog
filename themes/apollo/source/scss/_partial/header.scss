@@ -1,0 +1,39 @@
+header {
+    min-height: 60px;
+
+    .logo-link {
+        float: left;
+
+        img {
+            vertical-align: middle;
+            border-radius: 100%;
+            box-shadow: 0 0 1px #000;
+        }
+    }
+    
+    .nav {
+        float: right;
+        left: 80px;
+    }
+
+    .logo-link img {
+        height: 60px;
+    }
+
+    .site-name {
+        height: 65px;
+        line-height: 65px;
+        font-size: 2em;
+        font-weight: 500;
+        color: #2c3e50;
+    }
+
+    .nav-list-item {
+        display: inline-block;
+        padding: 19px  10px ;
+        a {
+            font-size: 18px;
+            line-height: 1.4;
+        }
+    }
+}

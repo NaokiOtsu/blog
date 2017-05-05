@@ -1,0 +1,21 @@
+menu:
+    Blog: /
+    About: /about/
+    Archive: /archives/
+    Twitter: https://twitter.com/melo15
+    GitHub: https://github.com/NaokiOtsu
+
+favicon: /favicon.png
+logo: /images/logo.png
+
+# Comment
+# e.g disqus: seansun
+disqus: naokiotsu
+duoshuo:
+
+# Analytics
+# google-analytics:
+ga: UA-7365476-10
+
+# Copyright Infomation
+startyear: 2016

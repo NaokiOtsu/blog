@@ -1,0 +1,11 @@
+extends partial/layout
+
+block site_title
+    != page.title + " - " + config.title
+
+block container
+    include mixins/post
+    +post(page)
+
+block copyright
+    include partial/copyright

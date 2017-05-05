@@ -1,0 +1,159 @@
+section.container {
+    margin: 2em 10px;
+}
+
+.sns-area {
+    display: flex;
+    align-items: flex-end;
+    margin-top: 30px;
+
+    // はてなブックマーク
+    .hatena-bookmark-button-frame {
+        margin: 0 15px 0 0;
+    }
+
+    // Twitter
+    .twitter-button {
+        iframe {
+            margin: 0 auto;
+        }
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .wrap {
+        width: 1000px;
+        margin: 0 auto;
+    }
+    header {
+        padding: 20px 100px;
+    }
+
+    .container {
+        display: flex;
+    }
+
+    .home.post-list {
+        flex: 1;
+        margin-top: 0;
+    }
+
+    .post {
+        flex: 1;
+        min-width: 12em;
+    }
+
+    .sidebar {
+        flex: 0 0 220px;
+        margin: 36px 30px 0 0;
+        font-size: 14px;
+
+        span {
+            color: #000000;
+            font-weight: bold;
+        }
+
+        iframe {
+            margin: 6px 0 0 0;
+        }
+
+        .more {
+            color: #42b983;
+        }
+    }
+    
+    .avator {
+        text-align: center;
+        img {
+            width: 80px;
+            border-radius: 100%;
+            box-shadow: 0 0 1px #000;
+        }
+    }
+
+    .name {
+        margin-top: 10px;
+    }
+
+    .profile-content {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .wrap {
+        width: 100%;
+    }
+    header {
+        padding: 20px 0;
+        .nav {
+            float: none;
+            left: 0;
+            display: flex;
+            justify-content: space-around;
+            max-width: 346px;
+            margin: 0 auto;
+        }
+        a.logo-link,
+        ul.nav.nav-list {
+            text-align: center;
+        }
+        a.logo-link {
+            float: none;
+            display: block;
+        }
+        li.nav-list-item {
+            padding: 10px 0;
+        }
+    }
+    section.container,
+    .home.post-list,
+    .archive {
+        margin-top: 0;
+    }
+    .archive .post-item {
+        padding-left: 5px;
+    }
+    .post-content {
+        h2, h3, h4, h5, h6 {
+            // max-width: 300px;
+            
+        }
+    }
+    .ds-thread,
+    #disqus_thread {
+        margin: 2em 10px;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    // フッター付近のプロフィール
+    .profile-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 30px 8px 0;
+        font-size: 13px;
+
+        img {
+            width: 70px;
+            border-radius: 100%;
+            box-shadow: 0 0 1px #000;
+        }
+
+        .profile-text {
+            flex: 1;
+            margin-left: 10px;
+        }
+
+        .more {
+            color: #42b983;
+        }
+
+        iframe {
+            margin: 8px 0 0;
+        }
+    }
+}

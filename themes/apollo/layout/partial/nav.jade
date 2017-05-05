@@ -1,0 +1,20 @@
+ul.nav.nav-list
+    each value, key in theme.menu
+        li.nav-list-item
+            - var re = /^(http|https):\/\/*/gi;
+            - var tar = re.test(value) ? "_blank" : "_self"
+            - var page_path = page.path
+            - var path = page_path.replace(/\/[0-9a-zA-Z\.]*/, "/")
+            if path === "index.html"
+                - path = ""
+            - var act = !re.test(value) && "/" + path === value
+            if value === "/"
+                if page.layout === "post"
+                    a.nav-list-link(class={active: true} href=value target=tar)
+                        != key
+                else
+                    a.nav-list-link(class={active: act} href=value target=tar)
+                        != key
+            else
+                a.nav-list-link(class={active: act} href=value target=tar)
+                    != key

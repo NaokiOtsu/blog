@@ -1,0 +1,61 @@
+mixin postInfo(item)
+    .post-info
+        if page.layout !== "page"
+            != full_date(item.date, 'll')
+        if item.from && (is_home() || is_post())
+            a.post-from(href=item.from target="_blank" title=item.from) 翻译 · 原文地址
+
+//- Index Page
+mixin posts()
+    div.home.post-list
+        - page.posts.each(function (item) {
+            div.post-list-item
+                article.post-block
+                    h2.post-title
+                        a.post-title-link(href= url_for(item.path))
+                            != item.title
+                    +postInfo(item)
+                    .post-content
+                        != item.excerpt
+                    a.read-more(href= url_for(item.path))!= __('more')
+        - })
+        include ../mixins/paginator
+        +home()
+
+//- Archive Page
+mixin postList()
+    .archive
+        - var year = 0;
+        - var change = false;
+        - page.posts.each(function (item) {
+            - var itemYear = date(item.date, 'YYYY') - 0;
+            - change = year !== itemYear;
+            - year = change ? itemYear : year;
+            if change 
+                h2.archive-year!= year
+            .post-item
+                +postInfo(item)
+                a.post-title-link(href= url_for(item.path))
+                    != item.title
+        - })
+
+//- Post Page
+mixin post(item)
+    .post
+        article.post-block
+            h1.post-title
+                != item.title
+            +postInfo(item)
+            .post-content
+                != item.content
+            .sns-area
+                a.hatena-bookmark-button(href="http://b.hatena.ne.jp/entry/" + config.domain + url_for(item.path), data-hatena-bookmark-title= item.title, data-hatena-bookmark-layout="vertical-balloon", data-hatena-bookmark-lang="ja", title="このエントリーをはてなブックマークに追加")
+                    img(src="https://b.st-hatena.com/images/entry-button/button-only@2x.png", alt="このエントリーをはてなブックマークに追加", width="20", height="20", style="border: none;")
+                .twitter-button
+                    <a href="https://twitter.com/share" class="twitter-share-button">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+            .scripts.
+                <script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+            include ../partial/profile
+        include ../mixins/paginator
+        +post()
+        include ../partial/comment
