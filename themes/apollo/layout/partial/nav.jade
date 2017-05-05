@@ -7,14 +7,14 @@ ul.nav.nav-list
             - var path = page_path.replace(/\/[0-9a-zA-Z\.]*/, "/")
             if path === "index.html"
                 - path = ""
-            - var act = !re.test(value) && "/" + path === value
-            if value === "/"
+            - var act = !re.test(value) && "/blog/" + path === value
+            if value === "/blog/"
                 if page.layout === "post"
-                    a.nav-list-link(class={active: true} href=value target=tar)
+                    a.nav-list-link(class={active: true} href=value target=tar path=path value=value)
                         != key
                 else
-                    a.nav-list-link(class={active: act} href=value target=tar)
+                    a.nav-list-link(class={active: act} href=value target=tar path=path value=value)
                         != key
             else
-                a.nav-list-link(class={active: act} href=value target=tar)
+                a.nav-list-link(class={active: act} href=value target=tar path=path value=value)
                     != key
