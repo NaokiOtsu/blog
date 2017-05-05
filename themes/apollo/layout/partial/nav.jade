@@ -10,11 +10,11 @@ ul.nav.nav-list
             - var act = !re.test(value) && "/blog/" + path === value
             if value === "/blog/"
                 if page.layout === "post"
-                    a.nav-list-link(class={active: true} href=value target=tar path=path value=value)
+                    a.nav-list-link(class={active: true} href=value target=tar)
                         != key
                 else
-                    a.nav-list-link(class={active: act} href=value target=tar path=path value=value)
+                    a.nav-list-link(class={active: act} href=value target=tar)
                         != key
             else
-                a.nav-list-link(class={active: act} href=value target=tar path=path value=value)
+                a.nav-list-link(class={active: act} href=value target=tar)
                     != key
