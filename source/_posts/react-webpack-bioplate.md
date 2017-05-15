@@ -34,8 +34,10 @@ yarn add react react-dom
 yarn add -D babel-core babel-loader babel-preset-es2015 babel-preset-react webpack webpack-dev-server
 ```
 
+### 
+
 ### .babelrcをルートに作成。  
-```bash .babelrc
+```json .babelrc
 {
   "presets": ["es2015", "react"]
 }
@@ -129,3 +131,33 @@ ReactDOM.render(
 
 ※ただ`yarn build`は本番用のminifyなど何も入ってないので、本番用の設定は適宜入れる必要がある。  
 [https://webpack.js.org/guides/production-build/](https://webpack.js.org/guides/production-build/)
+
+### [追記 2017/5/15]  
+PropTypesはクラスのstaticなプロパティで指定するのが流れのようで、  
+babelだと、`babel-plugin-transform-class-properties`を使う事が多そうなので追記しておく。  
+
+```bash
+yarn add -D babel-plugin-transform-class-properties
+```
+
+```json .babelrc
+{
+  ...
+  "plugins": ["transform-class-properties"] // 追記
+}
+```
+
+PropTypesの設定例  
+```js Counter.js
+...
+import PropTypes from 'prop-types';
+
+class Counter extends Component {
+  static propTypes = {
+    value: PropTypes.number.isRequired,
+    onIncrement: PropTypes.func.isRequired,
+    onDecrement: PropTypes.func.isRequired
+  }
+  ...
+}
+```
