@@ -19,34 +19,34 @@ package.json
 webpack.config.js
 ```
 
-### package.jsonの作成。
+### package.jsonの作成
 ```bash
 yarn init -y
 ```
 
-### dependenciesなモジュールをインストール。
+### dependenciesなモジュールをインストール
 ```bash
 yarn add react react-dom
 ```
 
-### devDependenciesなモジュールをインストール。
+### devDependenciesなモジュールをインストール
 ```bash
 yarn add -D babel-core babel-loader babel-preset-es2015 babel-preset-react webpack webpack-dev-server
 ```
 
-### .babelrcをルートに作成。  
+### .babelrcをルートに作成  
 ```json .babelrc
 {
   "presets": ["es2015", "react"]
 }
 ```
 
-### srcとpublicの2つのディレクトリを作成。
+### srcとpublicの2つのディレクトリを作成
 ```bash
 mkdir src public
 ```
 
-### publicの中に、index.htmlを作成。
+### publicの中に、index.htmlを作成
 ```html index.html
 <!DOCTYPE html>
 <html lang="ja">
@@ -63,7 +63,7 @@ mkdir src public
 </html>
 ```
 
-### webpack.config.jsを作成。
+### webpack.config.jsを作成
 ```js webpack.config.js
 const path = require('path');
 
@@ -96,7 +96,7 @@ module.exports = {
 };
 ```
 
-### srcの中に、index.jsを作成。
+### srcの中に、index.jsを作成
 ```js index.js
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -111,7 +111,7 @@ ReactDOM.render(
 );
 ```
 
-### package.jsonに"scripts"を追記する。
+### package.jsonに"scripts"を追記する
 ```json package.json
 {
   ...
