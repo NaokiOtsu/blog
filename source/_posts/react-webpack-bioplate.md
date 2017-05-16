@@ -34,8 +34,6 @@ yarn add react react-dom
 yarn add -D babel-core babel-loader babel-preset-es2015 babel-preset-react webpack webpack-dev-server
 ```
 
-### 
-
 ### .babelrcをルートに作成。  
 ```json .babelrc
 {
