@@ -11,15 +11,11 @@ title: Profile
 ### 簡単な経歴
 大学卒業後、2010年に福岡のメディア運営会社[トランスメディアGP](http://www.trance-media.co.jp/)に入社。約4年間フロントエンドに従事。
 2014年に上京し[ディー・エヌ・エー](http://dena.com/jp/)に入社。約3年間半モバイルゲームのフロントエンドを担当。  
-2017年6月に福岡の[TechJIN](http://techjin.co.jp/)に入社。主にフロントエンド担当。  
-
-### 開発
-Vue.jsやAngularJSのJavaScript開発が好きです。  
-たまにRailsやiOS/Androidアプリの開発をしたり。  
+2017年6月に福岡の[TechJIN](http://techjin.co.jp/)に入社。Railsやフロントエンドを担当。  
 
 ### 好きなこと
 バスケ(NBA)好きです。  
-映画(インターステラー、インセプションなど)も好きです  
+映画(インターステラー、インセプションなど)も好きです。
 
 ### LT
 [【イベントレポート】ページをより楽しく印象的にする「CSSアニメーション」を学ぶスキルアップイベント](http://www.itstaffing.jp/engineer/entry/20151211_1)
