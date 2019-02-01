@@ -9,11 +9,11 @@ title: Profile
 熊本県 南阿蘇
 
 ### 簡単な経歴
-2008年: [デジハリ福岡校](https://school.dhw.co.jp/school/fukuoka/)でWeb開発を学ぶ。
-2010年: [トランスメディアGP](http://www.trance-media.co.jp/)にJoin。フロントエンド担当。
-2014年: [DeNA](http://dena.com/jp/)にJoin。フロントエンド担当。
-2017年: [TechJIN](http://techjin.co.jp/)にJoin。Railsやフロントエンド担当。
-2018年: [ベガコーポレーション](https://www.vega-c.com/)にJoin。フロントエンド担当。
+2008年: [デジハリ福岡校](https://school.dhw.co.jp/school/fukuoka/)でWebデザイナー専攻。
+2010年: [トランスメディアGP](http://www.trance-media.co.jp/)にJoin。キャンペーンサイトなどのFlash(ActionScript3)やフロントエンドを担当。
+2014年: [DeNA](http://dena.com/jp/)にJoin。モバイルゲームのフロントエンドを担当。
+2017年: [TechJIN](http://techjin.co.jp/)にJoin。BtoBマーケティングツールのRailsやフロントエンドを担当。
+2018年: [ベガコーポレーション](https://www.vega-c.com/)にJoin。ECサイトのフロントエンドを担当。
 
 ### 好きなこと
 バスケ(NBA)好きです。
