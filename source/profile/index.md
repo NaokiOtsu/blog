@@ -9,12 +9,14 @@ title: Profile
 熊本県 南阿蘇
 
 ### 簡単な経歴
-大学卒業後、2010年に福岡のメディア運営会社[トランスメディアGP](http://www.trance-media.co.jp/)に入社。約4年間フロントエンドに従事。
-2014年に上京し[ディー・エヌ・エー](http://dena.com/jp/)に入社。約3年間半モバイルゲームのフロントエンドを担当。  
-2017年6月に福岡の[TechJIN](http://techjin.co.jp/)に入社。Railsやフロントエンドを担当。  
+2008年: [デジハリ福岡校](https://school.dhw.co.jp/school/fukuoka/)でWeb開発を学ぶ。
+2010年: [トランスメディアGP](http://www.trance-media.co.jp/)にJoin。フロントエンド担当。
+2014年: [DeNA](http://dena.com/jp/)にJoin。フロントエンド担当。
+2017年: [TechJIN](http://techjin.co.jp/)にJoin。Railsやフロントエンド担当。
+2018年: [ベガコーポレーション](https://www.vega-c.com/)にJoin。フロントエンド担当。
 
 ### 好きなこと
-バスケ(NBA)好きです。  
+バスケ(NBA)好きです。
 映画(インターステラー、インセプションなど)も好きです。
 
 ### LT
