@@ -1,17 +1,22 @@
-import pkg from './package'
+import NuxtConfiguration from '@nuxt/config'
 
-export default {
+const config: NuxtConfiguration = {
   mode: 'universal',
 
   /*
    ** Headers of the page
    */
   head: {
-    title: pkg.name,
+    title: 'OtsuLog',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: pkg.description }
+      {
+        hid: 'description',
+        name: 'description',
+        content:
+          'フロントエンド(Vue, React, ReactNative, Electron..)、バックエンド(Ruby, GraphQL..)、書籍(スタートアップ, 経営者..)から学んだことを発信する場'
+      }
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
@@ -66,3 +71,5 @@ export default {
     }
   }
 }
+
+export default config
