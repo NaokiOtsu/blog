@@ -1,7 +1,7 @@
 {
   "name": "OtsuLog",
   "version": "1.0.0",
-  "description": "フロントエンド(JavaScript, ReactNative, Electron..)、バックエンド(Ruby, GraphQL)、書籍など学んだことを発信する場",
+  "description": "フロントエンド(Vue, React, ReactNative, Electron..)、バックエンド(Ruby, GraphQL..)、書籍(スタートアップ, 経営者..)から学んだことを発信する場",
   "author": "NaokiOtsu",
   "private": true,
   "scripts": {
