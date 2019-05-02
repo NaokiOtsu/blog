@@ -1,7 +1,7 @@
 <template>
   <header>
     <h1>
-      <nuxt-link to="/">OtsuLog</nuxt-link>
+      <nuxt-link to="/"><span>Otsu</span>Log</nuxt-link>
     </h1>
     <nav>
       <ul>
@@ -58,7 +58,6 @@ header {
     }
 
     span {
-      margin-right: 4px;
       font-weight: bold;
     }
   }
@@ -79,12 +78,6 @@ header {
 // for SP
 @media (max-width: $width + (10px * 2)) {
   header {
-    h1 {
-      span {
-        display: block;
-      }
-    }
-
     li {
       margin-left: 8px;
     }

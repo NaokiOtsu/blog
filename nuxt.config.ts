@@ -1,4 +1,14 @@
+import * as fs from 'fs'
 import NuxtConfiguration from '@nuxt/config'
+
+// 動的なroutesを返す
+function getRoutes() {
+  return fs
+    .readdirSync("./markdown")
+    .filter(i => i.match(/.md$/))
+    .map(f => f.replace(/.md$/, ""))
+    .map(f => `/${f}/`);
+}
 
 const config: NuxtConfiguration = {
   mode: 'universal',
@@ -24,20 +34,21 @@ const config: NuxtConfiguration = {
   /*
    ** Customize the progress-bar color
    */
-  loading: { color: '#fff' },
+  loading: { color: '#3B8070' },
 
   /*
    ** Global CSS
    */
   css: [
     "normalize.css",
-    '~/assets/css/main.scss'
+    '~/assets/css/main.scss',
+    "~/node_modules/highlight.js/styles/vs2015.css"
   ],
 
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [],
+  plugins: ["~/plugins/init.js"],
 
   /*
    ** Nuxt.js modules
@@ -45,7 +56,8 @@ const config: NuxtConfiguration = {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
-    '@nuxtjs/pwa'
+    '@nuxtjs/pwa',
+    "@nuxtjs/markdownit",
   ],
   /*
    ** Axios module configuration
@@ -71,8 +83,29 @@ const config: NuxtConfiguration = {
           exclude: /(node_modules)/
         })
       }
+
+      config.node = {
+        fs: "empty"
+      };
     }
-  }
+  },
+
+  generate: {
+    routes: getRoutes()
+  },
+
+  markdownit: {
+    preset: "default",
+    linkify: true,
+    breaks: true,
+    // injected: true,
+    use: [
+      "markdown-it-container",
+      "markdown-it-attrs",
+      "markdown-it-meta",
+      "markdown-it-highlightjs"
+    ]
+  },
 }
 
 export default config
