@@ -79,6 +79,7 @@ section {
   }
 
   .date {
+    width: 90px;
     margin-right: 20px;
   }
 
