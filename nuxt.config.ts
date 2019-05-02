@@ -58,6 +58,12 @@ const config: NuxtConfiguration = {
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
     "@nuxtjs/markdownit",
+    [
+      "@nuxtjs/google-analytics",
+      {
+        id: "UA-7365476-10"
+      }
+    ],
   ],
   /*
    ** Axios module configuration
