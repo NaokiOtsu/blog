@@ -15,7 +15,7 @@ const config: NuxtConfiguration = {
         hid: 'description',
         name: 'description',
         content:
-          'フロントエンド(Vue, React, ReactNative, Electron..)、バックエンド(Ruby, GraphQL..)、書籍(スタートアップ, 経営者..)から学んだことを発信する場'
+          'フロントエンド(Vue, React, ReactNative, Electron..)、バックエンド(Ruby, GraphQL..)、書籍(スタートアップ, 経営者..)から学んだことをアウトプットする場所'
       }
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
@@ -29,7 +29,10 @@ const config: NuxtConfiguration = {
   /*
    ** Global CSS
    */
-  css: ['~/assets/css/main.scss'],
+  css: [
+    "normalize.css",
+    '~/assets/css/main.scss'
+  ],
 
   /*
    ** Plugins to load before mounting the App
@@ -61,7 +64,7 @@ const config: NuxtConfiguration = {
     extend(config, ctx) {
       // Run ESLint on save
       if (ctx.isDev && ctx.isClient) {
-        config.module.rules.push({
+        config.module!.rules.push({
           enforce: 'pre',
           test: /\.(js|vue)$/,
           loader: 'eslint-loader',

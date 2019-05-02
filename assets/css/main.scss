@@ -2,7 +2,9 @@
   font-size: 10px;
 }
 
-body {
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: subpixel-antialiased;
   -moz-osx-font-smoothing: unset;
   font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Yu Gothic',
@@ -15,7 +17,7 @@ body {
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2),
   (min-resolution: 2dppx) {
-  body {
+  html {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
