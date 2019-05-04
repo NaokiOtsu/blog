@@ -20,7 +20,17 @@
     </p>
 
     <h2>経歴</h2>
-    <p>SoftBank → TRGP → DeNA → TechJIN → Vega.<br /></p>
+    <p>SoftBank → TRGP → DeNA → TechJIN → Vega.</p>
+
+    <h2>出身</h2>
+    <p>熊本県 南阿蘇</p>
+
+    <h2>LT</h2>
+    <p>
+      <a href="http://www.itstaffing.jp/engineer/entry/20151211_1"
+        >【イベントレポート】ページをより楽しく印象的にする「CSSアニメーション」を学ぶスキルアップイベント</a
+      >
+    </p>
 
     <h2>好きなもの</h2>
     <p>
