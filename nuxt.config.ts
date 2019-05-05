@@ -112,6 +112,16 @@ const config: NuxtConfiguration = {
       "markdown-it-highlightjs"
     ]
   },
+
+  sitemap: {
+    path: "/sitemap.xml",
+    hostname: "https://naokiotsu.github.io/blog",
+    cacheTime: 1000 * 60 * 15,
+    gzip: true,
+    generate: true, // Enable me when using nuxt generate
+    exclude: [],
+    routes: getRoutes()
+  },
 }
 
 export default config
