@@ -19,5 +19,6 @@ declare module 'vue/types/options' {
     interface ComponentOptions<V extends Vue> {
         asyncData?(context: NuxtContext<V>): Promise<object> | object
         fetch?(context: NuxtContext<V>): Promise<object> | object
+        head?(context: NuxtContext<V>): Promise<object> | object
     }
 }

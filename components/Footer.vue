@@ -6,8 +6,8 @@
       <div v-if="showProfile" class="box">
         <img
           class="profile"
-          width="160"
-          height="160"
+          width="120"
+          height="120"
           src="~/assets/images/profile.png"
           alt="Naoki Otsu"
         />
@@ -133,17 +133,22 @@ footer {
 
   .box {
     display: flex;
-    align-items: center;
     margin-bottom: 20px;
   }
 
   .profile {
+    margin-top: 5px;
     border-radius: 50%;
   }
 
   .info {
     flex: 1;
-    margin-left: 20px;
+    margin-left: 26px;
+
+    h3 {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
 
     ul {
       margin: 20px 0 0;

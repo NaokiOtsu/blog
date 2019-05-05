@@ -23,7 +23,36 @@ import 'vuex'
 import { Vue, Component } from 'vue-property-decorator'
 import { format } from 'date-fns'
 
-@Component({})
+@Component({
+  head() {
+    return {
+      title: `Blog | OtsuLog`,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.body
+        },
+        {
+          name: 'twitter:card',
+          content: 'summary'
+        },
+        {
+          name: 'og:title',
+          content: `Blog | OtsuLog`
+        },
+        {
+          name: 'og:description',
+          content: this.body
+        },
+        {
+          name: 'og:image',
+          content: 'https://naokiotsu.github.io/blog/icon.png'
+        }
+      ]
+    }
+  }
+})
 export default class Index extends Vue {
   format = format
   year = ''
@@ -43,6 +72,7 @@ export default class Index extends Vue {
   }
 }
 </script>
+
 <style lang="scss" scoped>
 @import '~/assets/css/variables.scss';
 
@@ -73,7 +103,7 @@ section {
   }
 
   .month {
-    margin: 0 0 20px -10px;
+    margin: 50px 0 20px 0;
     font-size: 2.4rem;
     font-weight: bold;
   }
@@ -81,6 +111,7 @@ section {
   .date {
     width: 90px;
     margin-right: 20px;
+    white-space: nowrap;
   }
 
   .title {

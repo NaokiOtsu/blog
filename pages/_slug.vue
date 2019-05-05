@@ -57,10 +57,7 @@ import { format } from 'date-fns'
     return {
       content: fileContent.default
     }
-  }
-})
-export default class Slug extends Vue {
-  format = format
+  },
 
   head() {
     return {
@@ -85,11 +82,14 @@ export default class Slug extends Vue {
         },
         {
           name: 'og:image',
-          content: 'https://naokiotsu.github.io/blog/images/profile.png'
+          content: 'https://naokiotsu.github.io/blog/icon.png'
         }
       ]
     }
   }
+})
+export default class Slug extends Vue {
+  format = format
 
   created() {
     const post = this.$store.state.posts.find(
@@ -139,7 +139,7 @@ export default class Slug extends Vue {
       padding-bottom: 10px;
       font-size: 2.6rem;
       line-height: 4.2rem;
-      border-bottom: 1px solid #efefef;
+      border-bottom: 2px solid #efefef;
     }
 
     /deep/ h2 {
@@ -213,7 +213,7 @@ export default class Slug extends Vue {
         padding-bottom: 6px;
         font-size: 2rem;
         line-height: 3rem;
-        border-bottom: 1px solid #efefef;
+        border-bottom: 2px solid #efefef;
       }
 
       /deep/ h2 {

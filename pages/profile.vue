@@ -114,6 +114,42 @@
   </section>
 </template>
 
+<script lang="ts">
+import { Vue, Component } from 'vue-property-decorator'
+
+@Component({
+  head() {
+    return {
+      title: `Profile | OtsuLog`,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.body
+        },
+        {
+          name: 'twitter:card',
+          content: 'summary'
+        },
+        {
+          name: 'og:title',
+          content: `Profile | OtsuLog`
+        },
+        {
+          name: 'og:description',
+          content: this.body
+        },
+        {
+          name: 'og:image',
+          content: 'https://naokiotsu.github.io/blog/icon.png'
+        }
+      ]
+    }
+  }
+})
+export default class Index extends Vue {}
+</script>
+
 <style lang="scss" scoped>
 @import '~/assets/css/variables.scss';
 
