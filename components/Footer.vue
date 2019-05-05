@@ -15,8 +15,10 @@
         <div class="info">
           <h3>Naoki Otsu</h3>
           <p>
-            普段はフロントエンドエンジニアしながら、Webサービスとかアプリ開発してます。
-            <br />Nuxt, ReactNative, Electron, Vuex, Redux辺りをよく触ってます。
+            Front-End Engineer.<br>
+            Webやアプリを作るのが好きです<br>
+            Vue, React, React
+            Native, Firebase, GraqhQL, etc..
             <nuxt-link to="/profile/" class="more">...もっと見る</nuxt-link>
           </p>
           <ul>
