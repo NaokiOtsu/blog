@@ -1,0 +1,13 @@
+<template>
+  <div></div>
+</template>
+
+<script>
+if (process.browser) {
+  location.href =
+    'https://naokiotsu.github.io/blog/2018-08-25-mac-keyboard-shortcuts-when-vscode/'
+}
+export default {}
+</script>
+
+<style></style>
