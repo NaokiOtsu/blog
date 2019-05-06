@@ -1,17 +1,22 @@
-## About
-Web development blog
+# OtsuLog
 
-## URL
-https://naokiotsu.github.io/blog/
+> フロントエンド(JavaScript, ReactNative, Electron..)、バックエンド(Ruby, GraphQL)、書籍など学んだことを発信する場
 
-## Develop
-```bash
-git checkout develop
-hexo new post hoge # creating new post
+## Build Setup
+
+``` bash
+# install dependencies
+$ yarn install
+
+# serve with hot reload at localhost:3000
+$ yarn run dev
+
+# build for production and launch server
+$ yarn run build
+$ yarn start
+
+# generate static project
+$ yarn run generate
 ```
 
-## Deploy
-```bash
-hexo deploy -g # deploy on gh-pages branch
-```
-Publish when pushing to `gh-pages` branch
+For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).
