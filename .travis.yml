@@ -1,27 +1,25 @@
 language: node_js
 node_js:
-  - "8"
-
+- '8'
 cache:
   directories:
-    - "node_modules"
-
+  - node_modules
 branches:
   only:
   - master
-
 install:
-  - npm install
-  - npm run generate:gh-pages
-
+- npm install
+- npm run generate:gh-pages
 script:
-  - echo "Skipping tests"
-
+- echo "Skipping tests"
 deploy:
   provider: pages
   skip-cleanup: true
-  github-token: $GITHUB_ACCESS_TOKEN  # Set in travis-ci.org dashboard, marked secure https://docs.travis-ci.com/user/deployment/pages/#Setting-the-GitHub-token
+  github-token: "$GITHUB_ACCESS_TOKEN"
   target-branch: gh-pages
   local-dir: dist
   on:
     branch: master
+notifications:
+  slack:
+    secure: E/Fvxfv8DNe3zsSYRYLaeIZoOPpACbSD9/bo6xQTwow07jkZsfrDFWU74vgP5IgrnIRIBqyQ79XW+90DH96Bn9bnkqnWLsgoHkxAh3eeZSxTtB5+xdZtAAoguiOBXsOiVScZKjxz7l6YCKUWNpsER/iAChvQDgk5WGtFIEZ2xCIKFMZDcpWtU5txnEm3A42XkpsMKMicSkxPlJf581/8aug9oxz9VWbGx0HCIHPjUWQ8BUfVOVBqXsB4fOWRm+YnUgZXgqu0fztmp+XBKFoqUjODmTWJWwiMZB909jTMvRyKETMoLbMYHxSv1CcCCSEXbs83EG4yQoofqJM2WPKIiQWVuJjKXQpZbIyHQdMNTcPbaJyAPMBqGmtpkt4ZswQQFtZm+o6DiMqPyTSfrWsCLDD9mn4Bk1Z/ITnQY90piVeLN673w7VJj6cPqvq2jiWhNt7fVsuITjsCWXAl1Hu346v6O6pj6jt5s/P777Mp7N7T+zD6ufGaMU7fTDK77a3P7qJ+gKB9JWQS8Ad/XbkRGsxlikBagkkB9L5+tp0aMv4moC6TiYZ1gvAM8Xha/H+SHLjlE+dXEc9WKivcvVT0oGd3ptbP3rSgvBPmrrxbLufuoTJJ47AICabcyIH+blh6s1nfhnrcNJ7PgkNehACsj7pFNqGJifNRmuY9nqfqRJg=
