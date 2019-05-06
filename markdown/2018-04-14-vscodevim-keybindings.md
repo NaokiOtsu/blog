@@ -1,5 +1,5 @@
 ---
-title: vscodevim(vscode + vim)で効率的にコーディング
+title: VS Code + Vimで効率的にコーディング
 date: 2018-04-14
 ---
 
