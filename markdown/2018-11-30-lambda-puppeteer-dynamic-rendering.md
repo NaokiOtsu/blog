@@ -207,21 +207,21 @@ Origin Requestのデフォルトの設定だと、WebSocketでPuppeteerとconnec
 タイムアウト 3秒 → 30秒
 に変えたところエラーが消えて、無事にPuppeteerがLambda上で動いた。
 
-<img src="/images/2018-11-30/lambda.png" width="100%">
+<img src="/blog/images/2018-11-30/lambda.png" width="100%">
 
 # 動作確認
 
 動作確認は、ChromeのDevToolsの`Network conditions`から`Googlebot`をチェックしてサイトにアクセスすることで確認出来る。
 ボットの時に黄色のページが表示されて、ボットじゃない時は元のページが表示されればOK。
 
-<img src="/images/2018-11-30/pc.png" width="100%">
+<img src="/blog/images/2018-11-30/pc.png" width="100%">
 
 [モバイルフレンドリーテスト](https://search.google.com/test/mobile-friendly?hl=ja)もOK
 
-<img src="/images/2018-11-30/friendly.png" width="100%">
+<img src="/blog/images/2018-11-30/friendly.png" width="100%">
 
 [Fetch as Google](https://support.google.com/webmasters/answer/6066468?hl=ja)も問題なさそう。
-<img src="/images/2018-11-30/fetch.png" width="100%">
+<img src="/blog/images/2018-11-30/fetch.png" width="100%">
 
 # まとめ
 Lambda + Puppeteerでダイナミックレンダリングが出来た。

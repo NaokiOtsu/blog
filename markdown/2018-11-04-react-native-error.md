@@ -14,7 +14,7 @@ React Nativeの開発で起きたエラーと解決策のまとめ
 ## 解決策
 `/ios/プロジェクト名.xcodeproj`をXcodeで開いて、File → Project Settingsのメニューの中から「Advanced」を選択して、下記のように設定すると良かった。
 
-<img src="/images/2018-11-04/xcode.png" width="80%">
+<img src="/blog/images/2018-11-04/xcode.png" width="80%">
 
 もしくは別の解決策で、
 ```bash

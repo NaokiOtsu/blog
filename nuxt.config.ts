@@ -10,16 +10,12 @@ function getRoutes() {
     .map(f => `/${f}/`);
 }
 
-const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
-  router: {
-    base: '/blog/'
-  }
-} : {}
-
 const config: NuxtConfiguration = {
   mode: 'universal',
 
-  ...routerBase,
+  router: {
+    base: '/blog/'
+  },
 
   /*
    ** Headers of the page

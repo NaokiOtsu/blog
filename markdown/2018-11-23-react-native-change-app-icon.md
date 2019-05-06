@@ -10,7 +10,7 @@ ReactNativeというわけではないけど、iOSとAndroidのアプリのア�
 まずは画像の準備から。
 アイコンサイズは `1024 x 1024` で準備しとく。
 
-<img src="/images/2018-11-23/icon.png" width="20%">
+<img src="/blog/images/2018-11-23/icon.png" width="20%">
 
 たぶんPhotoshopやXDを使って作成すると、サイズ別で書き出しが出来ると思うけど、それらが無い場合はそれぞれのサイズに書き出してくれるWebサービスを使っても出来そう。パッと試したい時とか。
 
@@ -26,11 +26,11 @@ Xcodeでプロジェクトを開く(`/ios/hoge.xcodeproj`をXcodeで開く)
 
 下記のキャプチャのように `images.xcassets` → `AppIcon` をクリックすると、サイズ別にアプリアイコンが設定出来るので、そこに画像をドラッグ&ドロップで格納していく。
 
-<img src="/images/2018-11-23/xcode.png" width="50%">
+<img src="/blog/images/2018-11-23/xcode.png" width="50%">
 
 これで`react-native run-ios`して、シミュレーター上でもアイコンが変更されてたらOK!
 
-<img src="/images/2018-11-23/iphone.png" width="50%">
+<img src="/blog/images/2018-11-23/iphone.png" width="50%">
 
 # Andoirdでアプリのアイコンを設定する
 
@@ -55,6 +55,6 @@ Android側はAndroid Studioは使わない。ディレクトリに画像を入�
 
 差し替えた状態で`react-native run-android`してシミュレーター上でもアプリアイコンが変わっていたらOK!
 
-<img src="/images/2018-11-23/android.png" width="50%">
+<img src="/blog/images/2018-11-23/android.png" width="50%">
 
 シミュレーターでうまくいってたら実機側も問題なくアイコン画像変わってた! おしまい。
