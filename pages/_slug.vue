@@ -74,7 +74,7 @@ import { format } from 'date-fns'
         },
         {
           name: 'og:title',
-          content: `${this.title} | OtsuLog`
+          content: this.title
         },
         {
           name: 'og:description',

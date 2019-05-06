@@ -32,7 +32,7 @@ const config: NuxtConfiguration = {
           'フロントエンド(Vue, React, ReactNative, Electron..)、バックエンド(Ruby, GraphQL..)、書籍(スタートアップ, 経営者..)から学んだことをアウトプットする場所'
       }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/blog/favicon.ico' }]
   },
 
   /*
