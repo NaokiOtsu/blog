@@ -15,10 +15,9 @@
         <div class="info">
           <h3>Naoki Otsu</h3>
           <p>
-            Front-End Engineer.<br>
-            Webやアプリを作るのが好きです<br>
-            Vue, React, React
-            Native, Firebase, GraqhQL, etc..
+            Front-End Engineer.<br />
+            Webやアプリを作るのが好きです<br />
+            SoftBank → TRGP → DeNA → TechJIN → Vega.
             <nuxt-link to="/profile/" class="more">...もっと見る</nuxt-link>
           </p>
           <ul>
