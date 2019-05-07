@@ -17,7 +17,7 @@
           <p>
             Front-End Engineer.<br />
             Vue, React, React Native, Firebase, GraqhQL, etc..<br />
-            Webやアプリを作るのが好きです<br />
+            Webやアプリを作るのが好きです
             <nuxt-link to="/profile/" class="more">...もっと見る</nuxt-link>
           </p>
           <ul>
@@ -151,6 +151,10 @@ footer {
       margin-bottom: 0;
     }
 
+    p {
+      margin-top: 4px;
+    }
+
     ul {
       margin: 20px 0 0;
       padding: 0;
@@ -205,11 +209,11 @@ footer {
     .info {
       margin-left: 16px;
       line-height: 1.4;
-    }
 
-    h3 {
-      margin: 0 0 10px;
-      font-size: 1.6rem;
+      h3 {
+        margin: 0 0 4px;
+        font-size: 1.6rem;
+      }
     }
 
     p {

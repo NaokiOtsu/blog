@@ -58,6 +58,7 @@ header {
     }
 
     span {
+      margin-right: 2px;
       font-weight: bold;
     }
   }

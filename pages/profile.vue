@@ -17,7 +17,7 @@
       Vue, React, React Native, Firebase, GraqhQL, バスケ,
       映画(インターステラー), @rebuildfmも好き<br />
       Webやアプリを作るのが好きです<br />
-      時間があれば朝から晩までひたすら開発に没頭する日々です。<br />
+      朝から晩までひたすら開発に没頭する日々です。<br />
     </p>
 
     <h2>経歴</h2>
@@ -26,11 +26,30 @@
     <h2>出身</h2>
     <p>熊本県 南阿蘇</p>
 
-    <h2>LT</h2>
+    <h2>プライベートワーク</h2>
     <p>
-      <a href="http://www.itstaffing.jp/engineer/entry/20151211_1"
-        >【イベントレポート】ページをより楽しく印象的にする「CSSアニメーション」を学ぶスキルアップイベント</a
+      <a
+        href="https://itunes.apple.com/jp/app/%E5%AE%B6%E8%A8%88%E7%B0%BFtouchlife-%E7%B0%A1%E5%8D%98%E4%BA%BA%E6%B0%97%E3%81%AE%E3%81%8A%E5%B0%8F%E9%81%A3%E3%81%84%E5%B8%B3/id1460375602?mt=8"
+        target="_blank"
+        >「TouchLife」</a
       >
+      ... 家計簿アプリ(ReactNative + Firebase)
+    </p>
+    <p>
+      <a
+        href="https://play.google.com/store/apps/details?id=info.naokiotsu&hl=ja"
+        target="_blank"
+        >「マロンのおうちにかえろう」</a
+      >
+      ... 横スクロールゲーム(Unity)
+    </p>
+    <p>
+      <a
+        href="https://play.google.com/store/apps/details?id=com.rna1&hl=ja"
+        target="_blank"
+        >「ボイス」</a
+      >
+      ... 鳴き声アプリ(ReactNative)
     </p>
 
     <h2>好きなもの</h2>
@@ -45,13 +64,14 @@
         >Sweet Refrain</a
       >」 ... テンポ良くて作業用BGMとしてもGood!<br />
       ・日曜日のサンデーモーニングからワイドナショーの流れ<br />
-      ・カイジ 「<a
-        href="https://youtu.be/B28ufV4ojkQ"
-        target="_blank"
-        rel="noopener"
-        >柿ピー1日半欠けら</a
-      >」になるシーン<br />
-      <br />
+      ・カイジ 「柿ピー1日半欠けら」になるシーン<br />
+    </p>
+
+    <h2>LT</h2>
+    <p>
+      <a href="http://www.itstaffing.jp/engineer/entry/20151211_1"
+        >【イベントレポート】ページをより楽しく印象的にする「CSSアニメーション」を学ぶスキルアップイベント</a
+      >
     </p>
 
     <h2>SNS</h2>
