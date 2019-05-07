@@ -12,14 +12,14 @@ VSCodeは `Control + w` でウィンドウ切り替えが出来るけど、
 `一覧を呼び出す` → `選ぶ` の操作が必要で、だんだん煩わしくなってくる。
 `Command + Tab`のように次のワークスペースに片手でパッパッと切り替えたいなぁと思ってた。
 
-<img src="/blog/images/2018-08-25/vscode-shortcuts.png" width="80%">
+<img src="/images/2018-08-25/vscode-shortcuts.png" width="80%">
 
 方法はMac標準のショートカットを使うってことになるけど、
 `システム環境設定` → `キーボード` → `ショートカット`タブの → `キーボード` の `次のウィンドウを操作対象にする`
 を使うと良さそう
 
-<img src="/blog/images/2018-08-25/vscode-image1.png" width="80%">
-<img src="/blog/images/2018-08-25/vscode-image2.png" width="80%">
+<img src="/images/2018-08-25/vscode-image1.png" width="80%">
+<img src="/images/2018-08-25/vscode-image2.png" width="80%">
 
 このショートカット、デフォルトは `option + F1` とかになってて、
 そのままだと使い辛いので、自分は `option + tab` に変えてる

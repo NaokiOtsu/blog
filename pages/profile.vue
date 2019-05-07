@@ -139,7 +139,7 @@ import { Vue, Component } from 'vue-property-decorator'
         },
         {
           name: 'og:image',
-          content: 'https://naokiotsu.github.io/blog/icon.png'
+          content: 'https://naoki-otsu.com/icon.png'
         }
       ]
     }

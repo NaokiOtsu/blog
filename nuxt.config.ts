@@ -14,7 +14,7 @@ const config: NuxtConfiguration = {
   mode: 'universal',
 
   router: {
-    base: '/blog/'
+    base: '/'
   },
 
   /*
@@ -32,7 +32,7 @@ const config: NuxtConfiguration = {
           'フロントエンド(Vue, React, ReactNative, Electron..)、バックエンド(Ruby, GraphQL..)、書籍(スタートアップ, 経営者..)から学んだことをアウトプットする場所'
       }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/blog/favicon.ico' }]
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
 
   /*
@@ -119,7 +119,7 @@ const config: NuxtConfiguration = {
 
   sitemap: {
     path: "/sitemap.xml",
-    hostname: "https://naokiotsu.github.io/blog",
+    hostname: "https://naoki-otsu.com",
     cacheTime: 1000 * 60 * 15,
     gzip: true,
     generate: true, // Enable me when using nuxt generate
