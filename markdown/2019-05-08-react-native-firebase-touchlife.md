@@ -6,14 +6,14 @@ date: 2019-05-08
 ReactNative(Expo) + Firebaseで`TouchLife`というiOS/Androidアプリを開発してリリースしました。
 
 <div style="display: flex; align-items: center; margin-top: 24px;">
-  <div style="padding: 16px; background: #333;">
-    <img style="width: 74px; margin: 0; padding: 0;" src="/images/2019-05-08/iTunesArtwork.png">
+  <div style="">
+    <img style="width: 100px; margin: 0; padding: 0; border-radius: 16px; box-shadow: 0 0 3px rgba(0,0,0,0.5)" src="/images/2019-05-08/touchlife.png">
   </div>
-  <div style="margin-left: 16px; padding-top: 6px;">
+  <div style="margin-left: 16px; padding-top: 8px;">
     <div style="width: 140px;">
       <a href="https://itunes.apple.com/us/app/%E5%AE%B6%E8%A8%88%E7%B0%BFtouchlife-%E7%B0%A1%E5%8D%98%E4%BA%BA%E6%B0%97%E3%81%AE%E3%81%8A%E5%B0%8F%E9%81%A3%E3%81%84%E5%B8%B3/id1460375602?mt=8" target="_blank"><img src="/images/2019-05-08/Download_on_the_App_Store_Badge_JP_RGB_blk_100317.svg" style="width: 100%; margin: 0;"></a>
     </div>
-    <div style="width: 140px; margin-top: 6px;">
+    <div style="width: 140px; margin-top: 2px;">
       <a href="" target="_blank"><img src="/images/2019-05-08/google-play-badge.png" style="width: 100%; margin: 0; transform: scale(1.13)"></a>
     </div>
   </div>
@@ -52,7 +52,6 @@ ReactNative(Expo) + Firebaseで`TouchLife`というiOS/Androidアプリを開発
 今回は技術メインでアウトプットしたいと思います。
 
 # 使った技術
-<br>
 
 - ReactNative(Expo)
 - Firebase
@@ -62,6 +61,10 @@ ReactNative(Expo) + Firebaseで`TouchLife`というiOS/Androidアプリを開発
 - Google Analytics
 
 # ReactNative(Expo)
+
+<img src="/images/2019-05-08/react_native.png" style="width: 338px">
+<img src="/images/2019-05-08/expo.png" style="width: 150px; margin-bottom: 44px; margin-left: 15px;">
+
 メインはReactNative + Expoです。
 最初はExpoを使わずReactNativeのみで開発していたのですが、ReactNativeのバージョンアップや何か特別な事をやろうとするとすぐ赤いエラー画面になってしまい、機能の実装よりそのエラーの解決に労力が割かれている事に気づきました。(アプリ開発経験が豊富じゃないと辛い印象だった)
 
@@ -72,6 +75,9 @@ ReactNative(Expo) + Firebaseで`TouchLife`というiOS/Androidアプリを開発
 また今回は広島に住んでる友人と遠隔でやりとりしながらの開発だったんですが、Expoの場合、Expo ClientのiPhoneアプリを通じて[遠隔地でもビルドなしでiPhoneの実機で確認可能](https://docs.expo.io/versions/latest/workflow/how-expo-works/#serving-an-expo-project-for-local-development)で、これが大変役に立ちました。
 
 # Firebase
+
+<img src="/images/2019-05-08/firebase.png" style="width: 218px">
+
 ユーザー認証やデータベースへの保存の仕組みが必要で、認証の仕組みが予め備わっていてモバイルアプリに特化しているFirebaseを選定しました。
 主に使った機能は、`Authentication、Firestore、Functions, Hosting`の4つです。
 
@@ -80,11 +86,12 @@ ReactNative(Expo) + Firebaseで`TouchLife`というiOS/Androidアプリを開発
 - Facebook/Google認証
 
 の2つを実装しました。
-特にユーザーの入力したパスワードはFirebase側のみで管理されて自前で管理しなくてよくなる(開発者も知る事ができない)ので、よりセキュア + DBにencryptして保存のような実装もいらなくなるので、その分メインの開発に時間を割く事が出来ました。
+特にユーザーの入力したパスワードは`Firebase側のみで管理されて自前で管理しなくてよくなる`(開発者も知る事ができない)ので、よりセキュア + DBにencryptして保存のような実装もいらなくなるので、その分メインの開発に時間を割く事が出来ました。
 
 # Firestore
+
 ユーザー情報とそれに紐づく支出、収入のデータのDB保存が必要だったので、Firestoreを使いました。
-usersコレクションにユーザーごとのデータ、その中に支出、収入のサブコレクションを持つ構成にしました。
+`usersコレクションにユーザーごとのデータ、その中に支出、収入のサブコレクションを持つ構成`にしました。
 リリースしたばかりなので無料の範囲内で利用できています。
 
 # Functions
@@ -98,13 +105,13 @@ ExpoのWebViewを使って、アプリ内から参照するようにしていま
 またメール認証した後にアプリに戻すリダイレクトが必要だったため、リダイレクト専用のhtmlファイルも配置しています。
 
 ゆくゆくはランディングページにも利用する事になりそうです。
-その際は現行のフロントエンドのベストプラクティスが詰まっている
+その際はフロントエンドのベストプラクティスが詰まっている
 [Nuxt](https://ja.nuxtjs.org/)の[generate](https://ja.nuxtjs.org/api/configuration-generate)で作るのが良いのかなと思っています。
-このブログも`nuxt generate + markdown`で作っています。
+このブログも`nuxt generate + markdown`で作りました。
 
 # React Navigation
 ルーティングとナビゲーションは[React Navigation](https://github.com/react-navigation/react-navigation)で実装しました。
-最初は[react-native-router-flux](https://github.com/aksonov/react-native-router-flux)を使っていましたが、このモジュール自体がReact Navigationをベースに作られていてReact Navigationの[ドキュメント](https://reactnavigation.org/docs/en/getting-started.html)もしっかり準備されていたので、途中からReact Navigationに変更しました。
+最初は[react-native-router-flux](https://github.com/aksonov/react-native-router-flux)を使っていましたが、このモジュール自体がReact Navigationをベースに作られていてReact Navigationの[ドキュメント](https://reactnavigation.org/docs/en/getting-started.html)がしっかり準備されていたので、途中からReact Navigationに変更しました。
 これから始めるならReact Navigationで良い印象です。
 
 # redux + thunk
@@ -113,15 +120,17 @@ ExpoのWebViewを使って、アプリ内から参照するようにしていま
 [redux-saga](https://github.com/redux-saga/redux-saga)の選択肢もありましたが、thunkの方がなじみがあったのでこちらにしました。
 
 # Sentry
+
+<img src="/images/2019-05-08/sentry.png" style="width: 228px">
+
 バグ検知はExpoで公式にサポートされている[Sentry](https://sentry.io/welcome/)を導入。
-エラーが起きるとGmail, Slackに通知が飛ぶようになっています。
-[sentry-expo](https://github.com/expo/sentry-expo)を使って導入しました。
-今のところ無料範囲内で利用できています。
+ユーザーの端末でエラーが起きるとGmail, Slackに通知が飛ぶようになっています。
+[sentry-expo](https://github.com/expo/sentry-expo)を使っています。今のところ無料範囲内で利用できています。
 
 # Google Analytics
 アプリのインストール数などはApp Store Connectのアナリティクスでも確認できますが、具体的な時間帯や詳しい情報も欲しかったのでGoogle Analyticsを導入しました。
 [expo-analytics](https://github.com/ryanvanderpol/expo-analytics)を使っています。
-さらに踏み込んだ分析をする場合は、[Amplitude](https://amplitude.com/)などを導入すると良さそうでした。
+さらに踏み込んだ分析をする場合は、[Amplitude](https://amplitude.com/)などを導入すると良さそうです。
 
 # 使用したライブラリ一覧
 以下、TouchLifeで使った主なライブラリ一覧です。
@@ -139,6 +148,7 @@ ExpoのWebViewを使って、アプリ内から参照するようにしていま
 <img src="/images/2019-05-08/ultra.png">
 
 `給料日が土日祝の場合はその前の平日を取得する`などが必要で、そちらが取得できるUltraDate.jsを使いました。
+ちゃんと実装すると面倒な祝日やうるう年の計算など、Dateオブジェクトを便利に拡張したライブラリです。
 
 [UltraDate.js](https://github.com/hrdaya/UltraDate.js)
 
@@ -147,8 +157,8 @@ ExpoのWebViewを使って、アプリ内から参照するようにしていま
 <img src="/images/2019-05-08/May-11-2019 13-52-45.gif">
 
 円グラフの為に使いました。
-最初は[react-native-pie-chart](https://github.com/genexu/react-native-pie-chart)を使っていたのですが、途中から円グラフをアニメーションさせようとしたところreact-native-pie-chartだと難しそうだったので、こちらを使いました。(アニメーションしない円グラフだけの表示ならreact-native-pie-chartでも十分だと思います)
-`d3-shape`で円のデータを作って、それを`react-native-svg`で描画するような流れです。
+最初は[react-native-pie-chart](https://github.com/genexu/react-native-pie-chart)を使っていたのですが、円グラフをアニメーションさせようとしたところreact-native-pie-chartだと難しそうだったので、こちらを使いました。(アニメーションしない円グラフだけの表示ならreact-native-pie-chartでも十分だと思います)
+`d3-shape`で円のデータを作り、それを`react-native-svg`で描画するような流れです。
 
 下記の記事が参考になりました。
 [Pie animation in React Native using SVG](https://medium.com/@oriharel/pie-animation-in-react-native-using-svg-55d7d3f90156)
@@ -197,7 +207,7 @@ ExpoのWebViewを使って、アプリ内から参照するようにしていま
 
 <img src="/images/2019-05-08/May-11-2019 19-24-02.gif">
 
-画面の下部にInput要素がある時に、キーボードが下から出てきて入力している部分が隠れてしまって何が入力されているのか分からない問題があったのですが、その部分が隠れないようにスクロールしてくれるモジュールです。自分で実装するとそれなりに大変だったので助かりました。
+画面の下の方にInput要素があると、`キーボードが下から出てきた時に入力している部分が隠れてしまい何が入力されているのか分からない問題`があったのですが、その部分が隠れないようにスクロールしてくれるモジュールです。自分で実装するとそれなりに大変そうだったので助かりました。
 
 [react-native-keyboard-aware-scroll-view](https://github.com/APSL/react-native-keyboard-aware-scroll-view)
 
@@ -206,7 +216,7 @@ ExpoのWebViewを使って、アプリ内から参照するようにしていま
 <img src="/images/2019-05-08/May-11-2019 18-07-58.gif">
 
 シンプルなモーダルです。
-スタイルもカスタマイズ可能です。
+簡単に表示、非表示が出来て、スタイルもカスタマイズ可能です。
 
 [react-native-modal](https://github.com/react-native-community/react-native-modal)
 
@@ -215,9 +225,9 @@ ExpoのWebViewを使って、アプリ内から参照するようにしていま
 <img src="/images/2019-05-08/May-11-2019 18-11-07.gif">
 
 タブ切り替えが必要な箇所に使いました。
-スワイプ操作にも対応しているのが良かったです。
-最初は、[react-native-scrollable-tab-view](https://github.com/ptomasroos/react-native-scrollable-tab-view)を使っていましたが、ScrollViewの中で使おうとするとAndroidだけ中の要素が表示されない不具合があり、それが解決されているuniversalを使うことにしました。
-universalもreact-native-scrollable-tab-viewをForkしてるものになるので、この不具合が修正が改善されれば、react-native-scrollable-tab-viewで良いと思います。
+スワイプ操作にも対応しているのでUXも良い印象です。
+最初は、[react-native-scrollable-tab-view](https://github.com/ptomasroos/react-native-scrollable-tab-view)を使っていましたが、`ScrollViewの中で使おうとするとAndroidだけ中の要素が表示されない不具合`があり、それが解決されているuniversalを使うことにしました。
+universalも`react-native-scrollable-tab-view`をForkしてるものになるので、この不具合が修正が改善されれば、`react-native-scrollable-tab-view`で良いと思います。
 
 [react-native-scrollable-tab-view-universal](https://github.com/turfaa/react-native-scrollable-tab-view-universal)
 
@@ -226,7 +236,7 @@ universalもreact-native-scrollable-tab-viewをForkしてるものになるの�
 <img src="/images/2019-05-08/May-11-2019 18-13-09.gif">
 
 オープニングやグラフのカルーセルに使いました。
-次や前の月のグラフもちょっと見せるUIにしかったので、それが可能だったこちらを使いました。
+`次や前の月のグラフもちょっと見せるUIにしかった`ので、それが可能だったこちらを使いました。
 
 [react-native-snap-carousel](https://github.com/archriss/react-native-snap-carousel)
 
@@ -236,7 +246,7 @@ universalもreact-native-scrollable-tab-viewをForkしてるものになるの�
 
 ツールチップの表示に使いました。
 アプリの使い方を伝える最初のチュートリアルにも使えそうです。
-ツールチップが画面外にはみ出ないように、ライブラリ側で位置が自動計算され使う側がそこを意識しなくてよいのが良かったです。
+ツールチップが画面外にはみ出ないように、`ライブラリ側で位置を自動計算`してくれて使う側がそこを意識しなくてよいのが良かったです。
 
 [react-native-walkthrough-tooltip](https://github.com/jasongaare/react-native-walkthrough-tooltip)
 
@@ -262,7 +272,11 @@ ReactNative良いですね。
 開発途中でAndroidで実機確認したんですが、最初にAndroidでiPhoneと同じように動作した時は感動しました。
 
 また途中からExpoで作り直したのも良かったなと思っています。
-最初はExpoって公式のReactNativeからちょっと外れたニッチな開発のように感じて、公式から外れるのはどうかな的な感覚があったのですが、使ってみると使いやすくて、必要ならejectしていつでも公式のReactNativeに戻せるというのも移行した理由になりました。
+最初はExpoって公式のReactNativeからちょっと外れたニッチな開発のように感じて、公式から外れるのはどうかな的な感覚があったのですが、使ってみると使いやすくて、`必要ならejectしていつでも公式のReactNativeに戻せる`というのも移行した理由になりました。
+
+またこうしてアプリをリリースまで持っていけたのも、所属している会社の影響が大きいです。先月も月の残業時間が0で、プライベートでまとまった時間を取る事ができました。
+会社の中にはRubyコミッター、3DCGモデラー、SRE、ng-fukuoka organizer、アセンブリ言語にすごく詳しい方、積極的にOSS活動してる方...などなど、ここシリコンバレーだっけ？という感じで刺激を受けています。福岡、東京で興味のある方は会社を覗いて頂ければと思います。一緒に良いプロダクトを作っていきましょう。
+[VEGA corporation](https://www.vega-c.com/)
 
 `TouchLife`も定期的に更新して、常に改善している事を感じてもらえるアプリにしていきたいと思います。
 最後まで読んでいただき、ありがとうございました。

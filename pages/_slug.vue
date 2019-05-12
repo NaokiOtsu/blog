@@ -148,6 +148,10 @@ export default class Slug extends Vue {
       line-height: 3rem;
     }
 
+    /deep/ ul {
+      margin-top: 24px;
+    }
+
     /deep/ li {
       margin-bottom: 4px;
     }

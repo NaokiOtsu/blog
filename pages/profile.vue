@@ -21,7 +21,7 @@
     </p>
 
     <h2>経歴</h2>
-    <p>SoftBank → TRGP → DeNA → TechJIN → Vega corporation.</p>
+    <p>大学卒業 → SoftBank → TRGP → DeNA → TechJIN → Vega corporation.</p>
 
     <h2>出身</h2>
     <p>熊本県 南阿蘇</p>
@@ -54,16 +54,11 @@
 
     <h2>好きなもの</h2>
     <p>
-      ・マイケルジョーダン<br />
+      ・バスケ(NBA、マイケルジョーダンとか)<br />
       ・映画 インターステラー、インセプション、ソーシャルネットワーク<br />
-      ・ゲーム スマブラ、ウイイレ<br />
-      ・Perfumeの「<a
-        href="https://youtu.be/CYL3DnyA4e0"
-        target="_blank"
-        rel="noopener"
-        >Sweet Refrain</a
-      >」 ... テンポ良くて作業用BGMとしてもGood!<br />
-      ・日曜日のサンデーモーニングからワイドナショーの流れ<br />
+      ・ゲーム スマブラ、ウイイレ、荒野行動<br />
+      ・Mr.Children<br />
+      ・日曜日のサンデーモーニング → ワイドナショーの流れ<br />
       ・カイジ 「柿ピー1日半欠けら」になるシーン<br />
     </p>
 
