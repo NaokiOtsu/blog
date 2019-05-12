@@ -1,7 +1,7 @@
 <template>
   <header>
     <h1>
-      <nuxt-link to="/"><span>Otsu</span>Log</nuxt-link>
+      <nuxt-link to="/">Naoki <span>Otsu</span></nuxt-link>
     </h1>
     <nav>
       <ul>

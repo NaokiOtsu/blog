@@ -16,12 +16,12 @@
       Front-End Engineer.<br />
       Vue, React, React Native, Firebase, GraqhQL, バスケ,
       映画(インターステラー), @rebuildfmも好き<br />
-      Webやアプリを作るのが好きです<br />
-      朝から晩までひたすら開発に没頭する日々です。<br />
+      Webやアプリを作るのが好きで、「ヒットするプロダクトを作る」のが目標です<br />
+      福岡県の糸島に住んでいます
     </p>
 
     <h2>経歴</h2>
-    <p>SoftBank → TRGP → DeNA → TechJIN → Vega.</p>
+    <p>SoftBank → TRGP → DeNA → TechJIN → Vega corporation.</p>
 
     <h2>出身</h2>
     <p>熊本県 南阿蘇</p>
@@ -41,7 +41,7 @@
         target="_blank"
         >「マロンのおうちにかえろう」</a
       >
-      ... 横スクロールゲーム(Unity)
+      ... 横スクロールのアクションゲーム(Unity)
     </p>
     <p>
       <a
@@ -138,7 +138,7 @@ import { Vue, Component } from 'vue-property-decorator'
 @Component({
   head() {
     return {
-      title: `Profile | OtsuLog`,
+      title: `Profile | Naoki Otsu`,
       meta: [
         {
           hid: 'description',
@@ -151,7 +151,7 @@ import { Vue, Component } from 'vue-property-decorator'
         },
         {
           name: 'og:title',
-          content: `Profile | OtsuLog`
+          content: `Profile | Naoki Otsu`
         },
         {
           name: 'og:description',

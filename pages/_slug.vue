@@ -61,7 +61,7 @@ import { format } from 'date-fns'
 
   head() {
     return {
-      title: `${this.title} | OtsuLog`,
+      title: `${this.title} | Naoki Otsu`,
       meta: [
         {
           hid: 'description',

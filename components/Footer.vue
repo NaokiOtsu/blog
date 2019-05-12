@@ -17,7 +17,24 @@
           <p>
             Front-End Engineer.<br />
             Vue, React, React Native, Firebase, GraqhQL, etc..<br />
-            Webやアプリを作るのが好きです
+            フロントエンドを中心に発信しています。<br />
+            お気軽にフォローくださいませ。
+            <span style="position: relative; top: 4px; margin-left: 4px;"
+              ><a
+                href="https://twitter.com/melo15?ref_src=twsrc%5Etfw"
+                class="twitter-follow-button"
+                data-show-screen-name="false"
+                data-lang="ja"
+                data-show-count="false"
+                >Follow @melo15</a
+              ><script
+                async
+                src="https://platform.twitter.com/widgets.js"
+                charset="utf-8"
+              ></script
+            ></span>
+            <br />
+
             <nuxt-link to="/profile/" class="more">...もっと見る</nuxt-link>
           </p>
           <ul>
@@ -182,6 +199,7 @@ footer {
   address {
     margin: 0;
     text-align: center;
+    font-style: normal;
   }
 }
 
