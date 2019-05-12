@@ -60,7 +60,7 @@ import { format } from 'date-fns'
   },
 
   head() {
-    return {
+    const head = {
       title: `${this.title} | Naoki Otsu`,
       meta: [
         {
@@ -70,7 +70,7 @@ import { format } from 'date-fns'
         },
         {
           name: 'twitter:card',
-          content: 'summary'
+          content: this.image ? 'summary_large_image' : 'summary'
         },
         {
           name: 'og:title',
@@ -82,10 +82,12 @@ import { format } from 'date-fns'
         },
         {
           name: 'og:image',
-          content: 'https://naoki-otsu.com/icon.png'
+          content: this.image || 'https://naoki-otsu.com/icon.png'
         }
       ]
     }
+
+    return head
   }
 })
 export default class Slug extends Vue {
@@ -108,6 +110,10 @@ export default class Slug extends Vue {
 
   get body() {
     return this.$store.state.post.body.replace(/\r?\n/g, '')
+  }
+
+  get image() {
+    return this.$store.state.post.attributes.image
   }
 }
 </script>

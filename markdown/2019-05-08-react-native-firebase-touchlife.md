@@ -1,9 +1,10 @@
 ---
-title: ReactNative + FirebaseでiOS/Androidアプリを開発してリリースしました
+title: React Native + FirebaseでiOS/Androidアプリをリリースしました
 date: 2019-05-08
+image: https://naoki-otsu.com/images/2019-05-08/og.png
 ---
 
-ReactNative(Expo) + Firebaseで`TouchLife`というiOS/Androidアプリを開発してリリースしました。
+React Native(Expo) + Firebaseで`TouchLife`というiOS/Androidアプリをリリースしました。
 
 <div style="display: flex; align-items: center; margin-top: 24px;">
   <div style="">
@@ -53,20 +54,20 @@ ReactNative(Expo) + Firebaseで`TouchLife`というiOS/Androidアプリを開発
 
 # 使った技術
 
-- ReactNative(Expo)
+- React Native(Expo)
 - Firebase
 - React Navigation
 - redux + thunk
 - Sentry
 - Google Analytics
 
-# ReactNative(Expo)
+# React Native(Expo)
 
 <img src="/images/2019-05-08/react_native.png" style="width: 338px">
 <img src="/images/2019-05-08/expo.png" style="width: 150px; margin-bottom: 44px; margin-left: 15px;">
 
-メインはReactNative + Expoです。
-最初はExpoを使わずReactNativeのみで開発していたのですが、ReactNativeのバージョンアップや何か特別な事をやろうとするとすぐ赤いエラー画面になってしまい、機能の実装よりそのエラーの解決に労力が割かれている事に気づきました。(アプリ開発経験が豊富じゃないと辛い印象だった)
+メインはReact Native + Expoです。
+最初はExpoを使わずReact Nativeのみで開発していたのですが、React Nativeのバージョンアップや何か特別な事をやろうとするとすぐ赤いエラー画面になってしまい、機能の実装よりそのエラーの解決に労力が割かれている事に気づきました。(アプリ開発経験が豊富じゃないと辛い印象だった)
 
 これはいかんということでExpoで1から作り直したのですが、この開発体感がびっくりするぐらい良かった。
 基本Expoのレール上の実装になるので機能はExpoで提供されているものに制限されるデメリットはありますが、その分エラーになる事がほとんどなくなり、結果的にそれまでの2倍ぐらいの開発スピードになったと思います。
@@ -268,11 +269,11 @@ universalも`react-native-scrollable-tab-view`をForkしてるものになるの
     </iframe>
 
 # まとめ
-ReactNative良いですね。
+React Native良いですね。
 開発途中でAndroidで実機確認したんですが、最初にAndroidでiPhoneと同じように動作した時は感動しました。
 
 また途中からExpoで作り直したのも良かったなと思っています。
-最初はExpoって公式のReactNativeからちょっと外れたニッチな開発のように感じて、公式から外れるのはどうかな的な感覚があったのですが、使ってみると使いやすくて、`必要ならejectしていつでも公式のReactNativeに戻せる`というのも移行した理由になりました。
+最初はExpoって公式のReact Nativeからちょっと外れたニッチな開発のように感じて、公式から外れるのはどうかな的な感覚があったのですが、使ってみると使いやすくて、`必要ならejectしていつでも公式のReact Nativeに戻せる`というのも移行した理由になりました。
 
 またこうしてアプリをリリースまで持っていけたのも、所属している会社の影響が大きいです。先月も月の残業時間が0で、プライベートでまとまった時間を取る事ができました。
 会社の中にはRubyコミッター、3DCGモデラー、SRE、ng-fukuoka organizer、アセンブリ言語に詳しい方、積極的にOSS活動してる方...などなど、良い刺激を受けています。福岡、東京で興味のある方は会社を覗いて頂ければと思います。一緒に良いプロダクトを作っていきましょう。
