@@ -179,7 +179,7 @@ ExpoのWebViewを使って、アプリ内から参照するようにしていま
 
 # native-base
 
-<img src="/images/2019-05-08/May-11-2019 17-44-42.gif">
+<img src="/images/2019-05-08/ezgif-4-b7a0dbc95f5e.gif">
 
 主にフォームのセレクトボックスで使用。
 最初セレクトボックスは、[react-native-picker-select](https://github.com/lawnstarter/react-native-picker-select)を使っていたのですが、Androidで見た時に表示がおかしかったので、安定していたnative-baseに切り替えました。
@@ -206,7 +206,7 @@ ExpoのWebViewを使って、アプリ内から参照するようにしていま
 
 # react-native-keyboard-aware-scroll-view
 
-<img src="/images/2019-05-08/May-11-2019 19-24-02.gif">
+<img src="/images/2019-05-08/ezgif-4-b16a37b3b4cc.gif">
 
 画面の下の方にInput要素があると、`キーボードが下から出てきた時に入力している部分が隠れてしまい何が入力されているのか分からない問題`があったのですが、その部分が隠れないようにスクロールしてくれるモジュールです。自分で実装するとそれなりに大変そうだったので助かりました。
 
@@ -214,7 +214,7 @@ ExpoのWebViewを使って、アプリ内から参照するようにしていま
 
 # react-native-modal
 
-<img src="/images/2019-05-08/May-11-2019 18-07-58.gif">
+<img src="/images/2019-05-08/ezgif-4-86530604c2b8.gif">
 
 シンプルなモーダルです。
 簡単に表示、非表示が出来て、スタイルもカスタマイズ可能です。
@@ -223,7 +223,7 @@ ExpoのWebViewを使って、アプリ内から参照するようにしていま
 
 # react-native-scrollable-tab-view-universal
 
-<img src="/images/2019-05-08/May-11-2019 18-11-07.gif">
+<img src="/images/2019-05-08/ezgif-4-b8cf6619d868.gif">
 
 タブ切り替えが必要な箇所に使いました。
 スワイプ操作にも対応しているのでUXも良い印象です。
@@ -234,7 +234,7 @@ universalも`react-native-scrollable-tab-view`をForkしてるものになるの
 
 # react-native-snap-carousel
 
-<img src="/images/2019-05-08/May-11-2019 18-13-09.gif">
+<img src="/images/2019-05-08/ezgif-4-b97ac0e6144d.gif">
 
 オープニングやグラフのカルーセルに使いました。
 `次や前の月のグラフもちょっと見せるUIにしかった`ので、それが可能だったこちらを使いました。
