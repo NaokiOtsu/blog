@@ -6,18 +6,13 @@ image: https://naoki-otsu.com/images/2019-05-08/og.png
 
 React Native(Expo) + Firebaseで`TouchLife`というiOS/Androidアプリをリリースしました。
 
-<div style="display: flex; align-items: center; margin-top: 24px;">
-  <div style="">
-    <img style="width: 100px; margin: 0; padding: 0; border-radius: 16px; box-shadow: 0 0 3px rgba(0,0,0,0.5)" src="/images/2019-05-08/touchlife.png">
-  </div>
-  <div style="margin-left: 16px; padding-top: 8px;">
-    <div style="width: 140px;">
-      <a href="https://itunes.apple.com/us/app/%E5%AE%B6%E8%A8%88%E7%B0%BFtouchlife-%E7%B0%A1%E5%8D%98%E4%BA%BA%E6%B0%97%E3%81%AE%E3%81%8A%E5%B0%8F%E9%81%A3%E3%81%84%E5%B8%B3/id1460375602?mt=8" target="_blank"><img src="/images/2019-05-08/Download_on_the_App_Store_Badge_JP_RGB_blk_100317.svg" style="width: 100%; margin: 0;"></a>
-    </div>
-    <div style="width: 140px; margin-top: 2px;">
-      <a href="" target="_blank"><img src="/images/2019-05-08/google-play-badge.png" style="width: 100%; margin: 0; transform: scale(1.13)"></a>
-    </div>
-  </div>
+<div style="margin-top: 42px; text-align: center;">
+  <img style="width: 120px; margin: 0; padding: 0; border-radius: 16px; box-shadow: 0 0 3px rgba(0,0,0,0.5)" src="/images/2019-05-08/touchlife.png">
+</div>
+
+<div style="margin-top: 20px; padding-left: 20px; text-align: center;">
+  <a style="margin-right: 30px" href="https://itunes.apple.com/us/app/%E5%AE%B6%E8%A8%88%E7%B0%BFtouchlife-%E7%B0%A1%E5%8D%98%E4%BA%BA%E6%B0%97%E3%81%AE%E3%81%8A%E5%B0%8F%E9%81%A3%E3%81%84%E5%B8%B3/id1460375602?mt=8" target="_blank"><img src="/images/2019-05-08/Download_on_the_App_Store_Badge_JP_RGB_blk_100317.svg" style="width: 140px; margin: 0;"></a>
+  <a style="position: relative; top: 2px; display: inline-block; margin-top: 8px;" href="" target="_blank"><img src="/images/2019-05-08/google-play-badge.png" style="width: 140px; margin: 0; transform: scale(1.4)"></a>
 </div>
 
 # TouchLifeとは
@@ -63,8 +58,8 @@ React Native(Expo) + Firebaseで`TouchLife`というiOS/Androidアプリをリ�
 
 # React Native(Expo)
 
-<img src="/images/2019-05-08/react_native.png" style="width: 338px">
-<img src="/images/2019-05-08/expo.png" style="width: 150px; margin-bottom: 44px; margin-left: 15px;">
+<img src="/images/2019-05-08/react_native.png" style="width: 288px">
+<img src="/images/2019-05-08/expo.png" style="    width: 130px; margin-bottom: 40px; margin-left: 15px;">
 
 メインはReact Native + Expoです。
 最初はExpoを使わずReact Nativeのみで開発していたのですが、React Nativeのバージョンアップや何か特別な事をやろうとするとすぐ赤いエラー画面になってしまい、機能の実装よりそのエラーの解決に労力が割かれている事に気づきました。(アプリ開発経験が豊富じゃないと辛い印象だった)
@@ -169,7 +164,7 @@ ExpoのWebViewを使って、アプリ内から参照するようにしていま
 
 # formik + yup
 
-<img src="/images/2019-05-08/May-11-2019 17-46-59.gif">
+<img src="/images/2019-05-08/ezgif-4-4cda48b81c3e.gif">
 
 メールアドレスやパスワードなどフォームのバリデーションが扱いやすくなるので使いました。Reactの[公式ドキュメント](https://reactjs.org/docs/forms.html#fully-fledged-solutions)でも紹介されているものです。
 別の選択肢だと[redux-form](https://github.com/erikras/redux-form)もあり、こちらはフォームの状態をreduxのstoreに保存するようですが、Reactコミュニティの一般的な見解だとフォームの状態をreduxに入れない方向のようで、`formik`や[react-final-form](https://github.com/final-form/react-final-form)を使うのが良いとのことでした。
@@ -265,7 +260,7 @@ universalも`react-native-scrollable-tab-view`をForkしてるものになるの
 これでipaファイルが`.build/app.ipa`に生成されるので、後はfastlaneを使ってApp Store Connectにデプロイ → 実機確認 → 申請 → 配信 という感じで無事リリース出来ました。
 
 `実践Expo`は開発の途中からKindle版を買ったんですが、特にExpoを使ったリリース方法 + AnalyticsやSentryの設定方法も載っていて、とても為になりました。Expoで開発する場合はオススメの本です。
-<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="https://rcm-fe.amazon-adsystem.com/e/cm?ref=qf_sp_asin_til&t=otsu05d-22&m=amazon&o=9&p=8&l=as1&IS1=1&detail=1&asins=484439875X&linkId=a98f6286de56a7ffec2630da51b8e6d1&bc1=000000&lt1=_blank&fc1=333333&lc1=0066c0&bg1=ffffff&f=ifr">
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="https://rcm-fe.amazon-adsystem.com/e/cm?ref=qf_sp_asin_til&t=otsu03-22&m=amazon&o=9&p=8&l=as1&IS1=1&detail=1&asins=484439875X&linkId=468810da7f8baa2f559ab397924b960e&bc1=000000&lt1=_blank&fc1=333333&lc1=0066c0&bg1=ffffff&f=ifr">
     </iframe>
 
 # まとめ
@@ -274,10 +269,6 @@ React Native良いですね。
 
 また途中からExpoで作り直したのも良かったなと思っています。
 最初はExpoって公式のReact Nativeからちょっと外れたニッチな開発のように感じて、公式から外れるのはどうかな的な感覚があったのですが、使ってみると使いやすくて、`必要ならejectしていつでも公式のReact Nativeに戻せる`というのも移行した理由になりました。
-
-またこうしてアプリをリリースまで持っていけたのも、所属している会社の影響が大きいです。先月も月の残業時間が0で、プライベートでまとまった時間を取る事ができました。
-会社の中にはRubyコミッター、3DCGモデラー、SRE、ng-fukuoka organizer、アセンブリ言語に詳しい方、積極的にOSS活動してる方...などなど、良い刺激を受けています。福岡、東京で興味のある方は会社を覗いて頂ければと思います。一緒に良いプロダクトを作っていきましょう。
-[VEGA corporation](https://www.vega-c.com/)
 
 `TouchLife`も定期的に更新して、常に改善している事を感じてもらえるアプリにしていきたいと思います。
 最後まで読んでいただき、ありがとうございました。
