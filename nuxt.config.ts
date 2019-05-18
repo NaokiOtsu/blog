@@ -123,7 +123,7 @@ const config: NuxtConfiguration = {
 
   sitemap: {
     path: "/sitemap.xml",
-    hostname: "https://naoki-otsu.com",
+    hostname: "https://blog.naoki-otsu.com",
     cacheTime: 1000 * 60 * 15,
     gzip: true,
     generate: true, // Enable me when using nuxt generate
