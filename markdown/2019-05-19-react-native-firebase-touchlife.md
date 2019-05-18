@@ -20,11 +20,6 @@ React Native(Expo) + Firebaseで`「TouchLife」`という家計簿アプリを�
   </div>
 </div>
 
-<div style="margin-top: 20px; text-align: center;">
-
-
-</div>
-
 # TouchLifeとは
 
 <div style="display: flex; overflow-x: scroll; -webkit-overflow-scrolling: touch;">
@@ -71,7 +66,7 @@ React Native(Expo) + Firebaseで`「TouchLife」`という家計簿アプリを�
 <img src="/images/2019-05-19/expo.png" style="    width: 130px; margin-bottom: 40px; margin-left: 15px;">
 
 メインは[React Native](https://facebook.github.io/react-native/) + [Expo](https://expo.io/)です。
-最初はExpoは使わずReact Nativeのみで開発していましたが、React Nativeのバージョンアップや何か特別なことを入れようとするとすぐ赤いエラー画面になってしまい、機能の実装よりそのエラーの解決に労力が割かれてるなぁというのが気になっていました。(アプリ開発経験が豊富じゃないと辛い印象だった。ReactNativeの経験値不足もある。)
+最初はExpoは使わずReact Nativeのみで開発していましたが、React Nativeのバージョンアップや何か特別なことを入れようとするとすぐ赤いエラー画面になってしまい、機能の実装よりそのエラーの解決に労力が割かれてるなぁというのが気になっていました。(アプリ開発経験が豊富じゃないと辛い印象だった。React Native開発の経験値不足もある。)
 
 これはいかんということでExpoで1から作り直したのですが、この開発体感がびっくりするぐらい良かった。
 基本Expoのレール上の実装になるので機能はExpoで提供されているものに制限されるデメリットはありますが、その分エラーになる事がほとんどなくなり、結果的にそれまでの2倍ぐらいの開発スピードになったと思います。

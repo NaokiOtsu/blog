@@ -17,7 +17,7 @@
       Vue, React, React Native, Firebase, GraqhQL, バスケ,
       映画(インターステラー), @rebuildfmも好き<br />
       Webやアプリを作るのが好きです<br />
-      福岡の糸島在住です
+      福岡の糸島在住
     </p>
 
     <h2>経歴</h2>
