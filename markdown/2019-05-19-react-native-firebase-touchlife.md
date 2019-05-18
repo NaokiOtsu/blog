@@ -152,7 +152,7 @@ ExpoのWebViewを使って、アプリ内から参照するようにしていま
 
 # react-native-svg + d3-shape
 
-<img src="/images/2019-05-19/May-11-2019 13-52-45.gif">
+<img src="/images/2019-05-19/May-11-2019 13-52-45.gif" style="width: 182px;">
 
 円グラフの為に使いました。
 最初は[react-native-pie-chart](https://github.com/genexu/react-native-pie-chart)を使っていたのですが、円グラフをアニメーションさせようとするとreact-native-pie-chartだと難しそうでこちらを使いました。(アニメーションしない円グラフだけの表示ならreact-native-pie-chartでも十分だと思います)
@@ -166,7 +166,7 @@ ExpoのWebViewを使って、アプリ内から参照するようにしていま
 
 # formik + yup
 
-<img src="/images/2019-05-19/ezgif-4-4cda48b81c3e.gif">
+<img src="/images/2019-05-19/ezgif-4-4cda48b81c3e.gif" style="width: 292px;">
 
 メールアドレスやパスワードなどフォームのバリデーションが扱いやすくなるので使いました。Reactの[公式ドキュメント](https://reactjs.org/docs/forms.html#fully-fledged-solutions)でも紹介されているものです。
 別の選択肢だと[redux-form](https://github.com/erikras/redux-form)もあり、こちらはフォームの状態をreduxのstoreに保存するようですが、Reactコミュニティの一般的な見解だとフォームの状態をreduxで管理しない方向のようで、`formik`や[react-final-form](https://github.com/final-form/react-final-form)を使うのが良いとのことでした。
@@ -176,7 +176,7 @@ ExpoのWebViewを使って、アプリ内から参照するようにしていま
 
 # native-base
 
-<img src="/images/2019-05-19/ezgif-4-b7a0dbc95f5e.gif">
+<img src="/images/2019-05-19/ezgif-4-b7a0dbc95f5e.gif" style="width: 294px;">
 
 主にフォームのセレクトボックスで使用。
 最初セレクトボックスは、[react-native-picker-select](https://github.com/lawnstarter/react-native-picker-select)を使っていたのですが、Androidで見た時に表示がおかしかったので、安定していたnative-baseに切り替えました。
@@ -185,7 +185,7 @@ ExpoのWebViewを使って、アプリ内から参照するようにしていま
 
 # react-native-calendars
 
-<img src="/images/2019-05-19/May-11-2019 17-51-11.gif">
+<img src="/images/2019-05-19/May-11-2019 17-51-11.gif" style="width: 294px;">
 
 カレンダーの実装に使っています。
 `monthFormat={"yyyy年MM月"}`などで日本語のフォーマットでカスタマイズ可能なのも良かったです。
@@ -194,7 +194,7 @@ ExpoのWebViewを使って、アプリ内から参照するようにしていま
 
 # react-native-easy-toast
 
-<img src="/images/2019-05-19/May-11-2019 17-54-10.gif">
+<img src="/images/2019-05-19/May-11-2019 17-54-10.gif" style="width: 294px;">
 
 マイページなどユーザー情報を変更した時の、成功、失敗をユーザーに知らせる目的で使いました。
 表示する位置や色は自由にカスタマイズ出来ます。
@@ -203,7 +203,7 @@ ExpoのWebViewを使って、アプリ内から参照するようにしていま
 
 # react-native-keyboard-aware-scroll-view
 
-<img src="/images/2019-05-19/ezgif-4-b16a37b3b4cc.gif">
+<img src="/images/2019-05-19/ezgif-4-b16a37b3b4cc.gif" style="width: 294px;">
 
 画面の下の方にInput要素があると、`キーボードが下から出てきた時に入力している部分が隠れてしまい何が入力されているのか分からない問題`があったのですが、その部分が隠れないようにスクロールしてくれるモジュールです。自分で実装するとそれなりに大変そうだったので助かりました。
 
@@ -211,7 +211,7 @@ ExpoのWebViewを使って、アプリ内から参照するようにしていま
 
 # react-native-modal
 
-<img src="/images/2019-05-19/ezgif-4-86530604c2b8.gif">
+<img src="/images/2019-05-19/ezgif-4-86530604c2b8.gif" style="width: 272px;">
 
 シンプルなモーダルです。
 簡単に表示、非表示が出来て、スタイルもカスタマイズ可能です。
@@ -220,7 +220,7 @@ ExpoのWebViewを使って、アプリ内から参照するようにしていま
 
 # react-native-scrollable-tab-view-universal
 
-<img src="/images/2019-05-19/ezgif-4-b8cf6619d868.gif">
+<img src="/images/2019-05-19/ezgif-4-b8cf6619d868.gif" style="width: 294px;">
 
 タブ切り替えが必要な箇所に使いました。
 スワイプ操作にも対応しているのでUXも良い印象です。
@@ -231,7 +231,7 @@ universalも`react-native-scrollable-tab-view`をForkしてるものになるの
 
 # react-native-snap-carousel
 
-<img src="/images/2019-05-19/ezgif-4-b97ac0e6144d.gif">
+<img src="/images/2019-05-19/ezgif-4-b97ac0e6144d.gif" style="width: 292px;">
 
 オープニングやグラフのカルーセルに使いました。
 `次や前の月のグラフもちょっと見せるUIにしかった`ので、それが可能だったこちらを使いました。
@@ -240,7 +240,7 @@ universalも`react-native-scrollable-tab-view`をForkしてるものになるの
 
 # react-native-walkthrough-tooltip
 
-<img src="/images/2019-05-19/May-11-2019 19-16-31.gif">
+<img src="/images/2019-05-19/May-11-2019 19-16-31.gif" style="width: 294px;">
 
 ツールチップの表示に使いました。
 アプリの使い方を伝える最初のチュートリアルにも使えそうです。
