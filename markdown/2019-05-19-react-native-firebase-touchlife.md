@@ -4,7 +4,7 @@ date: 2019-05-19
 image: https://blog.naoki-otsu.com/images/2019-05-19/og.png
 ---
 
-React Native(Expo) + Firebaseで`「TouchLife」`という家計簿アプリを開発してiOS/Androidアプリとしてリリースしました。
+React Native(Expo) + Firebaseで`「TouchLife」`という家計簿アプリを友人と2人で開発して、iOS/Androidアプリとしてリリースしました。
 
 <div style="display: flex; justify-content: center;  align-items: center; margin-top: 42px;">
   <div>
@@ -46,20 +46,17 @@ React Native(Expo) + Firebaseで`「TouchLife」`という家計簿アプリを�
 </div>
 
 簡単にいうと家計簿アプリです。
-お金をきちんと把握しようとすると必ず出てくる面倒さを解決する為に作りました。
+`お金をちゃんと把握しようとすると必ず出てくる面倒さを解決`する為に作りました。
 
-通常の家計簿は記録するのがメインになると思いますが、
-そこから一歩踏み込んで、今月使ったお金が前月と比べてプラスなのかマイナスなのか、食費や交際費など細かい勘定科目で見た時にリアルな数字としてはどうなのか、を計算して分析するという特徴があります。
+通常の家計簿は記録するのがメインになると思いますが、そこから一歩踏み込んで、今月使ったお金が前月と比べてプラスなのかマイナスなのか、食費や交際費など細かい勘定科目で見た時にリアルな数字としてはどうなのか、を計算して分析するという特徴があります。
 
-特に給料日から今日までに使ったお金が前月のまったく同じ日と比べてどうなのかを計算する同日対比の機能が一番の特徴です。
+特に`給料日から今日までに使ったお金が前月のまったく同じ日と比べてどうなのか`を計算する同日対比の機能が一番の特徴です。
 
-きちんとお金を把握していきたいなと思っている方に届けば良いなという思いで、友人と2人で開発しました。
-友人が企画 + デザイン、自分がエンジニアリングを担当。
+これからちゃんとお金を把握していきたいなと思っている方に届けば良いなという思いで、リクルートで働いてる友人と遠隔でやりとりしつつ2人で開発しました。友人が企画 + デザイン、自分がエンジニアリングを担当。
 
-今回は技術メインでアウトプットしたいと思います。
+以下、技術メインで紹介できればと思います。
 
 # 使った技術
-言語は、JavaScriptのみです。
 
 - React Native(Expo)
 - Firebase
@@ -74,13 +71,13 @@ React Native(Expo) + Firebaseで`「TouchLife」`という家計簿アプリを�
 <img src="/images/2019-05-19/expo.png" style="    width: 130px; margin-bottom: 40px; margin-left: 15px;">
 
 メインは[React Native](https://facebook.github.io/react-native/) + [Expo](https://expo.io/)です。
-最初はExpoを使わずReact Nativeのみで開発していたのですが、React Nativeのバージョンアップや何か特別な事をやろうとするとすぐ赤いエラー画面になってしまい、機能の実装よりそのエラーの解決に労力が割かれている事が気になっていました。(アプリ開発経験が豊富じゃないと辛い印象だった)
+最初はExpoは使わずReact Nativeのみで開発していましたが、React Nativeのバージョンアップや何か特別なことを入れようとするとすぐ赤いエラー画面になってしまい、機能の実装よりそのエラーの解決に労力が割かれてるなぁというのが気になっていました。(アプリ開発経験が豊富じゃないと辛い印象だった。ReactNativeの経験値不足もある。)
 
 これはいかんということでExpoで1から作り直したのですが、この開発体感がびっくりするぐらい良かった。
 基本Expoのレール上の実装になるので機能はExpoで提供されているものに制限されるデメリットはありますが、その分エラーになる事がほとんどなくなり、結果的にそれまでの2倍ぐらいの開発スピードになったと思います。
 今回のアプリの要件がExpoの提供範囲内で十分開発可能だったこともExpo移行の理由でした。
 
-また今回は広島に住んでる友人と遠隔でやりとりしながらの開発だったんですが、Expoの場合、Expo ClientのiPhoneアプリを通じて[遠隔地でもビルドなしでiPhoneの実機で確認可能](https://docs.expo.io/versions/latest/workflow/how-expo-works/#serving-an-expo-project-for-local-development)で、これが大変役に立ちました。
+また今回は遠隔でやりとりしながらの開発だったんですが、Expoの場合、Expo ClientのiPhoneアプリを通じて[遠隔地でもビルドなしでiPhoneの実機で確認可能](https://docs.expo.io/versions/latest/workflow/how-expo-works/#serving-an-expo-project-for-local-development)で、これが大変役に立ちました。
 
 # Firebase
 
@@ -113,7 +110,7 @@ ExpoのWebViewを使って、アプリ内から参照するようにしていま
 またメール認証した後にアプリに戻すリダイレクトが必要だったため、リダイレクト専用のhtmlファイルも配置しています。
 
 ゆくゆくはランディングページにも利用する事になりそうです。
-その際は現行のフロントエンドのベストプラクティスが詰まっている[Nuxt](https://ja.nuxtjs.org/)の[generate](https://ja.nuxtjs.org/api/configuration-generate)で作るのが良いのかなと思っています。(このブログもnuxt generate + markdownです)
+その際は現行のフロントエンドのベストプラクティスが詰まってる[Nuxt](https://ja.nuxtjs.org/)の[generate](https://ja.nuxtjs.org/api/configuration-generate)で作るのが良いかなと思ってます。(このブログもnuxt generate + markdownです)
 
 # React Navigation
 ルーティングとナビゲーションは[React Navigation](https://github.com/react-navigation/react-navigation)で実装しました。
@@ -143,7 +140,7 @@ ExpoのWebViewを使って、アプリ内から参照するようにしていま
 
 # date-fns
 
-<img src="/images/2019-05-19/date-fns.png">
+<img src="/images/2019-05-19/date-fns.png" style="width: 100px;">
 
 `5月1日(水)`のような日本語にフォーマットされた日付が必要だったので使いました。
 
@@ -151,7 +148,7 @@ ExpoのWebViewを使って、アプリ内から参照するようにしていま
 
 # UltraDate.js
 
-<img src="/images/2019-05-19/ultra.png">
+<img src="/images/2019-05-19/ultra.png" style="width: 150px;">
 
 `給料日が土日祝の場合はその前の平日を取得する`などが必要で、そちらが取得できるUltraDate.jsを使いました。
 ちゃんと実装すると面倒な祝日やうるう年の計算など、Dateオブジェクトを便利に拡張したライブラリです。
@@ -163,8 +160,8 @@ ExpoのWebViewを使って、アプリ内から参照するようにしていま
 <img src="/images/2019-05-19/May-11-2019 13-52-45.gif">
 
 円グラフの為に使いました。
-最初は[react-native-pie-chart](https://github.com/genexu/react-native-pie-chart)を使っていたのですが、円グラフをアニメーションさせようとするとreact-native-pie-chartだと難しそうだったので、こちらを使いました。(アニメーションしない円グラフだけの表示ならreact-native-pie-chartでも十分だと思います)
-`d3-shape`で円のデータを作り、それを`react-native-svg`で描画する流れです。
+最初は[react-native-pie-chart](https://github.com/genexu/react-native-pie-chart)を使っていたのですが、円グラフをアニメーションさせようとするとreact-native-pie-chartだと難しそうでこちらを使いました。(アニメーションしない円グラフだけの表示ならreact-native-pie-chartでも十分だと思います)
+`d3-shape`で円のデータを作成、それを`react-native-svg`で描画する流れです。
 
 下記の記事が参考になりました。
 [Pie animation in React Native using SVG](https://medium.com/@oriharel/pie-animation-in-react-native-using-svg-55d7d3f90156)
@@ -276,7 +273,7 @@ React Native良いですね。
 開発途中でAndroidで実機確認したんですが、最初にAndroidでiPhoneと同じように動作した時は感動しました。
 
 また途中からExpoで作り直したのも良かったなと思っています。
-最初はExpoって公式のReact Nativeからちょっと外れたニッチな開発のように感じて、公式から外れるのはどうかな的な感覚があったのですが、使ってみると使いやすくて、`必要ならejectしていつでも公式のReact Nativeに戻せる`というのも移行した理由になりました。
+最初はExpoって公式のReact Nativeからちょっと外れたニッチな開発のように感じて、公式から外れるのはどうかな的な感覚があったのですが使ってみると使いやすくて、`必要ならejectしていつでも公式のReact Nativeに戻せる`というのも移行した理由になりました。
 
 `TouchLife`も定期的に更新して、常に改善している事を感じてもらえるアプリにしていきたいと思います。
 最後まで読んでいただき、ありがとうございました。
