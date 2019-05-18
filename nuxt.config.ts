@@ -68,10 +68,10 @@ const config: NuxtConfiguration = {
         id: "UA-7365476-10"
       }
     ],
-    ['@nuxtjs/google-adsense', {
-      id: 'ca-pub-7715596541055690',
-      pageLevelAds: true
-    }]
+    // ['@nuxtjs/google-adsense', {
+    //   id: 'ca-pub-7715596541055690',
+    //   pageLevelAds: true
+    // }]
   ],
   /*
    ** Axios module configuration
