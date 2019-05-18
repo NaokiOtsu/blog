@@ -186,6 +186,10 @@ export default class Slug extends Vue {
       padding: 1em 24px;
       background-color: #364549;
     }
+
+    /deep/ .touchlife-img {
+      width: 340px;
+    }
   }
 
   .sns {
@@ -268,6 +272,10 @@ export default class Slug extends Vue {
       /deep/ .hljs {
         padding: 1em 16px;
         -webkit-text-size-adjust: none;
+      }
+
+      /deep/ .touchlife-img {
+        width: 245px;
       }
     }
   }
