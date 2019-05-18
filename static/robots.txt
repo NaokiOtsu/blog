@@ -1,2 +1,2 @@
 user-agent: *
-sitemap: https://naoki-otsu.com/sitemap.xml
+sitemap: https://blog.naoki-otsu.com/sitemap.xml

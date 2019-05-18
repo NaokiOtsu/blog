@@ -47,7 +47,7 @@ import { format } from 'date-fns'
         },
         {
           name: 'og:image',
-          content: 'https://naoki-otsu.com/icon.png'
+          content: 'https://blog.naoki-otsu.com/icon.png'
         }
       ]
     }

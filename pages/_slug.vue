@@ -82,7 +82,7 @@ import { format } from 'date-fns'
         },
         {
           name: 'og:image',
-          content: this.image || 'https://naoki-otsu.com/icon.png'
+          content: this.image || 'https://blog.naoki-otsu.com/icon.png'
         }
       ]
     }

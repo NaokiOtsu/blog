@@ -68,6 +68,10 @@ const config: NuxtConfiguration = {
         id: "UA-7365476-10"
       }
     ],
+    ['@nuxtjs/google-adsense', {
+      id: 'ca-pub-7715596541055690',
+      pageLevelAds: true
+    }]
   ],
   /*
    ** Axios module configuration
@@ -119,7 +123,7 @@ const config: NuxtConfiguration = {
 
   sitemap: {
     path: "/sitemap.xml",
-    hostname: "https://naoki-otsu.com",
+    hostname: "https://blog.naoki-otsu.com",
     cacheTime: 1000 * 60 * 15,
     gzip: true,
     generate: true, // Enable me when using nuxt generate

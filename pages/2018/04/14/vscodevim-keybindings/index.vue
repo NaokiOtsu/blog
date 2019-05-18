@@ -4,7 +4,7 @@
 
 <script>
 if (process.browser) {
-  location.href = 'https://naoki-otsu.com/2018-04-14-vscodevim-keybindings/'
+  location.href = 'https://blog.naoki-otsu.com/2018-04-14-vscodevim-keybindings/'
 }
 export default {}
 </script>

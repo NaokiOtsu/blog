@@ -154,7 +154,7 @@ import { Vue, Component } from 'vue-property-decorator'
         },
         {
           name: 'og:image',
-          content: 'https://naoki-otsu.com/icon.png'
+          content: 'https://blog.naoki-otsu.com/icon.png'
         }
       ]
     }
