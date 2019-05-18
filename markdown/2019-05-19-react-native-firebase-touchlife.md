@@ -100,7 +100,7 @@ React Native(Expo) + Firebaseで`「TouchLife」`という家計簿アプリを�
 [Vue.js + Firebase functionsでお問い合わせフォームを作成する](https://qiita.com/ryo2132/items/7cdd6c86dd418095f74a)
 
 # Hosting
-主に利用規約、プライバシーポリシーページの為に使いました。
+主に利用規約、プライバシーポリシーの静的ページの為に使いました。
 ExpoのWebViewを使って、アプリ内から参照するようにしています。
 またメール認証した後にアプリに戻すリダイレクトが必要だったため、リダイレクト専用のhtmlファイルも配置しています。
 
