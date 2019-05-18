@@ -1,21 +1,21 @@
 ---
-title: React Native + FirebaseでiOS/Androidアプリを開発してリリースしました
+title: React Native + FirebaseでiOS & Androidアプリを開発してリリースしました
 date: 2019-05-19
 image: https://blog.naoki-otsu.com/images/2019-05-19/og.png
 ---
 
-React Native(Expo) + Firebaseで`「TouchLife」`という家計簿アプリを友人と2人で開発して、iOS/Androidアプリとしてリリースしました。
+React Native(Expo) + Firebaseで`「TouchLife」`という家計簿アプリを友人と2人で開発して、iOS & Androidアプリとしてリリースしました。
 
 <div style="display: flex; justify-content: center;  align-items: center; margin-top: 42px;">
   <div>
-    <img style="width: 120px; margin: 0; padding: 0; border-radius: 16px; box-shadow: 0 0 3px rgba(0,0,0,0.5)" src="/images/2019-05-19/touchlife.png">
+    <img style="width: 100px; margin: 0; padding: 0; border-radius: 16px; box-shadow: 0 0 3px rgba(0,0,0,0.5)" src="/images/2019-05-19/touchlife.png">
   </div>
   <div style="margin-left: 20px;">
-    <div style="margin-top: 3px;">
-      <a style="" href="https://itunes.apple.com/us/app/%E5%AE%B6%E8%A8%88%E7%B0%BFtouchlife-%E7%B0%A1%E5%8D%98%E4%BA%BA%E6%B0%97%E3%81%AE%E3%81%8A%E5%B0%8F%E9%81%A3%E3%81%84%E5%B8%B3/id1460375602?mt=8" target="_blank"><img src="/images/2019-05-19/Download_on_the_App_Store_Badge_JP_RGB_blk_100317.svg" style="width: 160px; margin: 0;"></a>
+    <div style="margin-top: 4px;">
+      <a style="" href="https://itunes.apple.com/app/id1460375602" target="_blank"><img src="/images/2019-05-19/Download_on_the_App_Store_Badge_JP_RGB_blk_100317.svg" style="width: 140px; margin: 0;"></a>
     </div>
-    <div style="margin-top: 8px;">
-      <a style="" href="https://play.google.com/store/apps/details?id=jp.touchlife" target="_blank"><img src="/images/2019-05-19/google-play-badge.png" style="width: 140px; margin: 0 0 0 10px; transform: scale(1.3)"></a>
+    <div style="margin-top: 6px;">
+      <a style="" href="https://play.google.com/store/apps/details?id=jp.touchlife" target="_blank"><img src="/images/2019-05-19/google-play-badge.png" style="width: 120px; margin: 0 0 0 10px; transform: scale(1.32)"></a>
     </div>
   </div>
 </div>
@@ -41,7 +41,7 @@ React Native(Expo) + Firebaseで`「TouchLife」`という家計簿アプリを�
 </div>
 
 簡単にいうと家計簿アプリです。
-`お金をちゃんと把握しようとすると必ず出てくる面倒さを解決`する為に作りました。
+`お金をちゃんと把握しようとすると出てくる面倒さを解決`する為に作りました。
 
 通常の家計簿は記録するのがメインになると思いますが、そこから一歩踏み込んで、今月使ったお金が前月と比べてプラスなのかマイナスなのか、食費や交際費など細かい勘定科目で見た時にリアルな数字としてはどうなのか、を計算して分析するという特徴があります。
 
