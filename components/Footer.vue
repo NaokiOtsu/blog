@@ -17,8 +17,7 @@
           <p>
             Front-End Engineer.<br />
             Vue, React, React Native, Firebase, GraqhQL, etc..<br />
-            フロントエンドを中心に発信しています。<br />
-            お気軽にフォローくださいませ。
+            フロントエンドを中心に発信しています。お気軽にフォローくださいませ。
             <span
               style="position: relative; top: 4px; margin-left: 4px; margin-bottom: 10px"
               ><a
@@ -35,8 +34,6 @@
               ></script
             ></span>
             <br />
-
-            <nuxt-link to="/profile/" class="more">...more</nuxt-link>
           </p>
           <ul>
             <li>
