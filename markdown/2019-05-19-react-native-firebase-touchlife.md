@@ -12,7 +12,7 @@ React Native(Expo) + Firebaseで`TouchLife`というiOS/Androidアプリをリ�
 
 <div style="margin-top: 20px; padding-left: 20px; text-align: center;">
   <a style="margin-right: 30px" href="https://itunes.apple.com/us/app/%E5%AE%B6%E8%A8%88%E7%B0%BFtouchlife-%E7%B0%A1%E5%8D%98%E4%BA%BA%E6%B0%97%E3%81%AE%E3%81%8A%E5%B0%8F%E9%81%A3%E3%81%84%E5%B8%B3/id1460375602?mt=8" target="_blank"><img src="/images/2019-05-19/Download_on_the_App_Store_Badge_JP_RGB_blk_100317.svg" style="width: 140px; margin: 0;"></a>
-  <a style="position: relative; top: 2px; display: inline-block; margin-top: 8px;" href="" target="_blank"><img src="/images/2019-05-19/google-play-badge.png" style="width: 140px; margin: 0; transform: scale(1.4)"></a>
+  <a style="position: relative; top: 2px; display: inline-block; margin-top: 8px;" href="https://play.google.com/store/apps/details?id=jp.touchlife" target="_blank"><img src="/images/2019-05-19/google-play-badge.png" style="width: 140px; margin: 0; transform: scale(1.4)"></a>
 </div>
 
 # TouchLifeとは
@@ -120,7 +120,7 @@ ExpoのWebViewを使って、アプリ内から参照するようにしていま
 
 バグ検知はExpoで公式にサポートされている[Sentry](https://sentry.io/welcome/)を導入。
 ユーザーの端末でエラーが起きるとGmail, Slackに通知が飛ぶようになっています。
-[sentry-expo](https://github.com/expo/sentry-expo)を使っています。今のところ無料範囲内で利用できています。
+[sentry-expo](https://github.com/expo/sentry-expo)を使っていて、今のところ無料範囲内で利用できています。
 
 # Google Analytics
 アプリのインストール数などはApp Store Connectのアナリティクスでも確認できますが、具体的な時間帯や詳しい情報も欲しかったのでGoogle Analyticsを導入しました。
@@ -246,7 +246,7 @@ universalも`react-native-scrollable-tab-view`をForkしてるものになるの
 [react-native-walkthrough-tooltip](https://github.com/jasongaare/react-native-walkthrough-tooltip)
 
 # npm-run-all
-[実践Expo](https://www.amazon.co.jp/dp/B07L5W41H4/ref=dp-kindle-redirect?_encoding=UTF8&btkr=1)の書籍に書いてあって初めて知ったんですが、これが便利でした。
+[実践Expo](https://www.amazon.co.jp/dp/B07L5W41H4/ref=dp-kindle-redirect?_encoding=UTF8&btkr=1)に書いてあって初めて知ったんですが、これが便利でした。
 `yarn add -D npm-run-all`後に、package.jsonの`scripts`を下記のように書いておいて、
 ```json
 "scripts": {
@@ -256,7 +256,7 @@ universalも`react-native-scrollable-tab-view`をForkしてるものになるの
 },
 ```
 `yarn build:ios`すると、`ios:run`や`ios:file`などの`ios:*`のscriptsが順番に実行される、というものです。
-これでipaファイルが`.build/app.ipa`に生成されるので、後はfastlaneを使ってApp Store Connectにデプロイ → 実機確認 → 申請 → 配信 という感じで無事リリース出来ました。
+これでipaファイルが`.build/app.ipa`に生成されるので、後はfastlaneを使ってApp Store Connectにデプロイ → 実機確認 → 申請 → 公開 という感じで無事リリース出来ました。
 
 [実践Expo](https://www.amazon.co.jp/dp/B07L5W41H4/ref=dp-kindle-redirect?_encoding=UTF8&btkr=1)は開発の途中からKindle版を買ったんですが、特にExpoを使ったリリース方法 + AnalyticsやSentryの設定方法も載っていて、とても為になりました。Expoで開発する場合はオススメの本です。
 
