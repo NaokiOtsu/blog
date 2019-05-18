@@ -1,46 +1,46 @@
 ---
 title: React Native + FirebaseでiOS/Androidアプリをリリースしました
-date: 2019-05-08
-image: https://naoki-otsu.com/images/2019-05-08/og.png
+date: 2019-05-19
+image: https://blog.naoki-otsu.com/images/2019-05-19/og.png
 ---
 
 React Native(Expo) + Firebaseで`TouchLife`というiOS/Androidアプリをリリースしました。
 
 <div style="margin-top: 42px; text-align: center;">
-  <img style="width: 120px; margin: 0; padding: 0; border-radius: 16px; box-shadow: 0 0 3px rgba(0,0,0,0.5)" src="/images/2019-05-08/touchlife.png">
+  <img style="width: 120px; margin: 0; padding: 0; border-radius: 16px; box-shadow: 0 0 3px rgba(0,0,0,0.5)" src="/images/2019-05-19/touchlife.png">
 </div>
 
 <div style="margin-top: 20px; padding-left: 20px; text-align: center;">
-  <a style="margin-right: 30px" href="https://itunes.apple.com/us/app/%E5%AE%B6%E8%A8%88%E7%B0%BFtouchlife-%E7%B0%A1%E5%8D%98%E4%BA%BA%E6%B0%97%E3%81%AE%E3%81%8A%E5%B0%8F%E9%81%A3%E3%81%84%E5%B8%B3/id1460375602?mt=8" target="_blank"><img src="/images/2019-05-08/Download_on_the_App_Store_Badge_JP_RGB_blk_100317.svg" style="width: 140px; margin: 0;"></a>
-  <a style="position: relative; top: 2px; display: inline-block; margin-top: 8px;" href="" target="_blank"><img src="/images/2019-05-08/google-play-badge.png" style="width: 140px; margin: 0; transform: scale(1.4)"></a>
+  <a style="margin-right: 30px" href="https://itunes.apple.com/us/app/%E5%AE%B6%E8%A8%88%E7%B0%BFtouchlife-%E7%B0%A1%E5%8D%98%E4%BA%BA%E6%B0%97%E3%81%AE%E3%81%8A%E5%B0%8F%E9%81%A3%E3%81%84%E5%B8%B3/id1460375602?mt=8" target="_blank"><img src="/images/2019-05-19/Download_on_the_App_Store_Badge_JP_RGB_blk_100317.svg" style="width: 140px; margin: 0;"></a>
+  <a style="position: relative; top: 2px; display: inline-block; margin-top: 8px;" href="" target="_blank"><img src="/images/2019-05-19/google-play-badge.png" style="width: 140px; margin: 0; transform: scale(1.4)"></a>
 </div>
 
 # TouchLifeとは
 
 <div style="display: flex; overflow-x: scroll;">
   <div>
-    <img src="/images/2019-05-08/capture3.png" style="width: 340px;">
+    <img src="/images/2019-05-19/capture3.png" style="width: 340px;">
   </div>
   <div>
-    <img src="/images/2019-05-08/capture1.png" style="width: 340px;">
+    <img src="/images/2019-05-19/capture1.png" style="width: 340px;">
   </div>
   <div>
-    <img src="/images/2019-05-08/capture4.png" style="width: 340px;">
+    <img src="/images/2019-05-19/capture4.png" style="width: 340px;">
   </div>
   <div>
-    <img src="/images/2019-05-08/capture5.png" style="width: 340px;">
+    <img src="/images/2019-05-19/capture5.png" style="width: 340px;">
   </div>
   <div>
-    <img src="/images/2019-05-08/capture6.png" style="width: 340px;">
+    <img src="/images/2019-05-19/capture6.png" style="width: 340px;">
   </div>
 </div>
 
-`お金をきちんと把握しようとすると必ず出てくる面倒さを解決`する為に作った家計簿アプリです。
+お金をきちんと把握しようとすると必ず出てくる面倒さを解決する為に作った家計簿アプリです。
 
 通常の家計簿は記録するのがメインになると思いますが、
 そこから一歩踏み込んで、今月使ったお金が前月と比べてプラスなのかマイナスなのか、食費や交際費など細かい勘定科目で見た時にリアルな数字としてはどうなのか、を計算して分析するという特徴があります。
 
-特に`給料日から今日までに使ったお金が前月のまったく同じ日と比べてどうなのか` を計算する同日対比の機能が一番の特徴です。
+特に給料日から今日までに使ったお金が前月のまったく同じ日と比べてどうなのかを計算する同日対比の機能が一番の特徴です。
 
 きちんとお金を把握していきたいなと思っている方に届けば良いなという思いで、友人と2人で開発しました。
 友人が企画 + デザイン、自分がエンジニアリングを担当。
@@ -59,8 +59,8 @@ React Native(Expo) + Firebaseで`TouchLife`というiOS/Androidアプリをリ�
 
 # React Native(Expo)
 
-<img src="/images/2019-05-08/react_native.png" style="width: 288px">
-<img src="/images/2019-05-08/expo.png" style="    width: 130px; margin-bottom: 40px; margin-left: 15px;">
+<img src="/images/2019-05-19/react_native.png" style="width: 288px">
+<img src="/images/2019-05-19/expo.png" style="    width: 130px; margin-bottom: 40px; margin-left: 15px;">
 
 メインは[React Native](https://facebook.github.io/react-native/) + [Expo](https://expo.io/)です。
 最初はExpoを使わずReact Nativeのみで開発していたのですが、React Nativeのバージョンアップや何か特別な事をやろうとするとすぐ赤いエラー画面になってしまい、機能の実装よりそのエラーの解決に労力が割かれている事が気になっていました。(アプリ開発経験が豊富じゃないと辛い印象だった)
@@ -73,7 +73,7 @@ React Native(Expo) + Firebaseで`TouchLife`というiOS/Androidアプリをリ�
 
 # Firebase
 
-<img src="/images/2019-05-08/firebase.png" style="width: 218px">
+<img src="/images/2019-05-19/firebase.png" style="width: 218px">
 
 ユーザー認証やデータベースへの保存の仕組みが必要で、認証の仕組みが予め備わっていてモバイルアプリに特化している[Firebase](https://firebase.google.com/)を使う事にしました。
 主に使った機能は、`Authentication、Firestore、Functions, Hosting`の4つです。
@@ -116,7 +116,7 @@ ExpoのWebViewを使って、アプリ内から参照するようにしていま
 
 # Sentry
 
-<img src="/images/2019-05-08/sentry.png" style="width: 228px">
+<img src="/images/2019-05-19/sentry.png" style="width: 228px">
 
 バグ検知はExpoで公式にサポートされている[Sentry](https://sentry.io/welcome/)を導入。
 ユーザーの端末でエラーが起きるとGmail, Slackに通知が飛ぶようになっています。
@@ -132,7 +132,7 @@ ExpoのWebViewを使って、アプリ内から参照するようにしていま
 
 # date-fns
 
-<img src="/images/2019-05-08/date-fns.png">
+<img src="/images/2019-05-19/date-fns.png">
 
 `5月1日(水)`のような日本語にフォーマットされた日付が必要だったので使いました。
 
@@ -140,7 +140,7 @@ ExpoのWebViewを使って、アプリ内から参照するようにしていま
 
 # UltraDate.js
 
-<img src="/images/2019-05-08/ultra.png">
+<img src="/images/2019-05-19/ultra.png">
 
 `給料日が土日祝の場合はその前の平日を取得する`などが必要で、そちらが取得できるUltraDate.jsを使いました。
 ちゃんと実装すると面倒な祝日やうるう年の計算など、Dateオブジェクトを便利に拡張したライブラリです。
@@ -149,7 +149,7 @@ ExpoのWebViewを使って、アプリ内から参照するようにしていま
 
 # react-native-svg + d3-shape
 
-<img src="/images/2019-05-08/May-11-2019 13-52-45.gif">
+<img src="/images/2019-05-19/May-11-2019 13-52-45.gif">
 
 円グラフの為に使いました。
 最初は[react-native-pie-chart](https://github.com/genexu/react-native-pie-chart)を使っていたのですが、円グラフをアニメーションさせようとするとreact-native-pie-chartだと難しそうだったので、こちらを使いました。(アニメーションしない円グラフだけの表示ならreact-native-pie-chartでも十分だと思います)
@@ -163,7 +163,7 @@ ExpoのWebViewを使って、アプリ内から参照するようにしていま
 
 # formik + yup
 
-<img src="/images/2019-05-08/ezgif-4-4cda48b81c3e.gif">
+<img src="/images/2019-05-19/ezgif-4-4cda48b81c3e.gif">
 
 メールアドレスやパスワードなどフォームのバリデーションが扱いやすくなるので使いました。Reactの[公式ドキュメント](https://reactjs.org/docs/forms.html#fully-fledged-solutions)でも紹介されているものです。
 別の選択肢だと[redux-form](https://github.com/erikras/redux-form)もあり、こちらはフォームの状態をreduxのstoreに保存するようですが、Reactコミュニティの一般的な見解だとフォームの状態をreduxで管理しない方向のようで、`formik`や[react-final-form](https://github.com/final-form/react-final-form)を使うのが良いとのことでした。
@@ -173,7 +173,7 @@ ExpoのWebViewを使って、アプリ内から参照するようにしていま
 
 # native-base
 
-<img src="/images/2019-05-08/ezgif-4-b7a0dbc95f5e.gif">
+<img src="/images/2019-05-19/ezgif-4-b7a0dbc95f5e.gif">
 
 主にフォームのセレクトボックスで使用。
 最初セレクトボックスは、[react-native-picker-select](https://github.com/lawnstarter/react-native-picker-select)を使っていたのですが、Androidで見た時に表示がおかしかったので、安定していたnative-baseに切り替えました。
@@ -182,7 +182,7 @@ ExpoのWebViewを使って、アプリ内から参照するようにしていま
 
 # react-native-calendars
 
-<img src="/images/2019-05-08/May-11-2019 17-51-11.gif">
+<img src="/images/2019-05-19/May-11-2019 17-51-11.gif">
 
 カレンダーの実装に使っています。
 `monthFormat={"yyyy年MM月"}`などで日本語のフォーマットでカスタマイズ可能なのも良かったです。
@@ -191,7 +191,7 @@ ExpoのWebViewを使って、アプリ内から参照するようにしていま
 
 # react-native-easy-toast
 
-<img src="/images/2019-05-08/May-11-2019 17-54-10.gif">
+<img src="/images/2019-05-19/May-11-2019 17-54-10.gif">
 
 マイページなどユーザー情報を変更した時の、成功、失敗をユーザーに知らせる目的で使いました。
 表示する位置や色は自由にカスタマイズ出来ます。
@@ -200,7 +200,7 @@ ExpoのWebViewを使って、アプリ内から参照するようにしていま
 
 # react-native-keyboard-aware-scroll-view
 
-<img src="/images/2019-05-08/ezgif-4-b16a37b3b4cc.gif">
+<img src="/images/2019-05-19/ezgif-4-b16a37b3b4cc.gif">
 
 画面の下の方にInput要素があると、`キーボードが下から出てきた時に入力している部分が隠れてしまい何が入力されているのか分からない問題`があったのですが、その部分が隠れないようにスクロールしてくれるモジュールです。自分で実装するとそれなりに大変そうだったので助かりました。
 
@@ -208,7 +208,7 @@ ExpoのWebViewを使って、アプリ内から参照するようにしていま
 
 # react-native-modal
 
-<img src="/images/2019-05-08/ezgif-4-86530604c2b8.gif">
+<img src="/images/2019-05-19/ezgif-4-86530604c2b8.gif">
 
 シンプルなモーダルです。
 簡単に表示、非表示が出来て、スタイルもカスタマイズ可能です。
@@ -217,7 +217,7 @@ ExpoのWebViewを使って、アプリ内から参照するようにしていま
 
 # react-native-scrollable-tab-view-universal
 
-<img src="/images/2019-05-08/ezgif-4-b8cf6619d868.gif">
+<img src="/images/2019-05-19/ezgif-4-b8cf6619d868.gif">
 
 タブ切り替えが必要な箇所に使いました。
 スワイプ操作にも対応しているのでUXも良い印象です。
@@ -228,7 +228,7 @@ universalも`react-native-scrollable-tab-view`をForkしてるものになるの
 
 # react-native-snap-carousel
 
-<img src="/images/2019-05-08/ezgif-4-b97ac0e6144d.gif">
+<img src="/images/2019-05-19/ezgif-4-b97ac0e6144d.gif">
 
 オープニングやグラフのカルーセルに使いました。
 `次や前の月のグラフもちょっと見せるUIにしかった`ので、それが可能だったこちらを使いました。
@@ -237,7 +237,7 @@ universalも`react-native-scrollable-tab-view`をForkしてるものになるの
 
 # react-native-walkthrough-tooltip
 
-<img src="/images/2019-05-08/May-11-2019 19-16-31.gif">
+<img src="/images/2019-05-19/May-11-2019 19-16-31.gif">
 
 ツールチップの表示に使いました。
 アプリの使い方を伝える最初のチュートリアルにも使えそうです。
