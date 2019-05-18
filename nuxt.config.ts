@@ -21,7 +21,7 @@ const config: NuxtConfiguration = {
    ** Headers of the page
    */
   head: {
-    title: 'OtsuLog',
+    title: 'Naoki Otsu',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },

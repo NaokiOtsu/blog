@@ -1,6 +1,6 @@
-# OtsuLog
+# Naoki Otsu
 
-> フロントエンド(JavaScript, ReactNative, Electron..)、バックエンド(Ruby, GraphQL)、書籍など学んだことを発信する場
+フロントエンド(JavaScript, ReactNative, Electron..)、バックエンド(Ruby, GraphQL)、書籍など学んだことを発信するブログ
 
 ## Build Setup
 
@@ -18,5 +18,3 @@ $ yarn start
 # generate static project
 $ yarn run generate
 ```
-
-For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).

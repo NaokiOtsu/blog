@@ -26,7 +26,7 @@ import { format } from 'date-fns'
 @Component({
   head() {
     return {
-      title: `Blog | OtsuLog`,
+      title: `Blog | Naoki Otsu`,
       meta: [
         {
           hid: 'description',
@@ -39,7 +39,7 @@ import { format } from 'date-fns'
         },
         {
           name: 'og:title',
-          content: `Blog | OtsuLog`
+          content: `Blog | Naoki Otsu`
         },
         {
           name: 'og:description',

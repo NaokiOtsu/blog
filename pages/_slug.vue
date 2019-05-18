@@ -60,8 +60,8 @@ import { format } from 'date-fns'
   },
 
   head() {
-    return {
-      title: `${this.title} | OtsuLog`,
+    const head = {
+      title: `${this.title} | Naoki Otsu`,
       meta: [
         {
           hid: 'description',
@@ -70,7 +70,7 @@ import { format } from 'date-fns'
         },
         {
           name: 'twitter:card',
-          content: 'summary'
+          content: this.image ? 'summary_large_image' : 'summary'
         },
         {
           name: 'og:title',
@@ -82,10 +82,12 @@ import { format } from 'date-fns'
         },
         {
           name: 'og:image',
-          content: 'https://blog.naoki-otsu.com/icon.png'
+          content: this.image || 'https://blog.naoki-otsu.com/icon.png'
         }
       ]
     }
+
+    return head
   }
 })
 export default class Slug extends Vue {
@@ -108,6 +110,10 @@ export default class Slug extends Vue {
 
   get body() {
     return this.$store.state.post.body.replace(/\r?\n/g, '')
+  }
+
+  get image() {
+    return this.$store.state.post.attributes.image
   }
 }
 </script>
@@ -146,6 +152,10 @@ export default class Slug extends Vue {
       margin: 40px 0 0;
       font-size: 2rem;
       line-height: 3rem;
+    }
+
+    /deep/ ul {
+      margin-top: 24px;
     }
 
     /deep/ li {
