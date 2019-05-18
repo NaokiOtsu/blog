@@ -48,6 +48,7 @@ React Native(Expo) + Firebaseで`TouchLife`というiOS/Androidアプリをリ�
 今回は技術メインでアウトプットしたいと思います。
 
 # 使った技術
+言語は、JavaScriptのみです。
 
 - React Native(Expo)
 - Firebase
@@ -61,8 +62,8 @@ React Native(Expo) + Firebaseで`TouchLife`というiOS/Androidアプリをリ�
 <img src="/images/2019-05-08/react_native.png" style="width: 288px">
 <img src="/images/2019-05-08/expo.png" style="    width: 130px; margin-bottom: 40px; margin-left: 15px;">
 
-メインはReact Native + Expoです。
-最初はExpoを使わずReact Nativeのみで開発していたのですが、React Nativeのバージョンアップや何か特別な事をやろうとするとすぐ赤いエラー画面になってしまい、機能の実装よりそのエラーの解決に労力が割かれている事に気づきました。(アプリ開発経験が豊富じゃないと辛い印象だった)
+メインは[React Native](https://facebook.github.io/react-native/) + [Expo](https://expo.io/)です。
+最初はExpoを使わずReact Nativeのみで開発していたのですが、React Nativeのバージョンアップや何か特別な事をやろうとするとすぐ赤いエラー画面になってしまい、機能の実装よりそのエラーの解決に労力が割かれている事が気になっていました。(アプリ開発経験が豊富じゃないと辛い印象だった)
 
 これはいかんということでExpoで1から作り直したのですが、この開発体感がびっくりするぐらい良かった。
 基本Expoのレール上の実装になるので機能はExpoで提供されているものに制限されるデメリットはありますが、その分エラーになる事がほとんどなくなり、結果的にそれまでの2倍ぐらいの開発スピードになったと思います。
@@ -74,7 +75,7 @@ React Native(Expo) + Firebaseで`TouchLife`というiOS/Androidアプリをリ�
 
 <img src="/images/2019-05-08/firebase.png" style="width: 218px">
 
-ユーザー認証やデータベースへの保存の仕組みが必要で、認証の仕組みが予め備わっていてモバイルアプリに特化しているFirebaseを選定しました。
+ユーザー認証やデータベースへの保存の仕組みが必要で、認証の仕組みが予め備わっていてモバイルアプリに特化している[Firebase](https://firebase.google.com/)を使う事にしました。
 主に使った機能は、`Authentication、Firestore、Functions, Hosting`の4つです。
 
 # Authentication
@@ -101,9 +102,7 @@ ExpoのWebViewを使って、アプリ内から参照するようにしていま
 またメール認証した後にアプリに戻すリダイレクトが必要だったため、リダイレクト専用のhtmlファイルも配置しています。
 
 ゆくゆくはランディングページにも利用する事になりそうです。
-その際はフロントエンドのベストプラクティスが詰まっている
-[Nuxt](https://ja.nuxtjs.org/)の[generate](https://ja.nuxtjs.org/api/configuration-generate)で作るのが良いのかなと思っています。
-このブログも`nuxt generate + markdown`で作りました。
+その際は現行のフロントエンドのベストプラクティスが詰まっている[Nuxt](https://ja.nuxtjs.org/)の[generate](https://ja.nuxtjs.org/api/configuration-generate)で作るのが良いのかなと思っています。(このブログもnuxt generate + markdownです)
 
 # React Navigation
 ルーティングとナビゲーションは[React Navigation](https://github.com/react-navigation/react-navigation)で実装しました。
@@ -153,8 +152,8 @@ ExpoのWebViewを使って、アプリ内から参照するようにしていま
 <img src="/images/2019-05-08/May-11-2019 13-52-45.gif">
 
 円グラフの為に使いました。
-最初は[react-native-pie-chart](https://github.com/genexu/react-native-pie-chart)を使っていたのですが、円グラフをアニメーションさせようとしたところreact-native-pie-chartだと難しそうだったので、こちらを使いました。(アニメーションしない円グラフだけの表示ならreact-native-pie-chartでも十分だと思います)
-`d3-shape`で円のデータを作り、それを`react-native-svg`で描画するような流れです。
+最初は[react-native-pie-chart](https://github.com/genexu/react-native-pie-chart)を使っていたのですが、円グラフをアニメーションさせようとするとreact-native-pie-chartだと難しそうだったので、こちらを使いました。(アニメーションしない円グラフだけの表示ならreact-native-pie-chartでも十分だと思います)
+`d3-shape`で円のデータを作り、それを`react-native-svg`で描画する流れです。
 
 下記の記事が参考になりました。
 [Pie animation in React Native using SVG](https://medium.com/@oriharel/pie-animation-in-react-native-using-svg-55d7d3f90156)
@@ -167,7 +166,7 @@ ExpoのWebViewを使って、アプリ内から参照するようにしていま
 <img src="/images/2019-05-08/ezgif-4-4cda48b81c3e.gif">
 
 メールアドレスやパスワードなどフォームのバリデーションが扱いやすくなるので使いました。Reactの[公式ドキュメント](https://reactjs.org/docs/forms.html#fully-fledged-solutions)でも紹介されているものです。
-別の選択肢だと[redux-form](https://github.com/erikras/redux-form)もあり、こちらはフォームの状態をreduxのstoreに保存するようですが、Reactコミュニティの一般的な見解だとフォームの状態をreduxに入れない方向のようで、`formik`や[react-final-form](https://github.com/final-form/react-final-form)を使うのが良いとのことでした。
+別の選択肢だと[redux-form](https://github.com/erikras/redux-form)もあり、こちらはフォームの状態をreduxのstoreに保存するようですが、Reactコミュニティの一般的な見解だとフォームの状態をreduxで管理しない方向のようで、`formik`や[react-final-form](https://github.com/final-form/react-final-form)を使うのが良いとのことでした。
 
 [formik](https://github.com/jaredpalmer/formik)
 [yup](https://github.com/jquense/yup)
@@ -247,7 +246,7 @@ universalも`react-native-scrollable-tab-view`をForkしてるものになるの
 [react-native-walkthrough-tooltip](https://github.com/jasongaare/react-native-walkthrough-tooltip)
 
 # npm-run-all
-`実践Expo`の本に書いてあって初めて知ったんですが、これが便利でした。
+[実践Expo](https://www.amazon.co.jp/dp/B07L5W41H4/ref=dp-kindle-redirect?_encoding=UTF8&btkr=1)の書籍に書いてあって初めて知ったんですが、これが便利でした。
 `yarn add -D npm-run-all`後に、package.jsonの`scripts`を下記のように書いておいて、
 ```json
 "scripts": {
@@ -259,9 +258,7 @@ universalも`react-native-scrollable-tab-view`をForkしてるものになるの
 `yarn build:ios`すると、`ios:run`や`ios:file`などの`ios:*`のscriptsが順番に実行される、というものです。
 これでipaファイルが`.build/app.ipa`に生成されるので、後はfastlaneを使ってApp Store Connectにデプロイ → 実機確認 → 申請 → 配信 という感じで無事リリース出来ました。
 
-`実践Expo`は開発の途中からKindle版を買ったんですが、特にExpoを使ったリリース方法 + AnalyticsやSentryの設定方法も載っていて、とても為になりました。Expoで開発する場合はオススメの本です。
-<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="https://rcm-fe.amazon-adsystem.com/e/cm?ref=qf_sp_asin_til&t=otsu03-22&m=amazon&o=9&p=8&l=as1&IS1=1&detail=1&asins=484439875X&linkId=468810da7f8baa2f559ab397924b960e&bc1=000000&lt1=_blank&fc1=333333&lc1=0066c0&bg1=ffffff&f=ifr">
-    </iframe>
+[実践Expo](https://www.amazon.co.jp/dp/B07L5W41H4/ref=dp-kindle-redirect?_encoding=UTF8&btkr=1)は開発の途中からKindle版を買ったんですが、特にExpoを使ったリリース方法 + AnalyticsやSentryの設定方法も載っていて、とても為になりました。Expoで開発する場合はオススメの本です。
 
 # まとめ
 React Native良いですね。
