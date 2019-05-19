@@ -18,8 +18,7 @@
             Front-End Engineer.<br />
             Vue, React, React Native, Firebase, GraqhQL, etc..<br />
             フロントエンドを中心に発信しています。お気軽にフォローくださいませ👍
-            <span
-              style="position: relative; top: 4px; margin-left: 4px; margin-bottom: 10px"
+            <span class="follow"
               ><a
                 href="https://twitter.com/melo15?ref_src=twsrc%5Etfw"
                 class="twitter-follow-button"
@@ -33,9 +32,19 @@
                 charset="utf-8"
               ></script
             ></span>
-            <br />
           </p>
           <ul>
+            <li>
+              <nuxt-link to="/profile/">
+                <img
+                  src="~/assets/images/icon.png"
+                  width="24"
+                  height="24"
+                  alt="Profile"
+                />
+              </nuxt-link>
+              <nuxt-link to="/profile/">Profile</nuxt-link>
+            </li>
             <li>
               <a
                 href="https://twitter.com/melo15"
@@ -187,11 +196,9 @@ footer {
       }
     }
 
-    .more {
-      margin-left: 4px;
-      color: white;
-      text-decoration: underline;
-      line-height: 2;
+    .follow {
+      position: relative;
+      top: 4px;
     }
   }
 
