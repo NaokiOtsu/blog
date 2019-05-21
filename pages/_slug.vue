@@ -249,7 +249,7 @@ export default class Slug extends Vue {
       }
 
       /deep/ ul {
-        margin-top: 6px;
+        margin-top: 16px;
         padding-left: 30px;
       }
 

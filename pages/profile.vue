@@ -21,7 +21,7 @@
     </p>
 
     <h2>経歴</h2>
-    <p>大学卒業 → SoftBank → TRGP → DeNA → TechJIN → Vega corporation.</p>
+    <p>大学卒業 → SoftBankBB → TRGP → DeNA → TechJIN → Vega corporation.</p>
 
     <h2>出身</h2>
     <p>熊本県 南阿蘇</p>
