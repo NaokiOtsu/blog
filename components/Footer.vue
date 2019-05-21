@@ -123,9 +123,9 @@ import { Vue, Component } from 'vue-property-decorator'
   props: {
     showProfile: {
       type: Boolean,
-      default: true
-    }
-  }
+      default: true,
+    },
+  },
 })
 export default class Footer extends Vue {}
 </script>

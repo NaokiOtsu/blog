@@ -138,27 +138,27 @@ import { Vue, Component } from 'vue-property-decorator'
         {
           hid: 'description',
           name: 'description',
-          content: this.body
+          content: this.body,
         },
         {
           name: 'twitter:card',
-          content: 'summary'
+          content: 'summary',
         },
         {
           name: 'og:title',
-          content: `Profile | Naoki Otsu`
+          content: `Profile | Naoki Otsu`,
         },
         {
           name: 'og:description',
-          content: this.body
+          content: this.body,
         },
         {
           name: 'og:image',
-          content: 'https://blog.naoki-otsu.com/icon.png'
-        }
-      ]
+          content: 'https://blog.naoki-otsu.com/icon.png',
+        },
+      ],
     }
-  }
+  },
 })
 export default class Index extends Vue {}
 </script>

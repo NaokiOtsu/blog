@@ -3,12 +3,12 @@ export const state = () => ({
   post: {
     attributes: {
       title: '',
-      date: null
+      date: null,
     },
     body: '',
     fileName: '',
-    frontmatter: ''
-  }
+    frontmatter: '',
+  },
 })
 
 export const mutations = {
@@ -18,5 +18,5 @@ export const mutations = {
 
   setPost(state, post) {
     state.post = post
-  }
+  },
 }

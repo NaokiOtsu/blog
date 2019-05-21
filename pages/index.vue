@@ -31,27 +31,27 @@ import { format } from 'date-fns'
         {
           hid: 'description',
           name: 'description',
-          content: this.body
+          content: this.body,
         },
         {
           name: 'twitter:card',
-          content: 'summary'
+          content: 'summary',
         },
         {
           name: 'og:title',
-          content: `Blog | Naoki Otsu`
+          content: `Blog | Naoki Otsu`,
         },
         {
           name: 'og:description',
-          content: this.body
+          content: this.body,
         },
         {
           name: 'og:image',
-          content: 'https://blog.naoki-otsu.com/icon.png'
-        }
-      ]
+          content: 'https://blog.naoki-otsu.com/icon.png',
+        },
+      ],
     }
-  }
+  },
 })
 export default class Index extends Vue {
   format = format

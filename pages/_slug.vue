@@ -11,8 +11,9 @@
           href="https://twitter.com/share?ref_src=twsrc%5Etfw"
           class="twitter-share-button"
           data-show-count="false"
-          >Tweet</a
         >
+          Tweet
+        </a>
         <script
           async
           src="https://platform.twitter.com/widgets.js"
@@ -55,7 +56,7 @@ import { format } from 'date-fns'
   async asyncData({ params }) {
     const fileContent = await require(`~/markdown/${params.slug}.md`)
     return {
-      content: fileContent.default
+      content: fileContent.default,
     }
   },
 
@@ -66,36 +67,36 @@ import { format } from 'date-fns'
         {
           hid: 'description',
           name: 'description',
-          content: this.body
+          content: this.body,
         },
         {
           name: 'twitter:card',
-          content: this.image ? 'summary_large_image' : 'summary'
+          content: this.image ? 'summary_large_image' : 'summary',
         },
         {
           name: 'og:title',
-          content: this.title
+          content: this.title,
         },
         {
           name: 'og:description',
-          content: this.body
+          content: this.body,
         },
         {
           name: 'og:image',
-          content: this.image || 'https://blog.naoki-otsu.com/icon.png'
-        }
-      ]
+          content: this.image || 'https://blog.naoki-otsu.com/icon.png',
+        },
+      ],
     }
 
     return head
-  }
+  },
 })
 export default class Slug extends Vue {
   format = format
 
   created() {
     const post = this.$store.state.posts.find(
-      post => post.fileName === this.$route.path.replace(/\//g, '')
+      post => post.fileName === this.$route.path.replace(/\//g, ''),
     )
     this.$store.commit('setPost', post)
   }
