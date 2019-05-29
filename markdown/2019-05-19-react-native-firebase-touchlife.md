@@ -80,7 +80,7 @@ React Native(Expo) + Firebaseで`「TouchLife」`という家計簿アプリを�
 <img src="/images/2019-05-19/expo.png" style="    width: 130px; margin-bottom: 40px; margin-left: 15px;">
 
 メインは[React Native](https://facebook.github.io/react-native/) + [Expo](https://expo.io/)です。
-最初はExpoは使わずReact Nativeのみで開発していましたが、React Nativeのバージョンアップや何か特別なことを入れようとするとすぐ赤いエラー画面になってしまい、機能の実装よりそのエラーの解決に労力が割かれてるなぁというのが気になっていました。(アプリ開発経験が豊富じゃないと辛い印象だった。React Native開発の経験値不足もある。)
+最初はExpoは使わずReact Nativeのみで開発していましたが、React Nativeのバージョンアップに追従させる時や何か特別なことを入れようとする度に赤いエラー画面になってしまい、機能の実装よりそのエラーの解決に労力が割かれてる感がずっと気になっていました。(アプリ開発経験が豊富じゃないと辛い印象だった。React Native開発の経験値不足もある。)
 
 これはいかんということでExpoで1から作り直したのですが、この開発体感がびっくりするぐらい良かった。
 基本Expoのレール上の実装になるので機能はExpoで提供されているものに制限されるデメリットはありますが、その分エラーになる事がほとんどなくなり、結果的にそれまでの2倍ぐらいの開発スピードになったと思います。
@@ -275,7 +275,7 @@ universalも`react-native-scrollable-tab-view`をForkしてるものになるの
 `yarn build:ios`すると、`ios:run`や`ios:file`などの`ios:*`のscriptsが順番に実行される、というものです。
 これでipaファイルが`.build/app.ipa`に生成されるので、後はfastlaneを使ってApp Store Connectにデプロイ → 実機確認 → 申請 → 公開 という感じで無事リリース出来ました。
 
-[実践Expo](https://www.amazon.co.jp/dp/B07L5W41H4/ref=dp-kindle-redirect?_encoding=UTF8&btkr=1)は開発の途中からKindle版を買ったんですが、特にExpoを使ったリリース方法 + AnalyticsやSentryの設定方法も載っていて、とても為になりました。Expoで開発する場合はオススメの本です。
+[実践Expo](https://www.amazon.co.jp/dp/B07L5W41H4/ref=dp-kindle-redirect?_encoding=UTF8&btkr=1)は開発の途中からKindle版を買ったんですが、特にExpoを使ったリリース方法 + AnalyticsやSentryの設定方法も載っていて、とても為になりました。Expoで開発する場合はオススメの一冊です。
 
 # まとめ
 React Native良いですね。
