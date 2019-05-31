@@ -2,8 +2,8 @@
 
 # Redirect default Netlify subdomain to primary domain
 https://elastic-leavitt-6901fd.netlify.com/* https://naoki-otsu.com/:splat 301!
-https://naoki-otsu.com/* https://naoki-otsu.com/:splat 301!
+https://blog.naoki-otsu.com/* https://naoki-otsu.com/:splat 301!
 
 # These extra rules are required because HTTPS is not forced
 http://elastic-leavitt-6901fd.netlify.com/* https://naoki-otsu.com/:splat 301!
-http://naoki-otsu.com/* https://naoki-otsu.com/:splat 301!
+http://blog.naoki-otsu.com/* https://naoki-otsu.com/:splat 301!
