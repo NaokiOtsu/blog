@@ -22,3 +22,9 @@ declare module 'vue/types/options' {
         head?(context: NuxtContext<V>): Promise<object> | object
     }
 }
+
+declare namespace NodeJS {
+  interface Process {
+    browser: boolean;
+  }
+}

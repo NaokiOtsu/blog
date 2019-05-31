@@ -54,6 +54,12 @@ import { Vue, Component } from 'vue-property-decorator'
 import { format } from 'date-fns'
 
 @Component({
+  beforeCreate() {
+    if (process.browser) {
+      location.href = `https://naoki-otsu.com${this.$route.path}`
+    }
+  },
+
   async asyncData({ params }) {
     const fileContent = await require(`~/markdown/${params.slug}.md`)
     return {
