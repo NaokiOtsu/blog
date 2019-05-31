@@ -28,3 +28,4 @@ declare namespace NodeJS {
     browser: boolean;
   }
 }
+
