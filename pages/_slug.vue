@@ -5,8 +5,8 @@
     <!-- eslint-disable -->
     <div class="contents" v-html="content"></div>
 
-    <no-ssr
-      ><div class="sns">
+    <no-ssr>
+      <div class="sns">
         <div class="twitter">
           <a
             href="https://twitter.com/share?ref_src=twsrc%5Etfw"
@@ -44,8 +44,10 @@
             charset="utf-8"
             async="async"
           ></script>
-        </div></div
-    ></no-ssr>
+        </div>
+      </div>
+      <adsbygoogle />
+    </no-ssr>
   </div>
 </template>
 
